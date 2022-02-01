@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="d-flex justify-content-center align-items-center banner">
-            <a href="index.html"><img src="<?php echo base_url("/assets/images/logo.png"); ?>" alt="Logo eZCorp"></a>
+            <a href="index"><img src="<?php echo base_url("/assets/images/logo.png"); ?>" alt="Logo eZCorp"></a>
         </div>
     </header>
     <main>
@@ -264,7 +264,7 @@
     </main>
     <footer class="footer-primary">
         <div class="h-100 d-flex flex-row justify-content-center align-items-center">
-            <a href="login.html"><button class="btn btn-primary mr-3">tableau de bord</button></a>
+            <a href="login"><button class="btn btn-primary mr-3">tableau de bord</button></a>
         </div>
     </footer>
     <script src="js/script.js"></script>

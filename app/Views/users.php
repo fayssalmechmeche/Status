@@ -67,7 +67,7 @@
                 <?php if (isset($validation)) : ?>
                     <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                 <?php endif; ?>
-                <form action='/statut/public/index.php/users/save' method='post'>
+                <form action='/statut/users/save' method='post'>
                     <div class="row">
 
                         <div class="form-group col-lg-6">

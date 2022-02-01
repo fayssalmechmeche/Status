@@ -18,7 +18,7 @@
     <main class="main-secondary">
         <div class="left">
             <img src=<?php echo base_url("/assets/images/logo.png"); ?> alt="logo" />
-            <a href="index.html"><i class="fa fa-arrow-circle-left"></i> Retourner à l'accueil</a>
+            <a href="index"><i class="fa fa-arrow-circle-left"></i> Retourner à l'accueil</a>
         </div>
         <div class="right">
             <div class="container">
