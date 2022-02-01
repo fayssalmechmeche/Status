@@ -5,10 +5,11 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 
-class CategorieModel extends Model
+class CategoryModel extends Model
 {
 
-    protected $table = 'categorie';
+    protected $table = 'category';
+    protected $primaryKey = 'id';
     protected $allowedFields = [
         'title'
     ];

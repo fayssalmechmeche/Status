@@ -7,14 +7,32 @@ use App\Models\LoginModel;
 
 class Users extends BaseController
 {
+
+
+
+
     public function index()
     {
         helper(['form']);
-        $data = [];
+        $modal = new LoginModel();
+        /*
+        $query = $db->query("select * from login");
+
+        foreach ($query->getResult() as $row) {
+            echo $row->email;
+            echo $row->name;
+        }
+        */
+
+        $data['logins'] = $modal->orderBy('id', 'DESC')->paginate(10);
+
+
         return view('users', $data);
     }
     public function save()
+
     {
+
         helper(['form']);
         $rules = [
             'name'          => 'required|min_length[2]|max_length[50]',
@@ -24,7 +42,8 @@ class Users extends BaseController
         ];
 
         if ($this->validate($rules)) {
-            $userModel = new loginModel();
+            $userModel = new LoginModel();
+
 
             $data = [
                 'name'     => $this->request->getVar('name'),

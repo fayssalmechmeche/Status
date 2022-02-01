@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li>
-                <a href="categories" data-toggle="tooltip" data-placement="right" title="Liste des catégories">
+                <a href="category" data-toggle="tooltip" data-placement="right" title="Liste des catégories">
                     <i class="fas fa-th-list"></i>
                 </a>
             </li>

@@ -8,7 +8,9 @@ class Dashboard extends BaseController
 {
     public function index()
     {
-        return view('dashboard');
+        $modal = new ServiceModel();
+        $data['services'] = $modal->orderBy('id', 'DESC')->paginate(10);
+        return view('dashboard', $data);
     }
     public function logout()
     {
@@ -21,8 +23,8 @@ class Dashboard extends BaseController
         helper(['form']);
         $rules = [
             'title'          => 'required',
-            'lien'          => 'required',
-            'categorie'         => 'required',
+            'link'          => 'required',
+            'category'         => 'required',
             'monitoring'      => 'required'
         ];
 
@@ -31,8 +33,8 @@ class Dashboard extends BaseController
 
             $data = [
                 'title'     => $this->request->getVar('title'),
-                'lien'    => $this->request->getVar('lien'),
-                'categorie'    => $this->request->getVar('categorie'),
+                'link'    => $this->request->getVar('link'),
+                'category'    => $this->request->getVar('category'),
                 'monitoring'    => $this->request->getVar('monitoring'),
 
             ];

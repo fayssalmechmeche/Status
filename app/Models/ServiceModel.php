@@ -9,7 +9,9 @@ class ServiceModel extends Model
 {
 
     protected $table = 'service';
+    protected $primaryKey = 'id';
+
     protected $allowedFields = [
-        'title', 'etat', 'ip', 'lien', 'categorie', 'monitoring'
+        'title', 'state', 'ip', 'link', 'category', 'monitoring'
     ];
 }

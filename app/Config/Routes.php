@@ -36,7 +36,7 @@ $routes->get('login', 'Login::index');
 
 
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
-$routes->get('categories', 'Categories::index', ['filter' => 'auth']);
+$routes->get('category', 'Category::index', ['filter' => 'auth']);
 $routes->get('users', 'Users::index', ['filter' => 'auth']);
 $routes->get('settings', 'Settings::index', ['filter' => 'auth']);
 $routes->get('usersettings', 'UserSettings::index', ['filter' => 'auth']);

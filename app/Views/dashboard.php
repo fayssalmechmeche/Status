@@ -6,8 +6,10 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="<?php base_url('css/style.css'); ?>" />
+
+	<link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
 	<!-- Basic CSS -->
+
 
 	<link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -33,6 +35,26 @@
 				</tr>
 			</thead>
 			<tbody>
+				<?php
+
+				if ($services) {
+					foreach ($services as $service) {
+						echo '
+<tr>
+<td><a href="' . $service["link"] . '">' . $service["title"] . '</a></td>
+<td>' . $service["category"] . '</td>
+<td>' . $service["ip"] . '</td>
+<td>' . $service["state"] . '</td>
+<td>
+						<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal">Modifier</button>
+					</td>
+
+
+</tr>';
+					}
+				}
+
+				?>
 				<tr>
 					<td><a href="#">Service 1</a></td>
 					<td>Sites web</td>
@@ -78,12 +100,12 @@
 					<div class="row">
 						<div class="form-group col-lg-6">
 							<label for="name">Intitulé</label>
-							<input type="text" class="form-control" id="intitule" name="intitule">
+							<input type="text" class="form-control" id="title" name="title">
 						</div>
 
 						<div class="form-group col-lg-6">
 							<label for="link">Lien</label>
-							<input type="text" class="form-control" id="lien" name="lien">
+							<input type="text" class="form-control" id="link" name="link">
 						</div>
 						<div class="form-group col-lg-6">
 							<label for="hostname">IP/Hôte</label>
@@ -91,7 +113,7 @@
 						</div>
 						<div class="form-group col-lg-12">
 							<label for="category">Catégorie</label>
-							<select class="form-control" name="categorie">
+							<select class="form-control" name="category">
 								<option selected>Sites web</option>
 								<option>Noms de domaine</option>
 								<option>Serveurs</option>
@@ -99,7 +121,7 @@
 						</div>
 						<div class="form-group col-lg-6">
 							<label for="status">Statut</label>
-							<select class="form-control" name="statut">
+							<select class="form-control" name="status">
 								<option selected>En ligne</option>
 								<option>Panne partielle</option>
 								<option>Maintenance</option>
@@ -110,7 +132,7 @@
 							<label for="monitoring">Monitoring automatique</label>
 							<select class="form-control" name="monitoring">
 								<option selected>Non</option>
-								<option name="oui">Oui</option>
+								<option name="yes">Oui</option>
 							</select>
 						</div>
 					</div>

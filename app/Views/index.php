@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
     <!-- Basic CSS -->
     <link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="d-flex justify-content-center align-items-center banner">
-            <a href="index.html"><img src="./img/logo.png" alt="Logo eZCorp"></a>
+            <a href="index.html"><img src="<?php echo base_url("/assets/images/logo.png"); ?>" alt="Logo eZCorp"></a>
         </div>
     </header>
     <main>

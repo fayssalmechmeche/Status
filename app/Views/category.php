@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
     <!-- Basic CSS -->
     <link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -29,24 +29,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Sites web</td>
-                    <td>
+                <?php
+
+                if ($categorys) {
+                    foreach ($categorys as $category) {
+                        echo '
+<tr>
+<td>' . $category["title"] . '</td>
+<td>
                         <button class="btn btn-info" type="button" data-toggle="modal" data-target="#categorie-modal">Modifier</button>
                     </td>
-                </tr>
-                <tr>
-                    <td>Noms de domaine</td>
-                    <td>
-                        <button class="btn btn-info" type="button" data-toggle="modal" data-target="#categorie-modal">Modifier</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Serveurs</td>
-                    <td>
-                        <button class="btn btn-info" type="button" data-toggle="modal" data-target="#categorie-modal">Modifier</button>
-                    </td>
-                </tr>
+</tr>';
+                    }
+                }
+
+                ?>
+
             </tbody>
         </table>
         <div class="subtitle">Ajouter une catégorie</div>
@@ -55,7 +53,7 @@
                 <?php if (isset($validation)) : ?>
                     <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                 <?php endif; ?>
-                <form action='/statut/public/index.php/categories/categorie' method='post'>
+                <form action='/statut/public/index.php/category/category' method='post'>
                     <div class="row">
                         <div class="form-group col-lg-3">
                             <label for="intitule">Intitulé</label>

@@ -9,5 +9,6 @@ class LoginModel extends Model
 {
 
     protected $table = 'login';
+    protected $primaryKey = 'id';
     protected $allowedFields = ['name', 'email', 'password'];
 }

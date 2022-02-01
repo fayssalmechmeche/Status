@@ -1,0 +1,1078 @@
+CRITICAL - 2022-02-01 06:12:41 --> Undefined variable $data
+#0 C:\wamp\www\statut\app\Views\users.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 34)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(14): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 06:12:44 --> Undefined variable $data
+#0 C:\wamp\www\statut\app\Views\users.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 34)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(14): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 06:17:24 --> Undefined variable $user
+#0 C:\wamp\www\statut\app\Views\users.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 34)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(14): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 06:17:26 --> Undefined variable $user
+#0 C:\wamp\www\statut\app\Views\users.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 34)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(14): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 06:17:34 --> Undefined variable $user
+#0 C:\wamp\www\statut\app\Views\users.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 34)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(14): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-02-01 06:53:41 --> Champ 'mail' inconnu dans field list
+CRITICAL - 2022-02-01 06:53:41 --> Call to a member function getResult() on bool
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:00:32 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:00:41 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:01:50 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:01:59 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:02:08 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:02:34 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:02:38 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:02 --> Undefined variable $dbQuery
+#0 C:\wamp\www\statut\app\Controllers\Users.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 23)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:08 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:19 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:26 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:37 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:52 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:52 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:52 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:52 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:03:52 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:04:06 --> view(): Argument #3 ($options) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 24
+#0 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array, Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:13:57 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:23 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:24 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:25 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:25 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:29 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:48 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:48 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:49 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:14:49 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:15:46 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:15:46 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:15:46 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:18:58 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 23)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:19:55 --> Undefined array key "name"
+#0 C:\wamp\www\statut\app\Controllers\Users.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 23)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:20:00 --> Undefined array key "name"
+#0 C:\wamp\www\statut\app\Controllers\Users.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 23)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:20:12 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 23)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:21:02 --> Undefined variable $logins
+#0 C:\wamp\www\statut\app\Views\users.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 35)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:21:45 --> Undefined variable $data
+#0 C:\wamp\www\statut\app\Views\users.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 35)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:21:46 --> Undefined variable $data
+#0 C:\wamp\www\statut\app\Views\users.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 35)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:21:46 --> Undefined variable $data
+#0 C:\wamp\www\statut\app\Views\users.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 35)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(24): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:35:10 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:35:30 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:35:31 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:35:31 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:35:48 --> Object of class App\Models\LoginModel could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-02-01 07:39:51 --> La table 'statut.name' n'existe pas
+ERROR - 2022-02-01 07:39:57 --> La table 'statut.name' n'existe pas
+ERROR - 2022-02-01 07:39:58 --> La table 'statut.name' n'existe pas
+CRITICAL - 2022-02-01 07:48:27 --> Object of class stdClass could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:48:30 --> Object of class stdClass could not be converted to string
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 07:49:17 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:49:18 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:49:19 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:50:42 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\users.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 36)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(29): view('users', Array, Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:50:46 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\users.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 36)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(29): view('users', Array, Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:51:23 --> view(): Argument #3 ($options) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 29
+#0 C:\wamp\www\statut\app\Controllers\Users.php(29): view('users', Array, Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:51:23 --> view(): Argument #3 ($options) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 29
+#0 C:\wamp\www\statut\app\Controllers\Users.php(29): view('users', Array, Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:51:24 --> view(): Argument #3 ($options) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 29
+#0 C:\wamp\www\statut\app\Controllers\Users.php(29): view('users', Array, Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:51:42 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\users.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 36)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(29): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:51:52 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\users.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 36)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(29): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:53:13 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:14 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:14 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:29 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:30 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:30 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:40 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:41 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:41 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:53:41 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 31
+#0 C:\wamp\www\statut\app\Controllers\Users.php(31): view('users', Array, 'test@test.com', 'test')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 07:55:00 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 07:55:02 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:01:23 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 19)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:21:58 --> Undefined variable $email
+#0 C:\wamp\www\statut\app\Views\users.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 37)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(20): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:24:34 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Views\users.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 37)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(20): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:26:12 --> Cannot use [] for reading
+#0 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 08:26:49 --> Undefined array key "password"
+#0 C:\wamp\www\statut\app\Controllers\Users.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 19)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:28:50 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 18
+#0 C:\wamp\www\statut\app\Controllers\Users.php(18): CodeIgniter\BaseModel->findAll('email')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:28:50 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 18
+#0 C:\wamp\www\statut\app\Controllers\Users.php(18): CodeIgniter\BaseModel->findAll('email')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:29:05 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 18
+#0 C:\wamp\www\statut\app\Controllers\Users.php(18): CodeIgniter\BaseModel->findAll('')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:29:05 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 18
+#0 C:\wamp\www\statut\app\Controllers\Users.php(18): CodeIgniter\BaseModel->findAll('')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:29:06 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\wamp\www\statut\app\Controllers\Users.php on line 18
+#0 C:\wamp\www\statut\app\Controllers\Users.php(18): CodeIgniter\BaseModel->findAll('')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:29:32 --> Call to undefined method App\Models\LoginModel::fetchAll
+#0 C:\wamp\www\statut\app\Controllers\Users.php(18): CodeIgniter\Model->__call('fetchAll', Array)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:33:14 --> Undefined property: stdClass::$title
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:33:44 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:33:45 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:33:45 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:33:59 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:33:59 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:34:00 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:34:19 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:34:19 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:34:19 --> Undefined property: stdClass::$mail
+#0 C:\wamp\www\statut\app\Controllers\Users.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 22)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:34:55 --> Undefined property: App\Controllers\Users::$db
+#0 C:\wamp\www\statut\app\Controllers\Users.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 19)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:34:55 --> Undefined property: App\Controllers\Users::$db
+#0 C:\wamp\www\statut\app\Controllers\Users.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 19)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:35:08 --> Undefined property: App\Controllers\Users::$db
+#0 C:\wamp\www\statut\app\Controllers\Users.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 19)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:35:09 --> Undefined property: App\Controllers\Users::$db
+#0 C:\wamp\www\statut\app\Controllers\Users.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 19)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:37:22 --> Undefined variable $date
+#0 C:\wamp\www\statut\app\Controllers\Users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:37:30 --> Undefined variable $date
+#0 C:\wamp\www\statut\app\Controllers\Users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:37:31 --> Undefined variable $date
+#0 C:\wamp\www\statut\app\Controllers\Users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:37:31 --> Undefined variable $date
+#0 C:\wamp\www\statut\app\Controllers\Users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:37:45 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:37:45 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:37:45 --> Array to string conversion
+#0 C:\wamp\www\statut\app\Controllers\Users.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\wamp\\www\\sta...', 26)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 08:40:13 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 27)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(25): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:40:13 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 27)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(25): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:40:13 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 27)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(25): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:40:52 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 27)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(25): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:40:53 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 27)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(25): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:40:53 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 27)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(25): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:40:53 --> Undefined variable $query
+#0 C:\wamp\www\statut\app\Views\users.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 27)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(25): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:52:37 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:52:38 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:52:38 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:53:11 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:56:37 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 41)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 08:56:41 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 41)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(30): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:13:29 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\category.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 39)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('category', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Category.php(15): view('category', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Category->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:04 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\category.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 39)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('category', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Category.php(15): view('category', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Category->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:20 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\category.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 38)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('category', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Category.php(15): view('category', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Category->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:47 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\category.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 38)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('category', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Category.php(15): view('category', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Category->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:48 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\category.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 38)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('category', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Category.php(15): view('category', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Category->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:48 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\category.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 38)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('category', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Category.php(15): view('category', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Category->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:49 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(23): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:51 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(23): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:16:59 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(23): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:17:16 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(23): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:17:24 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(23): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:17:39 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(23): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-01 09:17:40 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(23): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
