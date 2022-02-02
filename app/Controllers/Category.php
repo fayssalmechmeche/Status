@@ -6,13 +6,20 @@ use App\Models\CategoryModel;
 
 class Category extends BaseController
 {
+    public $modal;
+    public function __construct()
+    {
+        $this->modal = new CategoryModel();
+
+
+        $data['categorys'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
+        return view('category', $data);
+    }
     public function index()
     {
-        $modal = new CategoryModel();
 
 
-        $data['categorys'] = $modal->orderBy('id', 'DESC')->paginate(10);
-        return view('category', $data);
+        return view('category');
     }
     public function category()
     {
@@ -22,13 +29,13 @@ class Category extends BaseController
         ];
 
         if ($this->validate($rules)) {
-            $categoryModel = new CategoryModel();
+
 
             $data = [
                 'title'     => $this->request->getVar('title'),
             ];
 
-            $categoryModel->save($data);
+            $this->modal->save($data);
 
             return redirect()->to('/category');
         } else {

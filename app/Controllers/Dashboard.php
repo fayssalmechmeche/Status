@@ -6,11 +6,17 @@ use App\Models\ServiceModel;
 
 class Dashboard extends BaseController
 {
+    public $modal;
+    public function __construct()
+    {
+        $this->modal = new ServiceModel();
+        $data['services'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
+        return view('dashboard', $data);
+    }
     public function index()
     {
-        $modal = new ServiceModel();
-        $data['services'] = $modal->orderBy('id', 'DESC')->paginate(10);
-        return view('dashboard', $data);
+
+        return view('dashboard');
     }
     public function logout()
     {
@@ -29,7 +35,7 @@ class Dashboard extends BaseController
         ];
 
         if ($this->validate($rules)) {
-            $serviceModel = new ServiceModel();
+
 
             $data = [
                 'title'     => $this->request->getVar('title'),
@@ -39,10 +45,11 @@ class Dashboard extends BaseController
 
             ];
 
-            $serviceModel->save($data);
+            $this->modal->save($data);
 
             return redirect()->to('/dashboard');
         } else {
+            echo "raté ";
             $data['validation'] = $this->validator;
             return view('dashboard', $data);
         }

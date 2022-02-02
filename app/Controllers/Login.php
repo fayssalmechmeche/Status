@@ -7,6 +7,11 @@ use App\Models\LoginModel;
 class Login extends BaseController
 
 {
+    public $modal;
+    public function __construct()
+    {
+        $this->modal = new LoginModel();
+    }
     public function index()
     {
         helper(['form']);
@@ -15,11 +20,11 @@ class Login extends BaseController
     public function auth()
     {
         $session = session();
-        $model = new LoginModel();
+
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        $data = $model->where('email', $email)->first();
+        $data = $this->modal->where('email', $email)->first();
         if ($data) {
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);

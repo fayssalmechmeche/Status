@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php require_once "template/navbar.php" ?>
+    <?php require "template/navbar.php" ?>
     <main id="dashboard">
         <div class="main-title">Liste des catégories</div>
         <div class="subtitle">
@@ -53,7 +53,7 @@
                 <?php if (isset($validation)) : ?>
                     <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                 <?php endif; ?>
-                <form action='/statut/public/index.php/category/category' method='post'>
+                <form action='/statut/category/category' method='post'>
                     <div class="row">
                         <div class="form-group col-lg-3">
                             <label for="intitule">Intitulé</label>

@@ -8,26 +8,25 @@ use App\Models\LoginModel;
 class Users extends BaseController
 {
 
+    public $modal;
+    public function __construct()
+    {
+        helper(['form']);
+        $this->modal = new LoginModel();
+        $modal = new LoginModel();
 
 
+        $data['logins'] = $modal->orderBy('id', 'DESC')->paginate(10);
+        return view('users', $data);
+    }
 
     public function index()
     {
-        helper(['form']);
-        $modal = new LoginModel();
-        /*
-        $query = $db->query("select * from login");
-
-        foreach ($query->getResult() as $row) {
-            echo $row->email;
-            echo $row->name;
-        }
-        */
-
-        $data['logins'] = $modal->orderBy('id', 'DESC')->paginate(10);
 
 
-        return view('users', $data);
+
+
+        return view('users');
     }
     public function save()
 
@@ -42,16 +41,13 @@ class Users extends BaseController
         ];
 
         if ($this->validate($rules)) {
-            $userModel = new LoginModel();
-
-
             $data = [
                 'name'     => $this->request->getVar('name'),
                 'email'    => $this->request->getVar('email'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
 
-            $userModel->save($data);
+            $this->userModel->save($data);
             return redirect()->to('/Login');
         } else {
             $data['validation'] = $this->validator;

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php require_once "template/navbar.php" ?>
+    <?php require "template/navbar.php" ?>
     <main id="dashboard">
         <div class="main-title">Paramètres du compte</div>
         <div class="edit">
