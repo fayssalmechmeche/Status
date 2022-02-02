@@ -35,18 +35,17 @@ $routes->get('/', 'Index::index');
 $routes->get('login', 'Login::index');
 
 
-$routes->get('dashboard', 'Dashboard::index', ['filter' => 'auth']);
-$routes->get('category', 'Category::index', ['filter' => 'auth']);
-$routes->get('users', 'Users::index', ['filter' => 'auth']);
-$routes->get('settings', 'Settings::index', ['filter' => 'auth']);
-$routes->get('usersettings', 'UserSettings::index', ['filter' => 'auth']);
-/*
-$routes->get('/dashboard', 'Dashboard::index');
-$routes->get('categories', 'Categories::index');
-$routes->get('users', 'Users::index');
-$routes->get('settings', 'Settings::index');
-$routes->get('usersettings', 'UserSettings::index');
-*/
+
+
+$routes->group('', ['filter' => 'auth'], function ($routes) {
+    $routes->get('dashboard', 'Dashboard::index', ['as' => 'dashboard']);
+    $routes->get('category', 'Category::index', ['as' => 'category']);
+    $routes->get('users', 'Users::index', ['as' => 'users']);
+    $routes->get('settings', 'Settings::index', ['as' => 'settings']);
+    $routes->get('user/settings', 'UserSettings::index', ['as' => 'user.settings']);
+    $routes->get('dashboard/logout', 'Dashboard::logout', ['as' => 'logout']);
+});
+
 
 
 /*

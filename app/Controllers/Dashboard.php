@@ -47,7 +47,7 @@ class Dashboard extends BaseController
 
             $this->modal->save($data);
 
-            return redirect()->to('dashboard');
+            return redirect()->to(route_to('dashboard'));
         } else {
 
             $data['validation'] = $this->validator;
