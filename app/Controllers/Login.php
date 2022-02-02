@@ -8,8 +8,11 @@ class Login extends BaseController
 
 {
     public $modal;
+
     public function __construct()
+
     {
+
         $this->modal = new LoginModel();
     }
     public function index()

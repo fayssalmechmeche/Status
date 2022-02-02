@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<?php require "template/navbar.php" ?>
+	<?php require "template/sidebar.php" ?>
 	<main id="dashboard">
 		<div class="main-title">
 			Liste des services
