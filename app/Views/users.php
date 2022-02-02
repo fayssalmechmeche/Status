@@ -67,7 +67,7 @@
                 <?php if (isset($validation)) : ?>
                     <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                 <?php endif; ?>
-                <form action='/statut/users/save' method='post'>
+                <form action='<?= route_to('addUser') ?>' method='post'>
                     <div class="row">
 
                         <div class="form-group col-lg-6">

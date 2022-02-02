@@ -39,20 +39,20 @@ class Login extends BaseController
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to(route_to('dashboard'));
             } else {
                 $session->setFlashdata('msg', 'Combinaison Mail ou Mot de passe incorrect');
-                return redirect()->to('login');
+                return redirect()->to(route_to('login'));
             }
         } else {
             $session->setFlashdata('msg', 'Combinaison Mail ou Mot de passe incorrect');
-            return redirect()->to('login');
+            return redirect()->to(route_to('login'));
         }
     }
     public function logout()
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to(route_to('login'));
     }
 }

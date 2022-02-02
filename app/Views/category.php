@@ -53,7 +53,7 @@
                 <?php if (isset($validation)) : ?>
                     <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                 <?php endif; ?>
-                <form action='/statut/category/category' method='post'>
+                <form action=' <?= route_to('addCategory') ?>' method='post'>
                     <div class="row">
                         <div class="form-group col-lg-3">
                             <label for="intitule">Intitulé</label>

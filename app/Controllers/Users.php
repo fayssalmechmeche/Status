@@ -28,7 +28,7 @@ class Users extends BaseController
 
         return view('users');
     }
-    public function save()
+    public function addUser()
 
     {
 
@@ -48,7 +48,7 @@ class Users extends BaseController
             ];
 
             $this->userModel->save($data);
-            return redirect()->to('/Login');
+            return redirect()->to(route_to('login'));
         } else {
             $data['validation'] = $this->validator;
             return view('users', $data);

@@ -24,7 +24,7 @@ class Dashboard extends BaseController
         $session->destroy();
         return redirect()->to('login');
     }
-    public function service()
+    public function addService()
     {
         helper(['form']);
         $rules = [

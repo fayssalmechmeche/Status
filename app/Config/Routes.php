@@ -31,8 +31,10 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Index::index');
-$routes->get('login', 'Login::index');
+$routes->get('/', 'Index::index', ['as' => 'index']);
+
+$routes->get('login', 'Login::index', ['as' => 'login']);
+$routes->get('login/auth', 'Login::auth', ['as' => 'auth']);
 
 
 
@@ -41,9 +43,12 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('dashboard', 'Dashboard::index', ['as' => 'dashboard']);
     $routes->get('category', 'Category::index', ['as' => 'category']);
     $routes->get('users', 'Users::index', ['as' => 'users']);
+    $routes->get('users/addUser', 'Users::save', ['as' => 'addUser']);
     $routes->get('settings', 'Settings::index', ['as' => 'settings']);
     $routes->get('user/settings', 'UserSettings::index', ['as' => 'user.settings']);
     $routes->get('dashboard/logout', 'Dashboard::logout', ['as' => 'logout']);
+    $routes->get('dashboard/addService', 'Dashboard::addService', ['as' => 'addService']);
+    $routes->get('category/addCategory', 'Category::addCategory', ['as' => 'addCategory']);
 });
 
 

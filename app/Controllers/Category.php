@@ -21,7 +21,7 @@ class Category extends BaseController
 
         return view('category');
     }
-    public function category()
+    public function addCategory()
     {
         helper(['form']);
         $rules = [

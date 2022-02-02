@@ -18,7 +18,7 @@
     <main class="main-secondary">
         <div class="left">
             <img src=<?php echo base_url("/assets/images/logo.png"); ?> alt="logo" />
-            <a href="index"><i class="fa fa-arrow-circle-left"></i> Retourner à l'accueil</a>
+            <a href=<?= route_to('index') ?>><i class="fa fa-arrow-circle-left"></i> Retourner à l'accueil</a>
         </div>
         <div class="right">
             <div class="container">
@@ -29,7 +29,7 @@
                     <?php if (session()->getFlashdata('msg')) : ?>
                         <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
                     <?php endif; ?>
-                    <form action="login/auth" method="post">
+                    <form action="<?= route_to('auth') ?>" method="post">
                         <div class="d-flex flex-column m-2">
                             <label for="email">Adresse email</label>
                             <input type="email" class="form-control" id="email" name="email" value="<?= set_value('email') ?>">
