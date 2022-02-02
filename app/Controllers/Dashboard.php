@@ -22,7 +22,7 @@ class Dashboard extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('login');
     }
     public function service()
     {
@@ -47,9 +47,9 @@ class Dashboard extends BaseController
 
             $this->modal->save($data);
 
-            return redirect()->to('/dashboard');
+            return redirect()->to('dashboard');
         } else {
-            echo "raté ";
+
             $data['validation'] = $this->validator;
             return view('dashboard', $data);
         }
