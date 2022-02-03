@@ -70,7 +70,7 @@ class Users extends BaseController
 
         $rules = [
             'name'          => 'required|min_length[2]|max_length[50]',
-            'email'         => 'required|min_length[4]|max_length[100]|valid_email|is_unique[login.email]',
+            'email'         => 'required|min_length[4]|max_length[100]|valid_email|',
             'password'      => 'required|min_length[4]|max_length[50]',
             'cpassword'  => 'required|matches[password]'
         ];
@@ -79,11 +79,8 @@ class Users extends BaseController
 
         $id = $this->request->getVar('id');
 
-        if (!$rules) {
-            $data['logins'] = $this->modal->where('id', $id)->first();
-            $data['error'] = $this->validator;
-            return view('users', $data);
-        } else {
+        if ($this->validate($rules)) {
+
             $data = [
                 'name' => $this->request->getVar('name'),
                 'email'  => $this->request->getVar('email'),
@@ -97,6 +94,9 @@ class Users extends BaseController
             $session->setFlashdata('success', 'Donnée du compte mis à jour');
 
             return redirect()->to(route_to('users'));
+        } else {
+            $data['validationModal'] = $this->validator;
+            return view('users', $data);
         }
     }
 }

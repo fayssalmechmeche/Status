@@ -51,7 +51,10 @@
                             <td><?= $user["email"]  ?></td>
                             <td> <a href="users/edit/<?= $user['id'] ?>" class="btn btn-info" data-toggle="modal" data-target="#users-modal<?= $user['id'] ?>" name="edit">Modifier</a></td>
                             <div class="modal fade" id="users-modal<?= $user['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
+
+                                <?php if (isset($validationModal)) : ?>
+                                    <div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
+                                <?php endif; ?><div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title">Modifier l'utilisateur</h5>
@@ -60,6 +63,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
+
                                             <div class="alert alert-warning"><strong>Attention</strong> - Vous ne pouvez pas supprimer votre propre compte.</div>
                                             <div class="edit">
                                                 <div class="col-lg-12">
