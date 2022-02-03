@@ -611,3 +611,45 @@ CRITICAL - 2022-02-02 07:39:07 --> Undefined variable $logins
 #7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\wamp\www\statut\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-02-02 11:18:27 --> Undefined property: App\Controllers\Users::$userModel
+#0 C:\wamp\www\statut\app\Controllers\Users.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 50)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->addUser()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-02 11:20:11 --> Undefined property: App\Controllers\Users::$userModel
+#0 C:\wamp\www\statut\app\Controllers\Users.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\wamp\\www\\sta...', 50)
+#1 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Users->addUser()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-02 11:27:08 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 45)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('users', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Users.php(20): view('users', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Users->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+ERROR - 2022-02-02 16:23:35 --> Error connecting to the database: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée
+CRITICAL - 2022-02-02 16:23:35 --> Unable to connect to the database.
+Main connection [MySQLi]: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée
+#0 C:\wamp\www\statut\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp\www\statut\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp\www\statut\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp\www\statut\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\wamp\www\statut\app\Controllers\Login.php(30): CodeIgniter\BaseModel->first()
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Login->auth()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}

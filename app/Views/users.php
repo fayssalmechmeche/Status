@@ -18,6 +18,13 @@
 
 <body>
     <?php require "template/sidebar.php" ?>
+    <?php $session = \Config\Services::session();
+
+    if ($session->getFlashdata('success')) {
+        echo '
+            <div class="alert alert-success">' . $session->getFlashdata("success") . '</div>
+            ';
+    } ?>
     <main id="dashboard">
         <div class="main-title">Liste des utilisateurs</div>
         <div class="subtitle">
@@ -37,27 +44,61 @@
             <tbody>
                 <?php
 
-                if ($logins) {
-                    foreach ($logins as $user) {
-                        echo '
-        <tr>
-            
-            <td>' . $user["name"] . '</td>
-            <td>' . $user["email"] . '</td>
-            <td>
-                        <button class="btn btn-info" type="button" data-toggle="modal" data-target="#users-modal">Modifier</button>
-                    </td>
-            
-            <td></td>
-            <td></td>
-        </tr>';
-                    }
-                }
+                if ($logins) { ?>
+                    <?php foreach ($logins as $user) : ?>
+                        <tr>
+                            <td><?= $user["name"]  ?></td>
+                            <td><?= $user["email"]  ?></td>
+                            <td> <a href="users/edit/<?= $user['id'] ?>" class="btn btn-info" data-toggle="modal" data-target="#users-modal<?= $user['id'] ?>" name="edit">Modifier</a></td>
+                            <div class="modal fade" id="users-modal<?= $user['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Modifier l'utilisateur</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="alert alert-warning"><strong>Attention</strong> - Vous ne pouvez pas supprimer votre propre compte.</div>
+                                            <div class="edit">
+                                                <div class="col-lg-12">
+                                                    <form action="<?= route_to('users/update/') ?>" method="post">
+                                                        <div class="row">
+                                                            <div class="form-group col-lg-12">
+                                                                <label for="fullname">Nom complet</label>
+                                                                <input type="text" class="form-control" id="name" name="name" value="<?= $user['name'] ?>">
+                                                            </div>
+                                                            <div class="form-group col-lg-12">
+                                                                <label for="email">Adresse email</label>
+                                                                <input type="email" class="form-control" id="email" name="email" value="<?= $user['email'] ?>">
+                                                            </div>
+                                                            <div class="form-group col-lg-12">
+                                                                <label for="password">Mot de passe</label>
+                                                                <input type="password" class="form-control" id="password" name="password">
+                                                            </div>
+                                                            <div class="form-group col-lg-12">
+                                                                <label for="confirmPassword">Confirmer le mot de passe</label>
+                                                                <input type="password" class="form-control" id="cpassword" name="cpassword" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <input type="hidden" name="id" value="<?php echo $user["id"]; ?>" />
+                                                            <button type="submit" name="modify" class="btn btn-secondary">Modifier</button>
+                                                            <button type="submit" name="delete" class="btn btn-danger">Supprimer l'utilisateur</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </tr>
 
-
-
+                    <?php endforeach; ?>
+                <?php } ?>
 
             </tbody>
         </table>
@@ -92,49 +133,7 @@
             </div>
         </div>
     </main>
-    <div class="modal fade" id="users-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modifier l'utilisateur</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="alert alert-warning"><strong>Attention</strong> - Vous ne pouvez pas supprimer votre propre compte.</div>
-                    <div class="edit">
-                        <div class="col-lg-12">
-                            <form>
-                                <div class="row">
-                                    <div class="form-group col-lg-12">
-                                        <label for="fullname">Nom complet</label>
-                                        <input type="text" class="form-control" id="fullname" value="Ewan Kerboas">
-                                    </div>
-                                    <div class="form-group col-lg-12">
-                                        <label for="email">Adresse email</label>
-                                        <input type="email" class="form-control" id="email" value="ewan.kerboas@ezcorp.io">
-                                    </div>
-                                    <div class="form-group col-lg-12">
-                                        <label for="password">Mot de passe</label>
-                                        <input type="password" class="form-control" id="password">
-                                    </div>
-                                    <div class="form-group col-lg-12">
-                                        <label for="confirmPassword">Confirmer le mot de passe</label>
-                                        <input type="password" class="form-control" id="confirmPassword" value="">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-secondary">Modifier</button>
-                    <button type="submit" class="btn btn-danger">Supprimer l'utilisateur</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <script src="js/script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

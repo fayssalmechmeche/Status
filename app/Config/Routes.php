@@ -39,6 +39,7 @@ $routes->get('login/auth', 'Login::auth', ['as' => 'auth']);
 
 
 
+
 $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('dashboard', 'Dashboard::index', ['as' => 'dashboard']);
     $routes->get('category', 'Category::index', ['as' => 'category']);
@@ -49,6 +50,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('dashboard/logout', 'Dashboard::logout', ['as' => 'logout']);
     $routes->get('dashboard/addService', 'Dashboard::addService', ['as' => 'addService']);
     $routes->get('category/addCategory', 'Category::addCategory', ['as' => 'addCategory']);
+    $routes->get('users/edit/(:num)', 'Users::edit/$1', ['as' => 'users/edit']);
+    $routes->put('users/update/', 'Users::update/', ['as' => 'users/update/']);
 });
 
 
