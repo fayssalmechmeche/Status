@@ -23,7 +23,7 @@ class Category extends BaseController
     }
     public function addCategory()
     {
-        helper(['form']);
+        helper(['form', 'url']);
         $rules = [
             'title'          => 'required'
         ];
@@ -40,6 +40,42 @@ class Category extends BaseController
             return redirect()->to('/category');
         } else {
             $data['validation'] = $this->validator;
+            return view('category', $data);
+        }
+    }
+    public function edit($id = null)
+    {
+        $data['categorys'] = $this->modal->find($id);
+        return view('category/edit', $data);
+    }
+    function update()
+    {
+        helper(['form', 'url']);
+
+        $rules = [
+            'title'          => 'required'
+        ];
+
+
+
+        $id = $this->request->getVar('id');
+
+        if ($this->validate($rules)) {
+
+            $data = [
+                'title' => $this->request->getVar('title')
+
+            ];
+
+            $this->modal->update($id, $data);
+
+            $session = \Config\Services::session();
+
+            $session->setFlashdata('success', 'Donnée du compte mis à jour');
+
+            return redirect()->to(route_to('category'));
+        } else {
+            $data['validationModal'] = $this->validator;
             return view('category', $data);
         }
     }

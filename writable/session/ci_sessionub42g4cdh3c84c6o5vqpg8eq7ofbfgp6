@@ -1,1 +1,1 @@
-__ci_last_regenerate|i:1643899583;_ci_previous_url|s:27:"http://localhost:8080/users";id|s:1:"1";name|s:4:"test";email|s:13:"test@test.com";logged_in|b:1;success|s:29:"Donnée du compte mis à jour";__ci_vars|a:1:{s:7:"success";s:3:"old";}
+__ci_last_regenerate|i:1643899974;_ci_previous_url|s:27:"http://localhost:8080/users";id|s:1:"1";name|s:4:"test";email|s:13:"test@test.com";logged_in|b:1;success|s:29:"Donnée du compte mis à jour";__ci_vars|a:1:{s:7:"success";s:3:"old";}
