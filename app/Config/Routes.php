@@ -52,6 +52,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('category/addCategory', 'Category::addCategory', ['as' => 'addCategory']);
     $routes->get('users/edit/(:num)', 'Users::edit/$1', ['as' => 'users/edit']);
     $routes->put('users/update/', 'Users::update/', ['as' => 'users/update/']);
+    $routes->put('users/delete/', 'Users::delete/', ['as' => 'users/delete/']);
     $routes->put('users/settings/update/', 'UserSettings::update/', ['as' => 'users/settings/update/']);
     $routes->put('category/update/', 'Category::update/', ['as' => 'category/update/']);
     $routes->put('category/delete/', 'Category::delete/', ['as' => 'category/delete/']);

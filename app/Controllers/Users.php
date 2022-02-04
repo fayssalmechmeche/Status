@@ -17,11 +17,16 @@ class Users extends BaseController
 
 
         $data['logins'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
+
         return view('users', $data);
     }
 
     public function index()
     {
+
+
+
+
         return view('users');
     }
     public function addUser()
@@ -98,5 +103,17 @@ class Users extends BaseController
             $data['validationModal'] = $this->validator;
             return view('users', $data);
         }
+    }
+    function delete()
+    {
+
+        $id = $this->request->getVar('id');
+        $this->modal->where('id', $id)->delete($id);
+
+        $session = \Config\Services::session();
+
+        $session->setFlashdata('success', 'Compte supprimé');
+
+        return redirect()->to(route_to('users'));
     }
 }

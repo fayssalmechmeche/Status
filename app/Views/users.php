@@ -63,11 +63,14 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
+                                            <?php if ($session->getFlashdata('warning')) : ?>
+                                                <div class="alert alert-warning"><strong>Attention</strong> - Vous ne pouvez pas supprimer votre propre compte.</div>
+                                            <?php endif; ?>
 
-                                            <div class="alert alert-warning"><strong>Attention</strong> - Vous ne pouvez pas supprimer votre propre compte.</div>
+
                                             <div class="edit">
                                                 <div class="col-lg-12">
-                                                    <form action="<?= route_to('users/update/') ?>" method="post">
+                                                    <form action='' method="post">
                                                         <div class="row">
                                                             <div class="form-group col-lg-12">
                                                                 <label for="fullname">Nom complet</label>
@@ -88,8 +91,11 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <input type="hidden" name="id" value="<?php echo $user["id"]; ?>" />
-                                                            <button type="submit" name="modify" class="btn btn-secondary">Modifier</button>
-                                                            <button type="submit" name="delete" class="btn btn-danger">Supprimer l'utilisateur</button>
+                                                            <button type="submit" name="modify" class="btn btn-secondary" formaction="<?= route_to('users/update/') ?>">Modifier</button>
+
+                                                            <button type="submit" name="delete" class="btn btn-danger" formaction="<?= route_to('users/delete/') ?>">Supprimer l'utilisateur</button>
+
+
                                                         </div>
                                                     </form>
                                                 </div>
