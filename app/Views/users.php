@@ -62,10 +62,19 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
+                                        <?php $session = \Config\Services::session();
+
+                                        if ($session->getFlashdata('warning')) {
+                                            echo '
+            <div class="alert alert-warning">' . $session->getFlashdata("warning") . '</div>
+            ';
+                                        } ?>
+
+
+
                                         <div class="modal-body">
-                                            <?php if ($session->getFlashdata('warning')) : ?>
-                                                <div class="alert alert-warning"><strong>Attention</strong> - Vous ne pouvez pas supprimer votre propre compte.</div>
-                                            <?php endif; ?>
+
+
 
 
                                             <div class="edit">

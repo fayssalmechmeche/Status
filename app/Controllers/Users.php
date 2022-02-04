@@ -106,14 +106,22 @@ class Users extends BaseController
     }
     function delete()
     {
+        $session = \Config\Services::session();
+        $session->get('id');
+
 
         $id = $this->request->getVar('id');
-        $this->modal->where('id', $id)->delete($id);
 
-        $session = \Config\Services::session();
+        if ($session->get('id') == $id) {
 
-        $session->setFlashdata('success', 'Compte supprimé');
+            $session = \Config\Services::session();
 
-        return redirect()->to(route_to('users'));
+            $session->setFlashdata('warning', ' Vous ne pouvez pas supprimer votre propre compte.');
+            return redirect()->to(route_to('users'));
+        } else {
+
+            $this->modal->where('id', $id)->delete($id);
+            return redirect()->to(route_to('users'));
+        }
     }
 }
