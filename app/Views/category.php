@@ -58,7 +58,7 @@
                                             <div class="modal-body">
                                                 <div class="edit">
                                                     <div class="col-lg-12">
-                                                        <form action="<?= route_to('category/update/') ?>" method="post">
+                                                        <form action="" method="post">
                                                             <div class="row">
                                                                 <div class="form-group col-lg-6">
                                                                     <label for="name">Intitulé</label>
@@ -67,8 +67,8 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <input type="hidden" name="id" value="<?php echo $category["id"]; ?>" />
-                                                                <button type="submit" class="btn btn-secondary">Modifier</button>
-                                                                <button type="submit" class="btn btn-danger">Supprimer la catégorie</button>
+                                                                <button type="submit" class="btn btn-secondary" formaction="<?= route_to('category/update/') ?>">Modifier</button>
+                                                                <button type="submit" class="btn btn-danger" formaction="<?= route_to('category/delete/') ?>">Supprimer la catégorie</button>
                                                             </div>
                                                         </form>
                                                     </div>

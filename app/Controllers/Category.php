@@ -71,12 +71,24 @@ class Category extends BaseController
 
             $session = \Config\Services::session();
 
-            $session->setFlashdata('success', 'Donnée du compte mis à jour');
+            $session->setFlashdata('success', 'Catégorie mis à jour');
 
             return redirect()->to(route_to('category'));
         } else {
             $data['validationModal'] = $this->validator;
             return view('category', $data);
         }
+    }
+    function delete()
+    {
+
+        $id = $this->request->getVar('id');
+        $this->modal->where('id', $id)->delete($id);
+
+        $session = \Config\Services::session();
+
+        $session->setFlashdata('success', 'Catégorie supprimé');
+
+        return redirect()->to(route_to('category'));
     }
 }
