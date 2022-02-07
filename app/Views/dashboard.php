@@ -108,7 +108,7 @@
 														</div>
 														<div class="form-group col-lg-6">
 															<label for="status">Statut</label>
-															<select class="form-control">
+															<select name="state" class="form-control">
 																<option selected>En ligne</option>
 																<option>Panne partielle</option>
 																<option>Maintenance</option>

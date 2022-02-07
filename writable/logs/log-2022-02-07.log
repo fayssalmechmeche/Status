@@ -150,3 +150,15 @@ CRITICAL - 2022-02-07 08:26:01 --> Le champ 'state' ne peut être vide (null)
 #12 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #13 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
 #14 {main}
+CRITICAL - 2022-02-07 08:33:15 --> Undefined variable $index
+#0 C:\wamp\www\statut\app\Views\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 34)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(9): view('index')
+#5 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\Index->index()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
