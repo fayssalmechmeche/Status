@@ -46,6 +46,8 @@ class Dashboard extends BaseController
                 'link'    => $this->request->getVar('link'),
                 'category'    => $this->request->getVar('category'),
                 'monitoring'    => $this->request->getVar('monitoring'),
+                'ip'    => $this->request->getVar('ip'),
+                'state'    => $this->request->getVar('state'),
 
             ];
 
@@ -73,7 +75,13 @@ class Dashboard extends BaseController
         if ($this->validate($rules)) {
 
             $data = [
-                'title' => $this->request->getVar('title')
+                'title'     => $this->request->getVar('title'),
+                'link'    => $this->request->getVar('link'),
+                'category'    => $this->request->getVar('category'),
+                'monitoring'    => $this->request->getVar('monitoring'),
+                'ip'    => $this->request->getVar('ip'),
+                'state'    => $this->request->getVar('state'),
+
 
             ];
 
@@ -100,5 +108,20 @@ class Dashboard extends BaseController
         $session->setFlashdata('success', 'Service supprimé');
 
         return redirect()->to(route_to('dashboard'));
+    }
+    function checkServ($host, $port = 80, $timeout = 10)
+    {
+        //$fp = fSockOpen($host, $port, $errno, $errstr, $timeout);
+        //return $fp!=false;
+
+        error_reporting(E_ALL ^ E_WARNING);  // ligne qui enleve les messages d'erreur car il affiche un Warning (moche) si le serveur est down
+
+        if (fSockOpen($host, $port, $errno, $errstr, $timeout)) //on check si le serv est up ou pas
+        {
+            $session = \Config\Services::session();
+            return $session->setFlashdata('serverup', 'Serveur UP');
+        }
+        $session = \Config\Services::session();
+        return $session->setFlashdata('serverdown', 'Serveur Down');
     }
 }

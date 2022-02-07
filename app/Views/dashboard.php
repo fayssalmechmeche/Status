@@ -97,7 +97,7 @@
 														</div>
 														<div class="form-group col-lg-12">
 															<label for="category">Catégorie</label>
-															<select class="form-control">
+															<select name="category" class="form-control">
 																<?php if ($categorys) {
 																	foreach ($categorys as $category) : ?>
 																		<option> <?= $category['title'] ?></option>
@@ -142,39 +142,7 @@
 						</div>
 				<?php endforeach;
 				} ?>
-				<tr>
-					<td><a href="#">Service 1</a></td>
-					<td>Sites web</td>
-					<td>127.0.0.1</td>
-					<td class="d-flex justify-content-center">
-						<div class="status warning"></div>
-					</td>
-					<td>
-						<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal">Modifier</button>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#">Service 2</a></td>
-					<td>Noms de domaine</td>
-					<td>127.0.0.1</td>
-					<td class="d-flex justify-content-center">
-						<div class="status danger"></div>
-					</td>
-					<td>
-						<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal">Modifier</button>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#">Service 3</a></td>
-					<td>Serveurs</td>
-					<td>127.0.0.1</td>
-					<td class="d-flex justify-content-center">
-						<div class="status success"></div>
-					</td>
-					<td>
-						<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal<?= $service['id'] ?>">Modifier</button>
-					</td>
-				</tr>
+
 			</tbody>
 		</table>
 		<div class="subtitle">Ajouter un service</div>
@@ -212,7 +180,7 @@
 						</div>
 						<div class="form-group col-lg-6">
 							<label for="status">Statut</label>
-							<select class="form-control" name="status">
+							<select class="form-control" name="state">
 								<option selected>En ligne</option>
 								<option>Panne partielle</option>
 								<option>Maintenance</option>
