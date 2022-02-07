@@ -7,7 +7,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
+	<link rel="shortcut icon" href="<?php
+
+									use App\Controllers\Category;
+
+									echo base_url("/assets/images/favicon.png"); ?>" />
 	<!-- Basic CSS -->
 
 
@@ -19,6 +23,13 @@
 
 <body>
 	<?php require "template/sidebar.php" ?>
+	<?php $session = \Config\Services::session();
+
+	if ($session->getFlashdata('success')) {
+		echo '
+            <div class="alert alert-success">' . $session->getFlashdata("success") . '</div>
+            ';
+	} ?>
 	<main id="dashboard">
 		<div class="main-title">
 			Liste des services
@@ -38,23 +49,99 @@
 				<?php
 
 				if ($services) {
-					foreach ($services as $service) {
-						echo '
-<tr>
-<td><a href="' . $service["link"] . '">' . $service["title"] . '</a></td>
-<td>' . $service["category"] . '</td>
-<td>' . $service["ip"] . '</td>
-<td>' . $service["state"] . '</td>
-<td>
-						<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal">Modifier</button>
-					</td>
+					foreach ($services as $service) : ?>
+
+						<tr>
+							<td><a href="<?= $service['link'] ?>"><?= $service["title"] ?></a></td>
+							<td><?= $service["category"] ?></td>
+							<td><?= $service["ip"] ?></td>
+							<td><?= $service["state"] ?></td>
+							<td>
+								<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal<?= $service['id'] ?>">Modifier</button>
+							</td>
 
 
-</tr>';
-					}
-				}
+						</tr>
+						<div class="modal fade" id="services-modal<?= $service['id'] ?>" tabindex=" -1">
+							<?php if (isset($validationModal)) : ?>
+								<div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
+							<?php endif; ?>
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title">Modifier le service</h5>
+										<button type="button" class="close" data-dismiss="modal">
+											<span>&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="edit">
+											<div class="col-lg-12">
+												<form action="" method="post">
+													<div class="row">
+														<div class="form-group col-lg-12">
+															<label for="name">Intitulé</label>
+															<input type="text" class="form-control" id="title" name="title" value="<?= $service['title'] ?>">
+														</div>
+														<div class="form-group col-lg-12">
+															<label for="description">Description</label>
+															<input type="text" class="form-control" id="description" name="" value="description">
+														</div>
+														<div class="form-group col-lg-6">
+															<label for="link">Lien</label>
+															<input type="text" class="form-control" id="link" name="link" value="<?= $service['link'] ?>">
+														</div>
+														<div class="form-group col-lg-6">
+															<label for="hostname">IP/Hôte</label>
+															<input type="text" class="form-control" id="hostname" name="ip" value="<?= $service['ip'] ?>">
+														</div>
+														<div class="form-group col-lg-12">
+															<label for="category">Catégorie</label>
+															<select class="form-control">
+																<?php if ($categorys) {
+																	foreach ($categorys as $category) : ?>
+																		<option> <?= $category['title'] ?></option>
 
-				?>
+																<?php endforeach;
+																} ?>
+															</select>
+														</div>
+														<div class="form-group col-lg-6">
+															<label for="status">Statut</label>
+															<select class="form-control">
+																<option selected>En ligne</option>
+																<option>Panne partielle</option>
+																<option>Maintenance</option>
+																<option>Hors-ligne</option>
+															</select>
+														</div>
+														<div class="form-group col-lg-6">
+															<label for="monitoring">Monitoring automatique</label>
+															<select class="form-control">
+																<option selected>Non</option>
+																<option>Oui</option>
+															</select>
+														</div>
+														<div class="form-group col-lg-12">
+															<label for="message">Message</label>
+															<textarea class="form-control" id="message" name="message" rows="4"></textarea>
+														</div>
+														<div class="modal-footer">
+															<input type="hidden" name="id" value="<?php echo $service["id"]; ?>">
+															<button type="submit" class="btn btn-secondary" formaction="<?= route_to('dashboard/update/') ?>">Modifier</button>
+															<button type="submit" class="btn btn-danger" formaction="<?= route_to('dashboard/delete/') ?>">Supprimer le service</button>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				<?php endforeach;
+				} ?>
 				<tr>
 					<td><a href="#">Service 1</a></td>
 					<td>Sites web</td>
@@ -85,7 +172,7 @@
 						<div class="status success"></div>
 					</td>
 					<td>
-						<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal">Modifier</button>
+						<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal<?= $service['id'] ?>">Modifier</button>
 					</td>
 				</tr>
 			</tbody>
@@ -114,9 +201,13 @@
 						<div class="form-group col-lg-12">
 							<label for="category">Catégorie</label>
 							<select class="form-control" name="category">
-								<option selected>Sites web</option>
-								<option>Noms de domaine</option>
-								<option>Serveurs</option>
+								<?php if ($categorys) {
+									foreach ($categorys as $category) : ?>
+										<option> <?= $category['title'] ?></option>
+
+								<?php endforeach;
+								} ?>
+
 							</select>
 						</div>
 						<div class="form-group col-lg-6">
@@ -141,76 +232,7 @@
 			</div>
 		</div>
 	</main>
-	<div class="modal fade" id="services-modal" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Modifier le service</h5>
-					<button type="button" class="close" data-dismiss="modal">
-						<span>&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="edit">
-						<div class="col-lg-12">
-							<form>
-								<div class="row">
-									<div class="form-group col-lg-12">
-										<label for="name">Intitulé</label>
-										<input type="text" class="form-control" id="name" value="test">
-									</div>
-									<div class="form-group col-lg-12">
-										<label for="description">Description</label>
-										<input type="text" class="form-control" id="description" value="description">
-									</div>
-									<div class="form-group col-lg-6">
-										<label for="link">Lien</label>
-										<input type="text" class="form-control" id="link" value="lien">
-									</div>
-									<div class="form-group col-lg-6">
-										<label for="hostname">IP/Hôte</label>
-										<input type="text" class="form-control" id="hostname" value="127.0.0.1">
-									</div>
-									<div class="form-group col-lg-12">
-										<label for="category">Catégorie</label>
-										<select class="form-control">
-											<option selected>Sites web</option>
-											<option>Noms de domaine</option>
-											<option>Serveurs</option>
-										</select>
-									</div>
-									<div class="form-group col-lg-6">
-										<label for="status">Statut</label>
-										<select class="form-control">
-											<option selected>En ligne</option>
-											<option>Panne partielle</option>
-											<option>Maintenance</option>
-											<option>Hors-ligne</option>
-										</select>
-									</div>
-									<div class="form-group col-lg-6">
-										<label for="monitoring">Monitoring automatique</label>
-										<select class="form-control">
-											<option selected>Non</option>
-											<option>Oui</option>
-										</select>
-									</div>
-									<div class="form-group col-lg-12">
-										<label for="message">Message</label>
-										<textarea class="form-control" id="message" rows="4"></textarea>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-secondary">Modifier</button>
-					<button type="submit" class="btn btn-danger">Supprimer le service</button>
-				</div>
-			</div>
-		</div>
-	</div>
+
 	<div class="modal fade" id="categorie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -239,8 +261,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="submit" class="btn btn-secondary">Modifier</button>
-					<button type="submit" class="btn btn-danger">Supprimer le service</button>
+					<button type="submit" class="btn btn-secondary" formaction="">Modifier</button>
+					<button type="submit" class="btn btn-danger" formaction="">Supprimer le service</button>
 				</div>
 			</div>
 		</div>

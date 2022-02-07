@@ -50,6 +50,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     $routes->get('dashboard/logout', 'Dashboard::logout', ['as' => 'logout']);
     $routes->get('dashboard/addService', 'Dashboard::addService', ['as' => 'addService']);
+    $routes->put('dashboard/update/', 'Dashboard::update/', ['as' => 'dashboard/update/']);
+    $routes->get('dashboard/delete/', 'Dashboard::delete/', ['as' => 'dashboard/delete/']);
 
 
     $routes->get('users/edit/(:num)', 'Users::edit/$1', ['as' => 'users/edit']);
