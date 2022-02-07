@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="sidebar-brand">
-        <img src=<?php echo base_url("/assets/images/logo.png"); ?> alt="logo" />
+        <img src=<?php echo base_url("/assets/images/" . $logo['name']); ?> alt="logo" />
         <hr />
     </div>
     <div class="sidebar-content">

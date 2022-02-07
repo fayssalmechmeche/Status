@@ -29,7 +29,7 @@
         <div class="main-title">Paramètres du site</div>
         <div class="edit">
             <div class="col-lg-12">
-                <form class="mt-4" method="post" action="<?= route_to('settings/update/') ?>">
+                <form class="mt-4" enctype="multipart/form-data" method="post" action="<?= route_to('settings/update/') ?>">
                     <div class="row">
                         <div class="form-group col-lg-6">
                             <label for="siteName">Nom du site</label>
@@ -42,7 +42,7 @@
 
                         <div class="form-group col-lg-6">
                             <label for="logo">Logo du site</label>
-                            <input type="file" class="form-control-file" id="logo">
+                            <input type="file" class="form-control-file" name="logo" id="logo" value="upload">
                         </div>
                     </div>
                     <div>

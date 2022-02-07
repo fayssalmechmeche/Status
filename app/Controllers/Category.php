@@ -4,11 +4,13 @@ namespace App\Controllers;
 
 use App\Models\CategoryModel;
 use App\Models\MetaModel;
+use App\Models\LogoModel;
 
 class Category extends BaseController
 {
     public $modal;
     public $modalMeta;
+    public $modalLogo;
     public function __construct()
     {
         $this->modal = new CategoryModel();
@@ -17,6 +19,8 @@ class Category extends BaseController
         $data['categorys'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
         $this->modalMeta = new MetaModel();
         $data['meta'] = $this->modalMeta->find(1);
+        $this->modalLogo = new LogoModel();
+        $data['logo'] = $this->modalLogo->find(1);
         return view('category', $data);
     }
     public function index()

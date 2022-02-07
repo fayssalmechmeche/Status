@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\LoginModel;
 use App\Models\MetaModel;
+use App\Models\LogoModel;
 
 class User extends BaseController
 {
@@ -22,6 +23,8 @@ class User extends BaseController
 
         $data['logins'] = $this->modal->find($id);
         $data['meta'] = $this->modalMeta->find(1);
+        $this->modalLogo = new LogoModel();
+        $data['logo'] = $this->modalLogo->find(1);
 
 
 

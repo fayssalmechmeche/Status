@@ -34,7 +34,7 @@
                     <form action="<?= route_to('auth') ?>" method="post">
                         <div class="d-flex flex-column m-2">
                             <label for="email">Adresse email</label>
-                            <input type="email" class="form-control" id="email" name="email" value="<?= set_value('email') ?>">
+                            <input type="email" class="form-control" id="email" name="email" value="">
                             <label class=" mt-4" for="password">Mot de passe</label>
                             <input type="password" class="form-control" id="password" name="password">
                             <button type="submit" class="btn success send mt-4">Envoyer</button>

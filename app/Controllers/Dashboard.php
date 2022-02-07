@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\ServiceModel;
 use App\Models\CategoryModel;
 use App\Models\MetaModel;
+use App\Models\LogoModel;
 
 class Dashboard extends BaseController
 {
@@ -19,6 +20,8 @@ class Dashboard extends BaseController
         $data['categorys'] = $this->modalCategory->orderBy('id', 'DESC')->paginate(10);
         $this->modalMeta = new MetaModel();
         $data['meta'] = $this->modalMeta->find(1);
+        $this->modalLogo = new LogoModel();
+        $data['logo'] = $this->modalLogo->find(1);
 
         return view('dashboard', $data);
     }

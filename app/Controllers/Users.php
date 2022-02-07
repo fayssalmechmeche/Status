@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\LoginModel;
 use App\Models\MetaModel;
+use App\Models\LogoModel;
 
 
 class Users extends BaseController
@@ -21,6 +22,8 @@ class Users extends BaseController
         $data['logins'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
         $this->modalMeta = new MetaModel();
         $data['meta'] = $this->modalMeta->find(1);
+        $this->modalLogo = new LogoModel();
+        $data['logo'] = $this->modalLogo->find(1);
         return view('users', $data);
     }
 

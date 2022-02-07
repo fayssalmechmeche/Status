@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\MetaModel;
+use App\Models\LogoModel;
 
 class Settings extends BaseController
 {
@@ -17,6 +18,8 @@ class Settings extends BaseController
 
         $this->modalMeta = new MetaModel();
         $data['meta'] = $this->modalMeta->find(1);
+        $this->modalLogo = new LogoModel();
+        $data['logo'] = $this->modalLogo->find(1);
         return view('settings', $data);
     }
     public function index()
@@ -45,7 +48,15 @@ class Settings extends BaseController
 
             ];
 
-            $this->modal->update($id, $data);
+            $this->modalMeta->update($id, $data);
+
+
+
+            $imageFile = $this->request->getFile('logo');
+            $imageFile->move('./assets/images/');
+
+
+
 
             $session = \Config\Services::session();
 

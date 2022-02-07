@@ -4,18 +4,22 @@ namespace App\Controllers;
 
 use App\Models\LoginModel;
 use App\Models\MetaModel;
+use App\Models\LogoModel;
 
 class Login extends BaseController
 
 {
     public $modal;
     public $modalMeta;
+    public $modalLogo;
 
     public function __construct()
 
     {
         $this->modalMeta = new MetaModel();
         $data['meta'] = $this->modalMeta->find(1);
+        $this->modalLogo = new LogoModel();
+        $data['logo'] = $this->modalLogo->find(1);
 
         $this->modal = new LoginModel();
         return view('login', $data);
