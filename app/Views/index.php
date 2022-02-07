@@ -6,6 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" name="meta_description" content="<?= $meta['meta_description'] ?>">
+    <meta name="title" name="meta_title" content="<?= $meta['meta_title'] ?>">
     <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
     <!-- Basic CSS -->
     <link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
@@ -31,102 +33,97 @@
             <div class="panel-group mt-5" id="accordion" role="tablist" aria-multiselectable="true">
 
                 <!-- 1er tableau -->
-                <?php if ($index) {
 
-                    foreach ($index as $index) :
-                ?>
 
-                        <div class="panel panel-default" id="panel">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title d-flex justify-content-between">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-flex align-items-center collapsed">
-                                        <i class="fa fa-plus"></i>
-                                        <p>Sites internet</p>
-                                    </a>
-                                    <div class="d-flex align-items-center pr-2">
-                                        <div class="status warning"></div>
-                                    </div>
-                                </h4>
+                <div class="panel panel-default" id="panel">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title d-flex justify-content-between">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-flex align-items-center collapsed">
+                                <i class="fa fa-plus"></i>
+                                <p>Sites internet</p>
+                            </a>
+                            <div class="d-flex align-items-center pr-2">
+                                <div class="status warning"></div>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                        <div class="status-primary d-flex col-4">
-                                            <p><a target="_blank" href="https://ezcorp.io" class="ez-link">eZCorp.io</a></p>&nbsp;&nbsp;
-                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Site principal</span></span>
-                                        </div>
-                                        <div class="status-secondary col-4">
-                                            <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                        </div>
-                                        <div class="status-warning pr-4 col-4 text-right">
-                                            <p>Problèmes partiels</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                        <div class="status-primary d-flex col-4">
-                                            <p><a target="_blank" href="https://git.ezcorp.io">eZGit - GitLab</a></p>&nbsp;&nbsp;
-                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Serveur Gitlab</span></span>
-                                        </div>
-                                        <div class="status-secondary col-4">
-                                            <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                        </div>
-                                        <div class="status-success pr-4 col-4 text-right">
-                                            <p>Opérationnel</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                        <div class="status-primary d-flex col-4">
-                                            <p><a target="_blank" href="https://chat.ezcorp.io">eZChat - Rocket.Chat</a></p>&nbsp;&nbsp;
-                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Service de chat instantané</span></span>
-                                        </div>
-                                        <div class="status-secondary col-4">
-                                            <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                        </div>
-                                        <div class="status-success pr-4 col-4 text-right">
-                                            <p>Opérationnel</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                        <div class="status-primary d-flex col-4">
-                                            <p><a target="_blank" href="https://dash.ezcorp.io">eZDash - Espace membre</a></p>&nbsp;&nbsp;
-                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Espace membre associatif</span></span>
-                                        </div>
-                                        <div class="status-secondary col-4">
-                                            <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                        </div>
-                                        <div class="status-success pr-4 col-4 text-right">
-                                            <p>Opérationnel</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                        <div class="status-primary d-flex col-4">
-                                            <p><a target="_blank" href="https://docs.ezcorp.io">eZDocs - Documentation</a></p>&nbsp;&nbsp;
-                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Documentation en ligne</span></span>
-                                        </div>
-                                        <div class="status-secondary col-4">
-                                            <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                        </div>
-                                        <div class="status-success pr-4 col-4 text-right">
-                                            <p>Opérationnel</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                        <div class="status-primary d-flex col-4">
-                                            <p><a target="_blank" href="https://adhesion.ezcorp.io">eZAdhesion - Bulletin d'adhésion</a></p>&nbsp;&nbsp;
-                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Formulaire d'adhésion en ligne</span></span>
-                                        </div>
-                                        <div class="status-secondary col-4">
-                                            <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                        </div>
-                                        <div class="status-success pr-4 col-4 text-right">
-                                            <p>Opérationnel</p>
-                                        </div>
-                                    </div>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                <div class="status-primary d-flex col-4">
+                                    <p><a target="_blank" href="https://ezcorp.io" class="ez-link">eZCorp.io</a></p>&nbsp;&nbsp;
+                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Site principal</span></span>
+                                </div>
+                                <div class="status-secondary col-4">
+                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
+                                </div>
+                                <div class="status-warning pr-4 col-4 text-right">
+                                    <p>Problèmes partiels</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                <div class="status-primary d-flex col-4">
+                                    <p><a target="_blank" href="https://git.ezcorp.io">eZGit - GitLab</a></p>&nbsp;&nbsp;
+                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Serveur Gitlab</span></span>
+                                </div>
+                                <div class="status-secondary col-4">
+                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
+                                </div>
+                                <div class="status-success pr-4 col-4 text-right">
+                                    <p>Opérationnel</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                <div class="status-primary d-flex col-4">
+                                    <p><a target="_blank" href="https://chat.ezcorp.io">eZChat - Rocket.Chat</a></p>&nbsp;&nbsp;
+                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Service de chat instantané</span></span>
+                                </div>
+                                <div class="status-secondary col-4">
+                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
+                                </div>
+                                <div class="status-success pr-4 col-4 text-right">
+                                    <p>Opérationnel</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                <div class="status-primary d-flex col-4">
+                                    <p><a target="_blank" href="https://dash.ezcorp.io">eZDash - Espace membre</a></p>&nbsp;&nbsp;
+                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Espace membre associatif</span></span>
+                                </div>
+                                <div class="status-secondary col-4">
+                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
+                                </div>
+                                <div class="status-success pr-4 col-4 text-right">
+                                    <p>Opérationnel</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                <div class="status-primary d-flex col-4">
+                                    <p><a target="_blank" href="https://docs.ezcorp.io">eZDocs - Documentation</a></p>&nbsp;&nbsp;
+                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Documentation en ligne</span></span>
+                                </div>
+                                <div class="status-secondary col-4">
+                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
+                                </div>
+                                <div class="status-success pr-4 col-4 text-right">
+                                    <p>Opérationnel</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                <div class="status-primary d-flex col-4">
+                                    <p><a target="_blank" href="https://adhesion.ezcorp.io">eZAdhesion - Bulletin d'adhésion</a></p>&nbsp;&nbsp;
+                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Formulaire d'adhésion en ligne</span></span>
+                                </div>
+                                <div class="status-secondary col-4">
+                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
+                                </div>
+                                <div class="status-success pr-4 col-4 text-right">
+                                    <p>Opérationnel</p>
                                 </div>
                             </div>
                         </div>
-                <?php endforeach;
-                } ?>
+                    </div>
+                </div>
 
                 <!-- 2ème tableau -->
 

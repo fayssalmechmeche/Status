@@ -6,6 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" name="meta_description" content="<?= $meta['meta_description'] ?>">
+    <meta name="title" name="meta_title" content="<?= $meta['meta_title'] ?>">
     <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
     <!-- Basic CSS -->
     <link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
@@ -16,30 +18,38 @@
 
 <body>
     <?php require "template/sidebar.php" ?>
+    <?php $session = \Config\Services::session();
+
+    if ($session->getFlashdata('success')) {
+        echo '
+        <div class="alert alert-success">' . $session->getFlashdata("success") . '</div>
+        ';
+    } ?>
     <main id="dashboard">
         <div class="main-title">Paramètres du site</div>
         <div class="edit">
             <div class="col-lg-12">
-                <form class="mt-4">
+                <form class="mt-4" method="post" action="<?= route_to('settings/update/') ?>">
                     <div class="row">
                         <div class="form-group col-lg-6">
                             <label for="siteName">Nom du site</label>
-                            <input type="number" class="form-control" id="siteName">
+                            <input type="text" class="form-control" name="meta_title" id="meta_title" value="<?= $meta['meta_title'] ?>">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="description">Description du site</label>
-                            <input type="text" class="form-control" id="description">
+                            <input type="text" class="form-control" name="meta_description" id="meta_description" value="<?= $meta['meta_description'] ?>">
                         </div>
-                        <div class="form-group col-lg-6">
-                            <label for="link">URL du site</label>
-                            <input type="text" class="form-control" id="link">
-                        </div>
+
                         <div class="form-group col-lg-6">
                             <label for="logo">Logo du site</label>
                             <input type="file" class="form-control-file" id="logo">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-secondary">Modifier</button>
+                    <div>
+                        <input type="hidden" name="id" value="<?= $meta["id"]; ?>" />
+                        <button type="submit" class="btn btn-secondary">Modifier</button>
+                    </div>
+
                 </form>
             </div>
         </div>

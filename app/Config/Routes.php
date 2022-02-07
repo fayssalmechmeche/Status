@@ -45,6 +45,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('category', 'Category::index', ['as' => 'category']);
 
     $routes->get('settings', 'Settings::index', ['as' => 'settings']);
+    $routes->get('settings/update/', 'Settings::update', ['as' => 'settings/update/']);
 
 
 

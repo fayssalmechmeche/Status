@@ -3,12 +3,14 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use App\Models\MetaModel;
 
 
 class Users extends BaseController
 {
 
     public $modal;
+    public $modalMeta;
     public function __construct()
     {
         helper(['form']);
@@ -17,7 +19,8 @@ class Users extends BaseController
 
 
         $data['logins'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
-
+        $this->modalMeta = new MetaModel();
+        $data['meta'] = $this->modalMeta->find(1);
         return view('users', $data);
     }
 

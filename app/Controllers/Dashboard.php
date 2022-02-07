@@ -4,17 +4,22 @@ namespace App\Controllers;
 
 use App\Models\ServiceModel;
 use App\Models\CategoryModel;
+use App\Models\MetaModel;
 
 class Dashboard extends BaseController
 {
     public $modalService;
     public $modalCategory;
+    public $modalMeta;
     public function __construct()
     {
         $this->modalService = new ServiceModel();
         $this->modalCategory = new CategoryModel();
         $data['services'] = $this->modalService->orderBy('id', 'DESC')->paginate(10);
         $data['categorys'] = $this->modalCategory->orderBy('id', 'DESC')->paginate(10);
+        $this->modalMeta = new MetaModel();
+        $data['meta'] = $this->modalMeta->find(1);
+
         return view('dashboard', $data);
     }
     public function index()

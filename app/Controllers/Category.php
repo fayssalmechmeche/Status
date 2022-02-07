@@ -3,16 +3,20 @@
 namespace App\Controllers;
 
 use App\Models\CategoryModel;
+use App\Models\MetaModel;
 
 class Category extends BaseController
 {
     public $modal;
+    public $modalMeta;
     public function __construct()
     {
         $this->modal = new CategoryModel();
 
 
         $data['categorys'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
+        $this->modalMeta = new MetaModel();
+        $data['meta'] = $this->modalMeta->find(1);
         return view('category', $data);
     }
     public function index()

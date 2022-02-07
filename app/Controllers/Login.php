@@ -3,17 +3,22 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use App\Models\MetaModel;
 
 class Login extends BaseController
 
 {
     public $modal;
+    public $modalMeta;
 
     public function __construct()
 
     {
+        $this->modalMeta = new MetaModel();
+        $data['meta'] = $this->modalMeta->find(1);
 
         $this->modal = new LoginModel();
+        return view('login', $data);
     }
     public function index()
     {

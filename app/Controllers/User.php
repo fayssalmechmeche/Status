@@ -3,18 +3,25 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use App\Models\MetaModel;
 
 class User extends BaseController
 {
     public $modal;
+    public $modalMeta;
+
     public function __construct()
     {
         helper(['form']);
         $this->modal = new LoginModel();
+        $this->modalMeta = new MetaModel();
+
         $session = \Config\Services::session();
         $id = $session->get('id');
 
+
         $data['logins'] = $this->modal->find($id);
+        $data['meta'] = $this->modalMeta->find(1);
 
 
 
@@ -31,8 +38,8 @@ class User extends BaseController
         $rules = [
             'name'          => 'required|min_length[2]|max_length[50]',
             'email'         => 'required|min_length[4]|max_length[100]|valid_email|',
-            'password'      => 'required|min_length[4]|max_length[50]',
-            'cpassword'  => 'required|matches[password]'
+            'password'      => 'min_length[4]|max_length[50]',
+            'cpassword'  => 'matches[password]'
         ];
 
 

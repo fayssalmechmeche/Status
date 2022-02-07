@@ -6,6 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" name="meta_description" content="<?= $meta['meta_description'] ?>">
+    <meta name="title" name="meta_title" content="<?= $meta['meta_title'] ?>">
     <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
     <!-- Basic CSS -->
     <link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
@@ -20,13 +22,7 @@
     <?php if (isset($validation)) : ?>
         <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
     <?php endif; ?>
-    <?php $session = \Config\Services::session();
 
-    if ($session->getFlashdata('success')) {
-        echo '
-        <div class="alert alert-success">' . $session->getFlashdata("success") . '</div>
-        ';
-    } ?>
 
 
 
