@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li>
-                <a href=" <?= route_to('user.settings') ?>" data-toggle="tooltip" data-placement="right" title="Paramètres du compte">
+                <a href=" <?= route_to('user') ?>" data-toggle="tooltip" data-placement="right" title="Paramètres du compte">
                     <i class="fas fa-user-edit"></i>
                 </a>
             </li>

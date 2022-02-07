@@ -15,35 +15,58 @@
 </head>
 
 <body>
+
     <?php require "template/sidebar.php" ?>
+    <?php if (isset($validation)) : ?>
+        <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+    <?php endif; ?>
+    <?php $session = \Config\Services::session();
+
+    if ($session->getFlashdata('success')) {
+        echo '
+        <div class="alert alert-success">' . $session->getFlashdata("success") . '</div>
+        ';
+    } ?>
+
+
+
+
     <main id="dashboard">
+
         <div class="main-title">Paramètres du compte</div>
+
         <div class="edit">
             <div class="col-lg-12">
-                <form class="mt-4">
+                <form class="mt-4" action="<?= route_to('user/update/') ?>" method="post">
                     <div class="row">
                         <div class="form-group col-lg-6">
                             <label for="fullname">Nom complet</label>
-                            <input type="text" class="form-control" id="fullname" value="John Doe">
+                            <input type="text" class="form-control" id="name" name="name" value="<?= $logins['name'] ?>">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="email">Adresse email</label>
-                            <input type="text" class="form-control" id="email" value="test@gmail.com">
+                            <input type="text" class="form-control" id="email" name="email" value="<?= $logins['email'] ?>">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="password">Mot de passe</label>
-                            <input type="password" class="form-control" id="password" value="123456789">
+                            <input type="password" class="form-control" id="password" name="password" value="">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="confirmPassword">Confirmer le mot de passe</label>
-                            <input type="password" class="form-control" id="confirmPassword">
+                            <input type="password" class="form-control" id="cpassword" name="cpassword">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-secondary">Modifier</button>
+                    <div>
+                        <input type="hidden" name="id" value="<?= $logins["id"]; ?>" />
+                        <button type="submit" class="btn btn-secondary">Modifier</button>
+                    </div>
+
                 </form>
             </div>
         </div>
     </main>
+
+
     <script src="js/script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

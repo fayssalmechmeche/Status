@@ -43,17 +43,25 @@ $routes->get('login/auth', 'Login::auth', ['as' => 'auth']);
 $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('dashboard', 'Dashboard::index', ['as' => 'dashboard']);
     $routes->get('category', 'Category::index', ['as' => 'category']);
-    $routes->get('users', 'Users::index', ['as' => 'users']);
-    $routes->get('users/addUser', 'Users::save', ['as' => 'addUser']);
+
     $routes->get('settings', 'Settings::index', ['as' => 'settings']);
-    $routes->get('user/settings', 'UserSettings::index', ['as' => 'user.settings']);
+
+
+
     $routes->get('dashboard/logout', 'Dashboard::logout', ['as' => 'logout']);
     $routes->get('dashboard/addService', 'Dashboard::addService', ['as' => 'addService']);
-    $routes->get('category/addCategory', 'Category::addCategory', ['as' => 'addCategory']);
+
+
     $routes->get('users/edit/(:num)', 'Users::edit/$1', ['as' => 'users/edit']);
+    $routes->get('users', 'Users::index', ['as' => 'users']);
+    $routes->get('users/addUser', 'Users::save', ['as' => 'addUser']);
     $routes->put('users/update/', 'Users::update/', ['as' => 'users/update/']);
     $routes->put('users/delete/', 'Users::delete/', ['as' => 'users/delete/']);
-    $routes->put('users/settings/update/', 'UserSettings::update/', ['as' => 'users/settings/update/']);
+
+    $routes->get('user', 'User::index', ['as' => 'user']);
+    $routes->put('user/update/', 'User::update/', ['as' => 'user/update/']);
+
+    $routes->get('category/addCategory', 'Category::addCategory', ['as' => 'addCategory']);
     $routes->put('category/update/', 'Category::update/', ['as' => 'category/update/']);
     $routes->put('category/delete/', 'Category::delete/', ['as' => 'category/delete/']);
 });
