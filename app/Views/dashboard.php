@@ -259,7 +259,29 @@
 	<script>
 		var elms = document.querySelectorAll("[id='btn']");
 		elms[i].addEventListener("click", Modal);
+		var elms = document.querySelectorAll("[id='monitoring']");
+		for (var i = 0; i < elms.length; i++)
+			if (elms[i].selectedIndex == 1) {
 
+				var elms = document.querySelectorAll("[id='state']");
+				for (var i = 0; i < elms.length; i++)
+					elms[i].style.display = 'none';
+
+				var elms = document.querySelectorAll("[id='ip']");
+				for (var i = 0; i < elms.length; i++)
+					elms[i].style.display = 'block';
+			}
+		for (var i = 0; i < elms.length; i++)
+			if (elms[i].selectedIndex == 0) {
+
+				var elms = document.querySelectorAll("[id='state']");
+				for (var i = 0; i < elms.length; i++)
+					elms[i].style.display = 'block';
+
+				var elms = document.querySelectorAll("[id='ip']");
+				for (var i = 0; i < elms.length; i++)
+					elms[i].style.display = 'none';
+			}
 
 		function Modal() {
 			var elms = document.querySelectorAll("[id='monitoring']");
@@ -287,9 +309,6 @@
 				}
 
 		}
-	</script>
-
-	<script>
 		if (document.getElementById("monitoringPage").selectedIndex == 1) {
 			document.getElementById("statePage").style.display = "none";
 			document.getElementById("ipPage").style.display = "block";
@@ -312,6 +331,8 @@
 
 		}
 	</script>
+
+
 
 </body>
 
