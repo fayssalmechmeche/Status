@@ -59,7 +59,7 @@
 							<td><?= $service["ip"] ?></td>
 							<td><?= $service["state"] ?></td>
 							<td>
-								<button class="btn btn-info" type="button" data-toggle="modal" data-target="#services-modal<?= $service['id'] ?>">Modifier</button>
+								<button class="btn btn-info" type="button" data-toggle="modal" id="btn" data-target="#services-modal<?= $service['id'] ?>">Modifier</button>
 							</td>
 
 
@@ -93,7 +93,7 @@
 															<label for="link">Lien</label>
 															<input type="text" class="form-control" id="link" name="link" value="<?= $service['link'] ?>">
 														</div>
-														<div class="form-group col-lg-6">
+														<div class="form-group col-lg-6" id="ip">
 															<label for="hostname">IP/Hôte</label>
 															<input type="text" class="form-control" id="hostname" name="ip" value="<?= $service['ip'] ?>">
 														</div>
@@ -108,7 +108,7 @@
 																} ?>
 															</select>
 														</div>
-														<div class="form-group col-lg-6">
+														<div class="form-group col-lg-6" id="state">
 															<label for="status">Statut</label>
 															<select name="state" class="form-control">
 																<option selected>En ligne</option>
@@ -119,9 +119,9 @@
 														</div>
 														<div class="form-group col-lg-6">
 															<label for="monitoring">Monitoring automatique</label>
-															<select class="form-control">
-																<option selected>Non</option>
-																<option>Oui</option>
+															<select class="form-control" name="monitoring" id="monitoring" onchange="Modal();">
+																<option value="0">Non</option>
+																<option value="1">Oui</option>
 															</select>
 														</div>
 														<div class="form-group col-lg-12">
@@ -164,9 +164,9 @@
 							<label for="link">Lien</label>
 							<input type="text" class="form-control" id="link" name="link">
 						</div>
-						<div class="form-group col-lg-6" id="ip">
+						<div class="form-group col-lg-6" id="ipPage">
 							<label for="hostname">IP/Hôte</label>
-							<input type="text" class="form-control" id="ip" name="ip">
+							<input type="text" class="form-control" name="ip">
 						</div>
 						<div class="form-group col-lg-12">
 							<label for="category">Catégorie</label>
@@ -180,7 +180,7 @@
 
 							</select>
 						</div>
-						<div class="form-group col-lg-6" id="state">
+						<div class="form-group col-lg-6" id="statePage">
 							<label for="status">Statut</label>
 							<select class="form-control" name="state">
 								<option selected>En ligne</option>
@@ -191,7 +191,7 @@
 						</div>
 						<div class=" form-group col-lg-6">
 							<label for="monitoring">Monitoring automatique</label>
-							<select class="form-control" name="monitoring" id="monitoring" onchange="contact1();">
+							<select class="form-control" name="monitoring" id="monitoringPage" onchange="contact1();">
 
 								<option value="0">Non</option>
 								<option value="1">Oui</option>
@@ -257,24 +257,57 @@
 	</script>
 
 	<script>
-		if (document.getElementById("monitoring").selectedIndex == 1) {
-			document.getElementById("state").style.display = "none";
-			document.getElementById("ip").style.display = "block";
+		var elms = document.querySelectorAll("[id='btn']");
+		elms[i].addEventListener("click", Modal);
+
+
+		function Modal() {
+			var elms = document.querySelectorAll("[id='monitoring']");
+			for (var i = 0; i < elms.length; i++)
+				if (elms[i].selectedIndex == 1) {
+
+					var elms = document.querySelectorAll("[id='state']");
+					for (var i = 0; i < elms.length; i++)
+						elms[i].style.display = 'none';
+
+					var elms = document.querySelectorAll("[id='ip']");
+					for (var i = 0; i < elms.length; i++)
+						elms[i].style.display = 'block';
+				}
+			for (var i = 0; i < elms.length; i++)
+				if (elms[i].selectedIndex == 0) {
+
+					var elms = document.querySelectorAll("[id='state']");
+					for (var i = 0; i < elms.length; i++)
+						elms[i].style.display = 'block';
+
+					var elms = document.querySelectorAll("[id='ip']");
+					for (var i = 0; i < elms.length; i++)
+						elms[i].style.display = 'none';
+				}
+
 		}
-		if (document.getElementById("monitoring").selectedIndex == 0) {
-			document.getElementById("state").style.display = "block";
-			document.getElementById("ip").style.display = "none";
+	</script>
+
+	<script>
+		if (document.getElementById("monitoringPage").selectedIndex == 1) {
+			document.getElementById("statePage").style.display = "none";
+			document.getElementById("ipPage").style.display = "block";
+		}
+		if (document.getElementById("monitoringPage").selectedIndex == 0) {
+			document.getElementById("statePage").style.display = "block";
+			document.getElementById("ipPage").style.display = "none";
 		}
 
 		function contact1() {
 
-			if (document.getElementById("monitoring").selectedIndex == 1) {
-				document.getElementById("state").style.display = "none";
-				document.getElementById("ip").style.display = "block";
+			if (document.getElementById("monitoringPage").selectedIndex == 1) {
+				document.getElementById("statePage").style.display = "none";
+				document.getElementById("ipPage").style.display = "block";
 			}
-			if (document.getElementById("monitoring").selectedIndex == 0) {
-				document.getElementById("state").style.display = "block";
-				document.getElementById("ip").style.display = "none";
+			if (document.getElementById("monitoringPage").selectedIndex == 0) {
+				document.getElementById("statePage").style.display = "block";
+				document.getElementById("ipPage").style.display = "none";
 			}
 
 		}
