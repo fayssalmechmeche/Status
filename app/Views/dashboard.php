@@ -164,7 +164,7 @@
 							<label for="link">Lien</label>
 							<input type="text" class="form-control" id="link" name="link">
 						</div>
-						<div class="form-group col-lg-6">
+						<div class="form-group col-lg-6" id="ip">
 							<label for="hostname">IP/Hôte</label>
 							<input type="text" class="form-control" id="ip" name="ip">
 						</div>
@@ -180,7 +180,7 @@
 
 							</select>
 						</div>
-						<div class="form-group col-lg-6">
+						<div class="form-group col-lg-6" id="state">
 							<label for="status">Statut</label>
 							<select class="form-control" name="state">
 								<option selected>En ligne</option>
@@ -189,11 +189,13 @@
 								<option>Hors-ligne</option>
 							</select>
 						</div>
-						<div class="form-group col-lg-6">
+						<div class=" form-group col-lg-6">
 							<label for="monitoring">Monitoring automatique</label>
-							<select class="form-control" name="monitoring">
-								<option selected>Non</option>
-								<option name="yes">Oui</option>
+							<select class="form-control" name="monitoring" id="monitoring" onchange="contact1();">
+
+								<option value="0">Non</option>
+								<option value="1">Oui</option>
+
 							</select>
 						</div>
 					</div>
@@ -253,6 +255,31 @@
 			$('#services-edit').trigger('focus')
 		})
 	</script>
+
+	<script>
+		if (document.getElementById("monitoring").selectedIndex == 1) {
+			document.getElementById("state").style.display = "none";
+			document.getElementById("ip").style.display = "block";
+		}
+		if (document.getElementById("monitoring").selectedIndex == 0) {
+			document.getElementById("state").style.display = "block";
+			document.getElementById("ip").style.display = "none";
+		}
+
+		function contact1() {
+
+			if (document.getElementById("monitoring").selectedIndex == 1) {
+				document.getElementById("state").style.display = "none";
+				document.getElementById("ip").style.display = "block";
+			}
+			if (document.getElementById("monitoring").selectedIndex == 0) {
+				document.getElementById("state").style.display = "block";
+				document.getElementById("ip").style.display = "none";
+			}
+
+		}
+	</script>
+
 </body>
 
 </html>
