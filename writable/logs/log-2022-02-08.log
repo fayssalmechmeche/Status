@@ -1,0 +1,11 @@
+CRITICAL - 2022-02-08 06:16:00 -->  is not a valid rule.
+#0 C:\wamp\www\statut\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+#1 C:\wamp\www\statut\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('password', 'password', '', Array, Array)
+#2 C:\wamp\www\statut\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\wamp\www\statut\app\Controllers\User.php(52): CodeIgniter\Controller->validate(Array)
+#4 C:\wamp\www\statut\system\CodeIgniter.php(825): App\Controllers\User->update()
+#5 C:\wamp\www\statut\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#9 {main}
