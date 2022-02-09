@@ -34,234 +34,88 @@
 
                 <!-- 1er tableau -->
 
-
-                <div class="panel panel-default" id="panel">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title d-flex justify-content-between">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-flex align-items-center collapsed">
-                                <i class="fa fa-plus"></i>
-                                <p>Sites internet</p>
-                            </a>
-                            <div class="d-flex align-items-center pr-2">
-                                <div class="status warning"></div>
-                            </div>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a target="_blank" href="https://ezcorp.io" class="ez-link">eZCorp.io</a></p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Site principal</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-warning pr-4 col-4 text-right">
-                                    <p>Problèmes partiels</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a target="_blank" href="https://git.ezcorp.io">eZGit - GitLab</a></p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Serveur Gitlab</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a target="_blank" href="https://chat.ezcorp.io">eZChat - Rocket.Chat</a></p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Service de chat instantané</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a target="_blank" href="https://dash.ezcorp.io">eZDash - Espace membre</a></p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Espace membre associatif</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a target="_blank" href="https://docs.ezcorp.io">eZDocs - Documentation</a></p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Documentation en ligne</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a target="_blank" href="https://adhesion.ezcorp.io">eZAdhesion - Bulletin d'adhésion</a></p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Formulaire d'adhésion en ligne</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2ème tableau -->
-
                 <div class="panel panel-default mt-4">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title d-flex justify-content-between">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="d-flex align-items-center">
-                                <i class="fa fa-plus"></i>
-                                <p>Serveurs</p>
-                            </a>
-                            <div class="d-flex align-items-center pr-2">
-                                <div class="status success"></div>
-                            </div>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p>eZVPN - VPN Intranet</p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Serveur VPN permettant d'accéder à l'intranet</span></span>
+                    <?php foreach ($categorys as $category) : ?>
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title d-flex justify-content-between">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="d-flex align-items-center">
+                                    <i class="fa fa-plus"></i>
+                                    <p><?= $category['title'] ?></p>
+                                </a>
+                                <div class="d-flex align-items-center pr-2">
+                                    <div class="status success"></div>
                                 </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p>eZCloud - Disques réseaux</p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Disques réseaux</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p>Serveur AD - LDAP</p>&nbsp;&nbsp;
-                                    <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Serveur d'annuaire/authentification Active Directory</span></span>
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
+                            </h4>
                         </div>
-                    </div>
+                        <?php foreach ($services as $service) : ?>
+                            <?php
+                            if ($category['title'] != $service['category']) {
+                                continue;
+                            }
+                            ?>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                        <div class="status-primary d-flex col-4">
+                                            <p> <a target="_blank" href="<?= $service['link'] ?>" class="ez-link"> <?= $service['title'] ?>
+                                                </a> </p>&nbsp;&nbsp;
+                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Serveur VPN permettant d'accéder à l'intranet</span></span>
+                                        </div>
+
+                                        <div class="status-secondary col-4">
+                                            <p>Dernière mise à jour le <?= $service['updated'] ?></p>
+                                        </div>
+
+                                        <?php if ($service['state'] == 'En ligne') { ?>
+                                            <div class="status-success pr-4 col-4 text-right">
+                                                <p><?= $service['state'] ?></p>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($service['state'] == 'Hors-ligne') { ?>
+                                            <div class="status-danger pr-4 col-4 text-right">
+                                                <p><?= $service['state'] ?></p>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($service['state'] == 'Maintenance') { ?>
+                                            <div class="status-warning pr-4 col-4 text-right">
+                                                <p><?= $service['state'] ?></p>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($service['state'] == 'Panne partielle') { ?>
+                                            <div class="status-warning pr-4 col-4 text-right">
+                                                <p><?= $service['state'] ?></p>
+                                            </div>
+                                        <?php } ?>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+
                 </div>
 
-                <!-- 3ème tableau -->
 
-                <div class="panel panel-default mt-4">
-                    <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title d-flex justify-content-between">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="d-flex align-items-center">
-                                <i class="fa fa-plus"></i>
-                                <p>Noms de domaines</p>
-                            </a>
-                            <div class="d-flex align-items-center pr-2">
-                                <div class="status danger"></div>
-                            </div>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a href="ezcorp.io" class="ez-link">eZCorp.io</a></p>&nbsp;&nbsp;
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a href="ezcorp.fr" class="ez-link">eZCorp.fr</a></p>&nbsp;&nbsp;
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-success pr-4 col-4 text-right">
-                                    <p>Opérationnel</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between status-item align-items-center">
-                                <div class="status-primary d-flex col-4">
-                                    <p><a href="ezcorp.cc" class="ez-link">eZCorp.cc</a></p>&nbsp;&nbsp;
-                                </div>
-                                <div class="status-secondary col-4">
-                                    <p>Dernière mise à jour le 21/10/2020 à 14:07</p>
-                                </div>
-                                <div class="status-danger pr-4 col-4 text-right">
-                                    <p>Non opérationnel</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
             <div class="d-flex">
                 <h2 class="m-5 mx-auto">Incidents antérieurs</h2>
             </div>
             <div class="mt-3 w-100">
-                <div class="latest-item">
-                    <div class="latest-header">
-                        <h5>20/10/2020 à 00H00</h5>
-                        <hr class="latest-hr" />
+                <?php foreach ($messages as $message) : ?>
+                    <div class="latest-item">
+                        <div class="latest-header">
+                            <h5><?= $message['created'] ?></h5>
+                            <hr class="latest-hr" />
+                        </div>
+                        <div class="latest-main">
+                            <p><?= $message['message'] ?></p>
+                        </div>
                     </div>
-                    <div class="latest-main">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            In finibus molestie libero sed interdum. Ut felis turpis, iaculis
-                            in erat vel, fringilla placerat tellus.
-                            Praesent venenatis dolor et pharetra pharetra.</p>
-                    </div>
-                </div>
-                <div class="latest-item mt-5">
-                    <div class="latest-header">
-                        <h5>13/10/2020 à 10H00</h5>
-                        <hr class="latest-hr" />
-                    </div>
-                    <div class="latest-main">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            In finibus molestie libero sed interdum. Ut felis turpis, iaculis
-                            in erat vel, fringilla placerat tellus.
-                            Praesent venenatis dolor et pharetra pharetra.</p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
+
             </div>
         </div>
     </main>

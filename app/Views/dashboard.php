@@ -9,11 +9,7 @@
 	<meta name="description" name="meta_description" content="<?= $meta['meta_description'] ?>">
 	<meta name="title" name="meta_title" content="<?= $meta['meta_title'] ?>">
 
-	<link rel="shortcut icon" href="<?php
-
-									use App\Controllers\Category;
-
-									echo base_url("/assets/images/favicon.png"); ?>" />
+	<link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
 	<!-- Basic CSS -->
 
 
@@ -59,7 +55,7 @@
 							<td><?= $service["ip"] ?></td>
 							<td><?= $service["state"] ?></td>
 							<td>
-								<button class="btn btn-info" type="button" data-toggle="modal" id="btn" data-target="#services-modal<?= $service['id'] ?>">Modifier</button>
+								<button class="btn btn-info" type="button" data-toggle="modal" onclick="Modal()" id="btn" data-target="#services-modal<?= $service['id'] ?>">Modifier</button>
 							</td>
 
 
@@ -111,10 +107,10 @@
 														<div class="form-group col-lg-6" id="state">
 															<label for="status">Statut</label>
 															<select name="state" class="form-control">
-																<option selected>En ligne</option>
-																<option>Panne partielle</option>
-																<option>Maintenance</option>
-																<option>Hors-ligne</option>
+																<option <?php if ($service['state'] == 'En ligne') echo 'selected="selected"' ?>>En ligne</option>
+																<option <?php if ($service['state'] == 'Panne partielle') echo 'selected="selected"' ?>>Panne partielle</option>
+																<option <?php if ($service['state'] == 'Maintenance') echo 'selected="selected"' ?>>Maintenance</option>
+																<option <?php if ($service['state'] == 'Hors-ligne') echo 'selected="selected"' ?>>Hors-ligne</option>
 															</select>
 														</div>
 														<div class="form-group col-lg-6">
@@ -126,7 +122,7 @@
 														</div>
 														<div class="form-group col-lg-12">
 															<label for="message">Message</label>
-															<textarea class="form-control" id="message" name="message" rows="4"></textarea>
+															<textarea class="form-control" id="message" id="updated" name="message" rows="4"></textarea>
 														</div>
 														<div class="modal-footer">
 															<input type="hidden" name="id" value="<?php echo $service["id"]; ?>">
@@ -255,8 +251,38 @@
 			$('#services-edit').trigger('focus')
 		})
 	</script>
+	<script>
+		$(document).ready(function() {
+			$(".modal").on("hidden.bs.modal", function() {
+				$(".modal-body").removeData('bs.modal');
+			});
+		});
+	</script>
 
 	<script>
+		if (document.getElementById("monitoringPage").selectedIndex == 1) {
+			document.getElementById("statePage").style.display = "none";
+			document.getElementById("ipPage").style.display = "block";
+		}
+		if (document.getElementById("monitoringPage").selectedIndex == 0) {
+			document.getElementById("statePage").style.display = "block";
+			document.getElementById("ipPage").style.display = "none";
+		}
+
+		function contact1() {
+
+			if (document.getElementById("monitoringPage").selectedIndex == 1) {
+				document.getElementById("statePage").style.display = "none";
+				document.getElementById("ipPage").style.display = "block";
+			}
+			if (document.getElementById("monitoringPage").selectedIndex == 0) {
+				document.getElementById("statePage").style.display = "block";
+				document.getElementById("ipPage").style.display = "none";
+			}
+
+		}
+
+
 		var elms = document.querySelectorAll("[id='btn']");
 		elms[i].addEventListener("click", Modal);
 		var elms = document.querySelectorAll("[id='monitoring']");
@@ -307,27 +333,6 @@
 					for (var i = 0; i < elms.length; i++)
 						elms[i].style.display = 'none';
 				}
-
-		}
-		if (document.getElementById("monitoringPage").selectedIndex == 1) {
-			document.getElementById("statePage").style.display = "none";
-			document.getElementById("ipPage").style.display = "block";
-		}
-		if (document.getElementById("monitoringPage").selectedIndex == 0) {
-			document.getElementById("statePage").style.display = "block";
-			document.getElementById("ipPage").style.display = "none";
-		}
-
-		function contact1() {
-
-			if (document.getElementById("monitoringPage").selectedIndex == 1) {
-				document.getElementById("statePage").style.display = "none";
-				document.getElementById("ipPage").style.display = "block";
-			}
-			if (document.getElementById("monitoringPage").selectedIndex == 0) {
-				document.getElementById("statePage").style.display = "block";
-				document.getElementById("ipPage").style.display = "none";
-			}
 
 		}
 	</script>

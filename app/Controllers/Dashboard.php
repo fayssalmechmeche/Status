@@ -6,22 +6,27 @@ use App\Models\ServiceModel;
 use App\Models\CategoryModel;
 use App\Models\MetaModel;
 use App\Models\LogoModel;
+use App\Models\MessageModel;
 
 class Dashboard extends BaseController
 {
     public $modalService;
     public $modalCategory;
     public $modalMeta;
+    public $modalLogo;
+    public $modalMessage;
     public function __construct()
     {
         $this->modalService = new ServiceModel();
         $this->modalCategory = new CategoryModel();
         $data['services'] = $this->modalService->orderBy('id', 'DESC')->paginate(10);
         $data['categorys'] = $this->modalCategory->orderBy('id', 'DESC')->paginate(10);
+
         $this->modalMeta = new MetaModel();
         $data['meta'] = $this->modalMeta->find(1);
         $this->modalLogo = new LogoModel();
         $data['logo'] = $this->modalLogo->find(1);
+        $this->modalMessage = new MessageModel();
 
         return view('dashboard', $data);
     }
@@ -55,7 +60,8 @@ class Dashboard extends BaseController
                 'category'    => $this->request->getVar('category'),
                 'monitoring'    => $this->request->getVar('monitoring'),
                 'ip'    => $this->request->getVar('ip'),
-                'state'    => $this->request->getVar('state'),
+                'state'    => $this->request->getVar('state')
+
 
             ];
 
@@ -89,11 +95,26 @@ class Dashboard extends BaseController
                 'monitoring'    => $this->request->getVar('monitoring'),
                 'ip'    => $this->request->getVar('ip'),
                 'state'    => $this->request->getVar('state'),
+                'updated'    => $this->request->getVar('updated'),
+
+
 
 
             ];
 
             $this->modalService->update($id, $data);
+            $data = [
+
+                'message'    => $this->request->getVar('message')
+
+
+
+            ];
+
+            $this->modalMessage->save($data);
+
+
+
 
             $session = \Config\Services::session();
 

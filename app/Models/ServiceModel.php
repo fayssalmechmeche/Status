@@ -12,6 +12,6 @@ class ServiceModel extends Model
     protected $primaryKey = 'id';
 
     protected $allowedFields = [
-        'title', 'state', 'ip', 'link', 'category', 'monitoring'
+        'title', 'state', 'ip', 'link', 'category', 'monitoring', 'updated'
     ];
 }

@@ -9,3 +9,297 @@ CRITICAL - 2022-02-08 06:16:00 -->  is not a valid rule.
 #7 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #8 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
 #9 {main}
+ERROR - 2022-02-08 09:35:18 --> Champ 'name' inconnu dans order clause
+CRITICAL - 2022-02-08 09:35:18 --> Champ 'name' inconnu dans order clause
+#0 C:\wamp\www\statut\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp\www\statut\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp\www\statut\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp\www\statut\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp\www\statut\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp\www\statut\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
+#6 C:\wamp\www\statut\system\BaseModel.php(1088): CodeIgniter\BaseModel->findAll(10, 0)
+#7 C:\wamp\www\statut\app\Controllers\Index.php(26): CodeIgniter\BaseModel->paginate(10)
+#8 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#9 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#10 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#13 {main}
+CRITICAL - 2022-02-08 09:56:44 --> Undefined array key "title"
+#0 C:\wamp\www\statut\app\Views\index.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 136)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 09:57:30 --> Undefined array key "title"
+#0 C:\wamp\www\statut\app\Views\index.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 136)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 09:57:40 --> Undefined array key "title"
+#0 C:\wamp\www\statut\app\Views\index.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 136)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:08:25 --> Undefined array key "title"
+#0 C:\wamp\www\statut\app\Views\index.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 136)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:08:38 --> Cannot use object of type App\Models\CategoryModel as array
+#0 C:\wamp\www\statut\system\View\View.php(210): include()
+#1 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#3 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#4 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#5 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#9 {main}
+CRITICAL - 2022-02-08 10:08:59 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\index.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 136)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:10:18 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\index.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 136)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:10:31 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\index.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 136)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:15:08 --> Undefined array key "title"
+#0 C:\wamp\www\statut\app\Views\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 58)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(33): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:15:42 --> Undefined array key "title"
+#0 C:\wamp\www\statut\app\Views\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\sta...', 58)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(34): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:16:05 --> Trying to access array offset on value of type null
+#0 C:\wamp\www\statut\app\Views\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\wamp\\www\\sta...', 58)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(34): view('index', Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+ERROR - 2022-02-08 10:43:38 --> La table 'statut.my_table' n'existe pas
+CRITICAL - 2022-02-08 10:43:38 --> La table 'statut.my_table' n'existe pas
+#0 C:\wamp\www\statut\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name FRO...', 0)
+#1 C:\wamp\www\statut\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FRO...')
+#2 C:\wamp\www\statut\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FRO...')
+#3 C:\wamp\www\statut\app\Controllers\Index.php(33): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#4 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#5 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#9 {main}
+ERROR - 2022-02-08 10:43:59 --> Champ 'name' inconnu dans field list
+CRITICAL - 2022-02-08 10:43:59 --> Champ 'name' inconnu dans field list
+#0 C:\wamp\www\statut\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name FRO...', 0)
+#1 C:\wamp\www\statut\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FRO...')
+#2 C:\wamp\www\statut\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FRO...')
+#3 C:\wamp\www\statut\app\Controllers\Index.php(33): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#4 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#5 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#9 {main}
+ERROR - 2022-02-08 10:44:09 --> Champ 'name' inconnu dans field list
+CRITICAL - 2022-02-08 10:44:09 --> Champ 'name' inconnu dans field list
+#0 C:\wamp\www\statut\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name FRO...', 0)
+#1 C:\wamp\www\statut\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FRO...')
+#2 C:\wamp\www\statut\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FRO...')
+#3 C:\wamp\www\statut\app\Controllers\Index.php(33): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#4 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#5 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#9 {main}
+CRITICAL - 2022-02-08 10:44:19 --> view(): Argument #3 ($options) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Index.php on line 38
+#0 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Array, Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-08 10:44:29 --> view(): Argument #2 ($data) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Index.php on line 38
+#0 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-08 10:44:54 --> view(): Argument #2 ($data) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Index.php on line 38
+#0 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-08 10:45:21 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\wamp\www\statut\app\Controllers\Index.php on line 38
+#0 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', 'second')
+#1 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-08 10:45:29 --> view(): Argument #2 ($data) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Index.php on line 38
+#0 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-08 10:46:01 --> Cannot use [] for reading
+#0 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#1 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#5 {main}
+CRITICAL - 2022-02-08 10:46:06 --> view(): Argument #2 ($data) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Index.php on line 38
+#0 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-08 10:50:08 --> view(): Argument #2 ($data) must be of type array, stdClass given, called in C:\wamp\www\statut\app\Controllers\Index.php on line 38
+#0 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Object(stdClass))
+#1 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#2 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#6 {main}
+CRITICAL - 2022-02-08 10:52:35 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 58)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Array, Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:53:14 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 58)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Array, Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:53:27 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 58)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Array, Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
+CRITICAL - 2022-02-08 10:53:33 --> Undefined variable $row
+#0 C:\wamp\www\statut\app\Views\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\wamp\\www\\sta...', 58)
+#1 C:\wamp\www\statut\system\View\View.php(210): include('C:\\wamp\\www\\sta...')
+#2 C:\wamp\www\statut\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\statut\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\wamp\www\statut\app\Controllers\Index.php(38): view('index', Array, Array)
+#5 C:\wamp\www\statut\system\CodeIgniter.php(802): App\Controllers\Index->__construct()
+#6 C:\wamp\www\statut\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#7 C:\wamp\www\statut\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\statut\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\statut\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\sta...')
+#10 {main}
