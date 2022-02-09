@@ -83,7 +83,7 @@
 														</div>
 														<div class="form-group col-lg-12">
 															<label for="description">Description</label>
-															<input type="text" class="form-control" id="description" name="" value="description">
+															<input type="text" class="form-control" id="description" name="description" value="<?= $service['description'] ?>">
 														</div>
 														<div class="form-group col-lg-6">
 															<label for="link">Lien</label>

@@ -96,6 +96,7 @@ class Dashboard extends BaseController
                 'ip'    => $this->request->getVar('ip'),
                 'state'    => $this->request->getVar('state'),
                 'updated'    => $this->request->getVar('updated'),
+                'description'    => $this->request->getVar('description'),
 
 
 

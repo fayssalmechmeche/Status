@@ -59,7 +59,7 @@
                                         <div class="status-primary d-flex col-4">
                                             <p> <a target="_blank" href="<?= $service['link'] ?>" class="ez-link"> <?= $service['title'] ?>
                                                 </a> </p>&nbsp;&nbsp;
-                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above">Serveur VPN permettant d'accéder à l'intranet</span></span>
+                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above"><?= $service['description'] ?></span></span>
                                         </div>
 
                                         <div class="status-secondary col-4">
