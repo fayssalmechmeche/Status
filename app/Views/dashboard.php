@@ -98,7 +98,7 @@
 															<select name="category" class="form-control">
 																<?php if ($categorys) {
 																	foreach ($categorys as $category) : ?>
-																		<option> <?= $category['title'] ?></option>
+																		<option <?php if ($service['category'] == $category['title']) echo 'selected="selected"' ?>> <?= $category['title'] ?></option>
 
 																<?php endforeach;
 																} ?>
