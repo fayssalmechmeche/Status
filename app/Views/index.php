@@ -40,7 +40,7 @@
                 </div>
             <?php
             } else { ?>
-                <div class="alert-roundedWarning">
+                <div class="alert-roundedDanger">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
             <?php
@@ -65,27 +65,47 @@
                                 </a>
 
 
-                                <?php $variable = true; ?>
+                                <?php $variable = 'En ligne'; ?>
                                 <?php foreach ($services as $service) :
                                     if ($category['title'] != $service['category']) {
                                         continue;
                                     }
-                                    if ($service['state'] != 'En ligne') {
-                                        $variable = false;
+                                    if ($service['state'] == 'Maintenance') {
+                                        $variable = 'Maintenance';
+                                    }
+                                    if ($service['state'] == 'Hors-ligne') {
+                                        $variable = 'Hors-ligne';
+                                    }
+                                    if ($service['state'] == 'Panne partielle') {
+                                        $variable = 'En panne';
                                     }
                                 endforeach;
-                                if ($variable == true) { ?>
+                                if ($variable == 'En ligne') { ?>
                                     <div class="d-flex align-items-center pr-2">
                                         <div class="status success"></div>
                                     </div>
                                 <?php
-                                } else { ?>
+                                }
+                                if ($variable == 'Hors-ligne') { ?>
                                     <div class="d-flex align-items-center pr-2">
                                         <div class="status danger"></div>
                                     </div>
                                 <?php
                                 }
+                                if ($variable == 'Maintenance') { ?>
+                                    <div class="d-flex align-items-center pr-2">
+                                        <div class="status primary"></div>
+                                    </div>
+                                <?php
+                                }
+                                if ($variable == 'En panne') { ?>
+                                    <div class="d-flex align-items-center pr-2">
+                                        <div class="status warning"></div>
+                                    </div>
+                                <?php
+                                }
                                 ?>
+
 
                             </h4>
                         </div>
@@ -119,7 +139,7 @@
                                             </div>
                                         <?php } ?>
                                         <?php if ($service['state'] == 'Maintenance') { ?>
-                                            <div class="status-warning pr-4 col-4 text-right">
+                                            <div class="status-primary pr-4 col-4 text-right">
                                                 <p><?= $service['state'] ?></p>
                                             </div>
                                         <?php } ?>

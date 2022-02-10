@@ -72,10 +72,32 @@
     .alert-roundedSuccess p {
         margin: 0px;
     }
-    .alert-roundedWarning {
+    .alert-roundedDanger {
         border-radius: 50px;
         border: 2px solid red;
         background-color: red;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .alert-roundedDanger p {
+        margin: 0px;
+    }
+    .alert-roundedPrimary {
+        border-radius: 50px;
+        border: 2px solid cornflowerblue;
+        background-color: cornflowerblue;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .alert-roundedPrimary p {
+        margin: 0px;
+    }
+    .alert-roundedWarning {
+        border-radius: 50px;
+        border: 2px solid coral;
+        background-color: coral;
         color: #fff;
         font-size: 20px;
     }
@@ -143,6 +165,9 @@
     .danger {
         background: red;
     }
+    .primary {
+        background: cornflowerblue;
+    }
 
     .panel-default>.panel-heading+.panel-collapse>.panel-body {
         border-top-color: #EEEEEE;
@@ -180,6 +205,10 @@
         margin: 0;
     }
 
+    .status-primary p {
+        color: cornflowerblue;
+        margin: 0;
+    }
     .qs {
         display: inline-block;
         position: relative;
