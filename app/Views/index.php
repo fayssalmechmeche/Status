@@ -28,23 +28,48 @@
             <div class="d-flex flex-column">
                 <h2 class="m-5 mx-auto">état des serveurs</h2>
             </div>
-            <?php $variable = true; ?>
+            <?php $variable = 'En ligne'; ?>
             <?php foreach ($services as $service) :
-                if ($service['state'] != 'En ligne') {
-                    $variable = false;
+
+                if ($service['state'] == 'Hors-ligne') {
+                    $variable = 'Hors-ligne';
+                    break;
                 }
+                if ($service['state'] == 'Panne partielle') {
+                    $variable = 'En panne';
+                    break;
+                }
+                if ($service['state'] == 'Maintenance') {
+                    $variable = 'Maintenance';
+                    break;
+                }
+
+
+
             endforeach;
-            if ($variable == true) { ?>
+            echo $variable;
+            if ($variable == 'En ligne' and $variable != 'Maintenance' and $variable != 'En panne'  and $variable != 'Hors-ligne') { ?>
                 <div class="alert-roundedSuccess">
                     <p class="p-2 pl-4">Tous les services sont opérationnels</p>
                 </div>
             <?php
-            } else { ?>
-                <div class="alert-roundedDanger">
+            }
+            if ($variable == 'Maintenance' and $variable != 'En panne'  and $variable != 'Hors-ligne') { ?>
+                <div class="alert-roundedPrimary">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
             <?php
             }
+            if ($variable == 'En panne' and $variable != 'Hors-ligne') { ?>
+                <div class="alert-roundedWarning">
+                    <p class="p-2 pl-4">Certains services sont en pannes</p>
+                </div>
+            <?php }
+            if ($variable == 'Hors-ligne') { ?>
+                <div class="alert-roundedDanger">
+                    <p class="p-2 pl-4">Certains services sont en pannes</p>
+                </div>
+            <?php }
             ?>
 
 
