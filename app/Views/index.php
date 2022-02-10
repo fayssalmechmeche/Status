@@ -24,27 +24,69 @@
     </header>
     <main>
         <div class="container">
+
             <div class="d-flex flex-column">
                 <h2 class="m-5 mx-auto">état des serveurs</h2>
-                <div class="alert-rounded">
+            </div>
+            <?php $variable = true; ?>
+            <?php foreach ($services as $service) :
+                if ($service['state'] != 'En ligne') {
+                    $variable = false;
+                }
+            endforeach;
+            if ($variable == true) { ?>
+                <div class="alert-roundedSuccess">
                     <p class="p-2 pl-4">Tous les services sont opérationnels</p>
                 </div>
-            </div>
+            <?php
+            } else { ?>
+                <div class="alert-roundedWarning">
+                    <p class="p-2 pl-4">Certains services sont en pannes</p>
+                </div>
+            <?php
+            }
+            ?>
+
+
+
+
             <div class="panel-group mt-5" id="accordion" role="tablist" aria-multiselectable="true">
 
                 <!-- 1er tableau -->
 
                 <div class="panel panel-default mt-4">
                     <?php foreach ($categorys as $category) : ?>
+
                         <div class="panel-heading" role="tab" id="headingTwo">
                             <h4 class="panel-title d-flex justify-content-between">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="d-flex align-items-center">
                                     <i class="fa fa-plus"></i>
                                     <p><?= $category['title'] ?></p>
                                 </a>
-                                <div class="d-flex align-items-center pr-2">
-                                    <div class="status success"></div>
-                                </div>
+
+
+                                <?php $variable = true; ?>
+                                <?php foreach ($services as $service) :
+                                    if ($category['title'] != $service['category']) {
+                                        continue;
+                                    }
+                                    if ($service['state'] != 'En ligne') {
+                                        $variable = false;
+                                    }
+                                endforeach;
+                                if ($variable == true) { ?>
+                                    <div class="d-flex align-items-center pr-2">
+                                        <div class="status success"></div>
+                                    </div>
+                                <?php
+                                } else { ?>
+                                    <div class="d-flex align-items-center pr-2">
+                                        <div class="status danger"></div>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+
                             </h4>
                         </div>
                         <?php foreach ($services as $service) : ?>

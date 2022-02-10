@@ -61,7 +61,7 @@
         max-width: 100px;
     }
 
-    .alert-rounded {
+    .alert-roundedSuccess {
         border-radius: 50px;
         border: 2px solid #69BD0C;
         background-color: #7ED320;
@@ -69,7 +69,18 @@
         font-size: 20px;
     }
 
-    .alert-rounded p {
+    .alert-roundedSuccess p {
+        margin: 0px;
+    }
+    .alert-roundedWarning {
+        border-radius: 50px;
+        border: 2px solid red;
+        background-color: red;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .alert-roundedWarning p {
         margin: 0px;
     }
 

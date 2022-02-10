@@ -34,8 +34,6 @@ class Index extends BaseController
         $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(10);
 
 
-
-
         return view('index', $data);
     }
     public function index()
