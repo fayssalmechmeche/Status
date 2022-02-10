@@ -111,8 +111,11 @@ class Dashboard extends BaseController
 
 
             ];
+            if ($data['message'] == null) {
+            } else {
+                $this->modalMessage->save($data);
+            }
 
-            $this->modalMessage->save($data);
 
 
 
