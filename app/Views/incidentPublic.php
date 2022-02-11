@@ -18,31 +18,40 @@
 
 <body>
 
+    <header>
+        <div class="d-flex justify-content-center align-items-center banner">
+            <a href="index"><img src="<?php echo base_url("/assets/images/logo.png"); ?>" alt="Logo eZCorp"></a>
+        </div>
+    </header>
 
-
-
-    <div class="d-flex">
-        <h2 class="m-5 mx-auto">Incidents antérieurs</h2>
-    </div>
-    <div class="mt-3 w-100">
-        <?php foreach ($messages as $message) : ?>
-            <div class="latest-item">
-                <div class="latest-header">
-                    <h5><?php $sqldate = date('m/d/Y', strtotime($message['created']));
-                        echo $sqldate ?> à <?= $message['time'] ?></h5>
-                    <hr class="latest-hr" />
+    <div class="container">
+        <div class="d-flex">
+            <h2 class="m-5 mx-auto">Incidents antérieurs</h2>
+        </div>
+        <div class="mt-3 w-100">
+            <?php foreach ($messages as $message) : ?>
+                <div class="latest-item">
+                    <div class="latest-header">
+                        <h5><?php $sqldate = date('m/d/Y', strtotime($message['created']));
+                            echo $sqldate ?> à <?= $message['time'] ?></h5>
+                        <hr class="latest-hr" />
+                    </div>
+                    <div class="latest-main">
+                        <p><?php
+                            echo $message['message'];
+                            ?></p>
+                    </div>
                 </div>
-                <div class="latest-main">
-                    <p><?php
-                        echo $message['message'];
-                        ?></p>
-                </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+
+        </div>
 
     </div>
-
-
+    <footer class="footer-primary">
+        <div class="h-100 d-flex flex-row justify-content-center align-items-center">
+            <a href="<?= route_to('login') ?>"><button class="btn btn-primary mr-3">tableau de bord</button></a>
+        </div>
+    </footer>
 </body>
 
 </html>
