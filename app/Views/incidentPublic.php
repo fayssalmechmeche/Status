@@ -17,7 +17,36 @@
 </head>
 
 <body>
-    <?php require "template/sidebar.php" ?>
+
+
+
+
+    <div class="d-flex">
+        <h2 class="m-5 mx-auto">Incidents antérieurs</h2>
+    </div>
+    <div class="mt-3 w-100">
+        <?php foreach ($messages as $message) : ?>
+            <div class="latest-item">
+                <div class="latest-header">
+                    <h5><?php $sqldate = date('m/d/Y', strtotime($message['created']));
+                        echo $sqldate ?> à <?= $message['time'] ?></h5>
+                    <hr class="latest-hr" />
+                </div>
+                <div class="latest-main">
+                    <p><?php
+
+
+
+                        echo $message['message'];
+
+
+                        ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+    </div>
+
 
 </body>
 

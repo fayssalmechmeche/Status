@@ -44,7 +44,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     $routes->get('dashboard', 'Dash::index', ['as' => 'dash']);
 
-    $routes->get('incident', 'Incident::indexPublic', ['as' => 'incidentPublic']);
+    $routes->get('Public', 'Incident::indexPublic', ['as' => 'incidentPublic']);
     $routes->get('incident', 'Incident::index', ['as' => 'incident']);
 
     $routes->get('settings', 'Settings::index', ['as' => 'settings']);
