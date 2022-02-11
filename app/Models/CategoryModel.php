@@ -14,7 +14,7 @@ class CategoryModel extends Model
         'title'
     ];
 
-    public function countss()
+    public function countsCategory()
     {
         $builder = $this->db->table('category');
 

@@ -22,12 +22,12 @@ class Dash extends BaseController
         $this->modalLogo = new LogoModel();
         $data['logo'] = $this->modalLogo->find(1);
         $this->modal = new LoginModel();
-        $data['user'] = $this->modal->countss();
+        $data['user'] = $this->modal->countsUser();
 
         $this->modalCategory = new CategoryModel();
-        $data['category'] = $this->modalCategory->countss();
+        $data['category'] = $this->modalCategory->countsCategory();
         $this->modalService = new ServiceModel();
-        $data['service'] = $this->modalService->countss();
+        $data['service'] = $this->modalService->countsService();
 
 
         return view('dash', $data);

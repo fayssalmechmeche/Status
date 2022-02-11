@@ -14,7 +14,7 @@ class ServiceModel extends Model
     protected $allowedFields = [
         'title', 'state', 'ip', 'link', 'category', 'monitoring', 'updated', 'description'
     ];
-    public function countss()
+    public function countsService()
     {
         $builder = $this->db->table('service');
 

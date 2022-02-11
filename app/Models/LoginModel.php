@@ -12,7 +12,7 @@ class LoginModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['name', 'email', 'password'];
 
-    public function countss()
+    public function countsUser()
     {
         $builder = $this->db->table('login');
 
