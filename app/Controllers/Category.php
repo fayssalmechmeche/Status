@@ -21,6 +21,10 @@ class Category extends BaseController
         $data['meta'] = $this->modalMeta->find(1);
         $this->modalLogo = new LogoModel();
         $data['logo'] = $this->modalLogo->find(1);
+
+
+
+
         return view('category', $data);
     }
     public function index()
