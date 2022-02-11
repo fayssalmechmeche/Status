@@ -26,59 +26,20 @@
         <div class="main-title">
             Dashboard
         </div>
-
-
-
-        <div class="row">
-            <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre d'utilisateurs</h5>
-                <div class="card  border-left-success shadow  py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    utilisateurs</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $user ?></div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-users fa-2x text-gray-300"></i>
-                            </div>
+        <div class="subtitle">Nombre d'utilisateur</div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Nombre de categorie</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $category ?></div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre de services</h5>
-                <div class="card border-left-success shadow  py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    services</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $service ?></div>
-                            </div>
-                            <div class="col-auto">
+                        <div class="col-auto">
 
-                                <i class="fas fa-server fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre de catégories</h5>
-                <div class="card border-left-success shadow  py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    categories</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $category ?></div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-tasks-alt"></i>
-                                <i class="fas fa-book fa-2x text-gray-300"></i>
-                            </div>
+
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -86,11 +47,43 @@
         </div>
 
 
+        <div class="subtitle">Nombre de services</div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Nombre de categorie</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $category ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-tasks-alt"></i>
+                            <i class="fas fa-book fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-
-
-
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Nombre de categorie</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $category ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-tasks-alt"></i>
+                            <i class="fas fa-book fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 

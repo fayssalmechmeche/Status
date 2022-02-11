@@ -120,7 +120,10 @@
 																<option value="1">Oui</option>
 															</select>
 														</div>
-
+														<div class="form-group col-lg-12">
+															<label for="message">Message</label>
+															<textarea class="form-control" id="message" id="updated" name="message" rows="4"></textarea>
+														</div>
 														<div class="modal-footer">
 															<input type="hidden" name="id" value="<?php echo $service["id"]; ?>">
 															<button type="submit" class="btn btn-secondary" formaction="<?= route_to('dashboard/update/') ?>">Modifier</button>

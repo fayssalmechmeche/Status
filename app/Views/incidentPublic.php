@@ -34,12 +34,7 @@
                 </div>
                 <div class="latest-main">
                     <p><?php
-
-
-
                         echo $message['message'];
-
-
                         ?></p>
                 </div>
             </div>

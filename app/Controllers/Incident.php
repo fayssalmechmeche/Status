@@ -17,6 +17,9 @@ class Incident extends BaseController
         $data['meta'] = $this->modalMeta->find(1);
         $this->modalLogo = new LogoModel();
         $data['logo'] = $this->modalLogo->find(1);
+        $this->modalMessage = new MessageModel();
+        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate();
+
         return view('incident', $data);
     }
     public function indexPublic()
@@ -26,7 +29,7 @@ class Incident extends BaseController
         $this->modalLogo = new LogoModel();
         $data['logo'] = $this->modalLogo->find(1);
         $this->modalMessage = new MessageModel();
-        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(5);
+        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate();
         return view('incidentPublic', $data);
     }
 }
