@@ -13,4 +13,12 @@ class CategoryModel extends Model
     protected $allowedFields = [
         'title'
     ];
+
+    public function countss()
+    {
+        $builder = $this->db->table('category');
+
+        $query = $builder->countAllResults();
+        return $query;
+    }
 }

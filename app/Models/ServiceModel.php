@@ -14,4 +14,11 @@ class ServiceModel extends Model
     protected $allowedFields = [
         'title', 'state', 'ip', 'link', 'category', 'monitoring', 'updated', 'description'
     ];
+    public function countss()
+    {
+        $builder = $this->db->table('service');
+
+        $query = $builder->countAllResults();
+        return $query;
+    }
 }

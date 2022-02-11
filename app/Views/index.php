@@ -26,7 +26,7 @@
         <div class="container">
 
             <div class="d-flex flex-column">
-                <h2 class="m-5 mx-auto">état des serveurs</h2>
+                <h2 class="m-5 mx-auto">état de nos services</h2>
             </div>
             <?php $variable = 'En ligne'; ?>
             <?php foreach ($services as $service) :
@@ -34,38 +34,38 @@
                 if ($service['state'] == 'Hors-ligne') {
                     $variable = 'Hors-ligne';
                     break;
-                }
-                if ($service['state'] == 'Panne partielle') {
+                } elseif ($service['state'] == 'Panne partielle' and $service['state'] != 'Hors-ligne') {
                     $variable = 'En panne';
-                    break;
-                }
-                if ($service['state'] == 'Maintenance') {
+                    continue;
+                } elseif ($service['state'] == 'Maintenance' and $service['state'] != 'Panne partielle' and $service['state'] != 'Hors-ligne') {
                     $variable = 'Maintenance';
-                    break;
+                    continue;
                 }
 
-
-
+                echo $variable;
             endforeach;
             echo $variable;
+
+
+
+
+
+
             if ($variable == 'En ligne' and $variable != 'Maintenance' and $variable != 'En panne'  and $variable != 'Hors-ligne') { ?>
                 <div class="alert-roundedSuccess">
                     <p class="p-2 pl-4">Tous les services sont opérationnels</p>
                 </div>
             <?php
-            }
-            if ($variable == 'Maintenance' and $variable != 'En panne'  and $variable != 'Hors-ligne') { ?>
+            } elseif ($variable == 'Maintenance' and $variable != 'En panne'  and $variable != 'Hors-ligne') { ?>
                 <div class="alert-roundedPrimary">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
             <?php
-            }
-            if ($variable == 'En panne' and $variable != 'Hors-ligne') { ?>
+            } elseif ($variable == 'En panne' and $variable != 'Hors-ligne') { ?>
                 <div class="alert-roundedWarning">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
-            <?php }
-            if ($variable == 'Hors-ligne') { ?>
+            <?php } elseif ($variable == 'Hors-ligne') { ?>
                 <div class="alert-roundedDanger">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
@@ -95,14 +95,17 @@
                                     if ($category['title'] != $service['category']) {
                                         continue;
                                     }
-                                    if ($service['state'] == 'Maintenance') {
-                                        $variable = 'Maintenance';
-                                    }
                                     if ($service['state'] == 'Hors-ligne') {
                                         $variable = 'Hors-ligne';
+                                        break;
                                     }
                                     if ($service['state'] == 'Panne partielle') {
                                         $variable = 'En panne';
+                                        break;
+                                    }
+                                    if ($service['state'] == 'Maintenance') {
+                                        $variable = 'Maintenance';
+                                        break;
                                     }
                                 endforeach;
                                 if ($variable == 'En ligne') { ?>
