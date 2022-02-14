@@ -16,12 +16,17 @@ class Category extends BaseController
         $this->modal = new CategoryModel();
 
 
-        $data['categorys'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
-        $this->modalMeta = new MetaModel();
-        $data['meta'] = $this->modalMeta->find(1);
-        $this->modalLogo = new LogoModel();
-        $data['logo'] = $this->modalLogo->find(1);
 
+        $this->modalMeta = new MetaModel();
+
+        $this->modalLogo = new LogoModel();
+
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'categorys' =>  $this->modal->orderBy('id', 'DESC')->paginate(20),
+            'pager' =>  $this->modal->pager,
+        ];
 
 
 
@@ -29,9 +34,21 @@ class Category extends BaseController
     }
     public function index()
     {
+        $this->modal = new CategoryModel();
 
 
-        return view('category');
+
+        $this->modalMeta = new MetaModel();
+
+        $this->modalLogo = new LogoModel();
+
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'categorys' =>  $this->modal->orderBy('id', 'DESC')->paginate(1),
+            'pager' =>  $this->modal->pager,
+        ];
+        return view('category', $data);
     }
     public function addCategory()
     {

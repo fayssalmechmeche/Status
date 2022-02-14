@@ -30,6 +30,9 @@
         <div class="subtitle">
             Catégories
         </div>
+        <?php echo $pager->links('default', 'full_pagination');
+
+        ?>
         <table>
             <thead>
                 <tr>
