@@ -12,28 +12,41 @@ class Users extends BaseController
 
     public $modal;
     public $modalMeta;
+    public $modalLogo;
     public function __construct()
     {
         helper(['form']);
         $this->modal = new LoginModel();
-
-
-
-        $data['logins'] = $this->modal->orderBy('id', 'DESC')->paginate();
         $this->modalMeta = new MetaModel();
-        $data['meta'] = $this->modalMeta->find(1);
+
         $this->modalLogo = new LogoModel();
-        $data['logo'] = $this->modalLogo->find(1);
+
+
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'logins' =>  $this->modal->orderBy('id', 'DESC')->paginate(5),
+            'pager' =>  $this->modal->pager,
+        ];
         return view('users', $data);
     }
 
     public function index()
     {
+        helper(['form']);
+        $this->modal = new LoginModel();
+        $this->modalMeta = new MetaModel();
+
+        $this->modalLogo = new LogoModel();
 
 
-
-
-        return view('users');
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'logins' =>  $this->modal->orderBy('id', 'DESC')->paginate(1),
+            'pager' =>  $this->modal->pager,
+        ];
+        return view('users', $data);
     }
     public function addUser()
 

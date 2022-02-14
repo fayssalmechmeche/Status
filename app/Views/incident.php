@@ -33,6 +33,9 @@
             Liste des incidents
         </div>
         <div class="subtitle">incidents</div>
+        <?php echo $pager->links('default', 'full_pagination');
+
+        ?>
         <table>
             <thead>
                 <tr>
@@ -60,6 +63,7 @@
                             <td>
                                 <button class="btn btn-info" type="button" data-toggle="modal" id="btn" data-target="#services-modal<?= $message['id'] ?>">Modifier</button>
                             </td>
+
 
 
                         </tr>

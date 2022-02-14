@@ -33,7 +33,9 @@
             Utilisateurs
         </div>
 
+        <?php echo $pager->links('default', 'full_pagination');
 
+        ?>
         <table>
             <thead>
 
