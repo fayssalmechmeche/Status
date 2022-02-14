@@ -25,11 +25,20 @@
     </header>
 
     <div class="container">
+
         <div class="d-flex">
             <h2 class="m-5 mx-auto">Incidents antérieurs</h2>
         </div>
+        <?php echo $pager->links('default', 'full_pagination');
+
+        ?>
+
+
+
         <div class="mt-3 w-100">
+            <?php $no = 1 ?>
             <?php foreach ($messages as $message) : ?>
+
                 <div class="latest-item">
                     <div class="latest-header">
                         <h5><?php $sqldate = date('d/m/Y', strtotime($message['created']));
@@ -47,6 +56,8 @@
             <?php endforeach; ?>
 
         </div>
+
+
 
     </div>
     <footer class="footer-primary">

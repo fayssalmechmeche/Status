@@ -17,20 +17,31 @@ class Incident extends BaseController
     public function __construct()
     {
         $this->modalMeta = new MetaModel();
-        $data['meta'] = $this->modalMeta->find(1);
-        $this->modalLogo = new LogoModel();
-        $data['logo'] = $this->modalLogo->find(1);
-        $this->modalMessage = new MessageModel();
-        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(5);
-        $this->modalService = new ServiceModel();
-        $data['services'] = $this->modalService->orderBy('id', 'DESC')->paginate();
 
-        return view('incident', $data);
+        $this->modalLogo = new LogoModel();
+
+        $this->modalMessage = new MessageModel();
+
+        $this->modalService = new ServiceModel();
     }
     public function index()
     {
+        $this->modalMeta = new MetaModel();
 
-        return view('incident');
+        $this->modalLogo = new LogoModel();
+
+        $this->modalMessage = new MessageModel();
+
+        $this->modalService = new ServiceModel();
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'messages' =>  $this->modalMessage->orderBy('id', 'DESC')->paginate(5),
+            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(),
+            'pager' =>  $this->modalMessage->pager,
+        ];
+
+        return view('incident', $data);
     }
 
 
@@ -111,11 +122,21 @@ class Incident extends BaseController
     public function indexPublic()
     {
         $this->modalMeta = new MetaModel();
-        $data['meta'] = $this->modalMeta->find(1);
+
         $this->modalLogo = new LogoModel();
-        $data['logo'] = $this->modalLogo->find(1);
+
         $this->modalMessage = new MessageModel();
-        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate();
+
+        $this->modalService = new ServiceModel();
+
+
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'messages' =>  $this->modalMessage->orderBy('id', 'DESC')->paginate(20),
+            'pager' =>  $this->modalMessage->pager,
+        ];
+
         return view('incidentPublic', $data);
     }
 }
