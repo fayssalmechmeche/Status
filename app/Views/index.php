@@ -160,7 +160,8 @@
                                         </div>
 
                                         <div class="status-secondary col-4">
-                                            <p>Dernière mise à jour le <?= $service['updated'] ?></p>
+                                            <p>Dernière mise à jour le <?php $sqldate = date('d/m/Y', strtotime($service['updated']));
+                                                                        echo $sqldate ?> à <?= $service['time'] ?></p>
                                         </div>
 
                                         <?php if ($service['state'] == 'En ligne') { ?>

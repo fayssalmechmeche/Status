@@ -21,7 +21,7 @@ class Incident extends BaseController
         $this->modalLogo = new LogoModel();
         $data['logo'] = $this->modalLogo->find(1);
         $this->modalMessage = new MessageModel();
-        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(50);
+        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(5);
         $this->modalService = new ServiceModel();
         $data['services'] = $this->modalService->orderBy('id', 'DESC')->paginate();
 

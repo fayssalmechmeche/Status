@@ -50,10 +50,17 @@ class Settings extends BaseController
 
             $this->modalMeta->update($id, $data);
 
-
-
             $imageFile = $this->request->getFile('logo');
-            $imageFile->move('./assets/images/');
+            if ($imageFile->isValid()) {
+
+                if (file_exists('./assets/images/logo.png')) {
+                    unlink('./assets/images/logo.png');
+                }
+
+                $imageFile = $this->request->getFile('logo');
+
+                $imageFile->move('./assets/images/');
+            }
 
 
 
