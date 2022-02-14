@@ -19,7 +19,7 @@ class Users extends BaseController
 
 
 
-        $data['logins'] = $this->modal->orderBy('id', 'DESC')->paginate(10);
+        $data['logins'] = $this->modal->orderBy('id', 'DESC')->paginate();
         $this->modalMeta = new MetaModel();
         $data['meta'] = $this->modalMeta->find(1);
         $this->modalLogo = new LogoModel();

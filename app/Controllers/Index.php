@@ -27,9 +27,9 @@ class Index extends BaseController
         $this->modalCategory = new CategoryModel();
         $this->modalMessage = new MessageModel();
 
-        $data['categorys'] = $this->modalCategory->orderBy('id', 'desc')->paginate(10);
+        $data['categorys'] = $this->modalCategory->orderBy('id', 'desc')->paginate();
 
-        $data['services'] = $this->modalService->orderBy('id', 'desc')->paginate(10);
+        $data['services'] = $this->modalService->orderBy('id', 'desc')->paginate();
 
         $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(5);
 

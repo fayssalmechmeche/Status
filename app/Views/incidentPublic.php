@@ -33,8 +33,10 @@
                 <div class="latest-item">
                     <div class="latest-header">
                         <h5><?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                            echo $sqldate ?> à <?= $message['time'] ?> Service concerné : <?= $message['service'] ?> etat de l'incident : <?= $message['state'] ?></h5>
+                            echo $sqldate ?> à <?= $message['time'] ?></h5>
                         <hr class="latest-hr" />
+                        <p> <b>Service concerné :</b> <?= $message['service'] ?> </p>
+                        <p> <b> Etat de l'incident :</b> <?= $message['state'] ?> </p>
                     </div>
                     <div class="latest-main">
                         <p><?php
@@ -47,7 +49,7 @@
         </div>
 
     </div>
-    <footer class="footer-secondary">
+    <footer class="footer-primary">
         <div class="h-100 d-flex flex-row justify-content-center align-items-center">
             <a href="<?= route_to('login') ?>"><button class="btn btn-primary mr-3">tableau de bord</button></a>
         </div>

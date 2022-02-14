@@ -210,11 +210,16 @@
                 <?php foreach ($messages as $message) : ?>
                     <div class="latest-item">
                         <div class="latest-header">
-                            <h5><?= $message['created'] ?></h5>
+                            <h5><?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                echo $sqldate ?> à <?= $message['time'] ?></h5>
                             <hr class="latest-hr" />
+                            <p> <b>Service concerné :</b> <?= $message['service'] ?> </p>
+                            <p> <b> Etat de l'incident :</b> <?= $message['state'] ?> </p>
                         </div>
                         <div class="latest-main">
-                            <p><?= $message['message'] ?></p>
+                            <p><?php
+                                echo $message['message'];
+                                ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>

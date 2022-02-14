@@ -201,40 +201,7 @@
 		</div>
 	</main>
 
-	<div class="modal fade" id="categorie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Modifier la catégorie</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="edit">
-						<div class="col-lg-12">
-							<form>
-								<div class="row">
-									<div class="form-group col-lg-6">
-										<label for="exampleInputEmail1">ID</label>
-										<input type="number" class="form-control" value="1">
-									</div>
-									<div class="form-group col-lg-6">
-										<label for="exampleInputEmail1">Nom</label>
-										<input type="text" class="form-control" id="text" value="description">
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-secondary" formaction="">Modifier</button>
-					<button type="submit" class="btn btn-danger" formaction="">Supprimer le service</button>
-				</div>
-			</div>
-		</div>
-	</div>
+
 	<script src="js/script.js"></script>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
