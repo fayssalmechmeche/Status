@@ -97,43 +97,48 @@
                                 </a>
 
 
-                                <?php $variable = 'En ligne'; ?>
+
                                 <?php foreach ($services as $service) :
+                                    $variables = 'En ligne';
+
                                     if ($category['title'] != $service['category']) {
                                         continue;
                                     }
+
                                     if ($service['state'] == 'Hors-ligne') {
-                                        $variable = 'Hors-ligne';
+                                        $variables = 'Hors-ligne';
                                         break;
                                     }
-                                    if ($service['state'] == 'Panne partielle') {
-                                        $variable = 'En panne';
+
+                                    if ($service['state'] != 'Hors-ligne' and $service['state'] == 'Panne partielle') {
+                                        $variables = 'En panne';
                                         break;
                                     }
-                                    if ($service['state'] == 'Maintenance') {
-                                        $variable = 'Maintenance';
+                                    if ($service['state'] != 'Hors-ligne' and $service['state'] != 'Panne partielle' and $service['state'] == 'Maintenance') {
+                                        $variables = 'Maintenance';
                                         break;
                                     }
+
                                 endforeach;
-                                if ($variable == 'En ligne') { ?>
+                                if ($variables == 'En ligne') { ?>
                                     <div class="d-flex align-items-center pr-2">
                                         <div class="status success"></div>
                                     </div>
                                 <?php
                                 }
-                                if ($variable == 'Hors-ligne') { ?>
+                                if ($variables == 'Hors-ligne') { ?>
                                     <div class="d-flex align-items-center pr-2">
                                         <div class="status danger"></div>
                                     </div>
                                 <?php
                                 }
-                                if ($variable == 'Maintenance') { ?>
+                                if ($variables == 'Maintenance') { ?>
                                     <div class="d-flex align-items-center pr-2">
                                         <div class="status primary"></div>
                                     </div>
                                 <?php
                                 }
-                                if ($variable == 'En panne') { ?>
+                                if ($variables == 'En panne') { ?>
                                     <div class="d-flex align-items-center pr-2">
                                         <div class="status warning"></div>
                                     </div>
