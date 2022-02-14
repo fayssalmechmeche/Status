@@ -33,7 +33,7 @@
                 <div class="latest-item">
                     <div class="latest-header">
                         <h5><?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                            echo $sqldate ?> à <?= $message['time'] ?></h5>
+                            echo $sqldate ?> à <?= $message['time'] ?> Service concerné : <?= $message['service'] ?> etat de l'incident : <?= $message['state'] ?></h5>
                         <hr class="latest-hr" />
                     </div>
                     <div class="latest-main">
