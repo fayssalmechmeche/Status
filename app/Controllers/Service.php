@@ -8,7 +8,7 @@ use App\Models\MetaModel;
 use App\Models\LogoModel;
 use App\Models\MessageModel;
 
-class Dashboard extends BaseController
+class Service extends BaseController
 {
     public $modalService;
     public $modalCategory;
@@ -19,21 +19,42 @@ class Dashboard extends BaseController
     {
         $this->modalService = new ServiceModel();
         $this->modalCategory = new CategoryModel();
-        $data['services'] = $this->modalService->orderBy('id', 'DESC')->paginate();
-        $data['categorys'] = $this->modalCategory->orderBy('id', 'DESC')->paginate();
+
 
         $this->modalMeta = new MetaModel();
-        $data['meta'] = $this->modalMeta->find(1);
-        $this->modalLogo = new LogoModel();
-        $data['logo'] = $this->modalLogo->find(1);
-        $this->modalMessage = new MessageModel();
 
-        return view('dashboard', $data);
+        $this->modalLogo = new LogoModel();
+
+        $this->modalMessage = new MessageModel();
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'categorys' =>  $this->modalCategory->orderBy('id', 'DESC')->paginate(20),
+            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(20),
+            'pager' =>  $this->modalService->pager,
+        ];
+        return view('service', $data);
     }
     public function index()
     {
+        $this->modalService = new ServiceModel();
+        $this->modalCategory = new CategoryModel();
 
-        return view('dashboard');
+
+        $this->modalMeta = new MetaModel();
+
+        $this->modalLogo = new LogoModel();
+
+        $this->modalMessage = new MessageModel();
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'categorys' =>  $this->modalCategory->orderBy('id', 'DESC')->paginate(20),
+            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(20),
+            'pager' =>  $this->modalService->pager,
+        ];
+
+        return view('service', $data);
     }
     public function logout()
     {
@@ -67,11 +88,11 @@ class Dashboard extends BaseController
 
             $this->modalService->save($data);
 
-            return redirect()->to(route_to('dashboard'));
+            return redirect()->to(route_to('service'));
         } else {
 
             $data['validation'] = $this->validator;
-            return view('dashboard', $data);
+            return view('service', $data);
         }
     }
     function update()
@@ -124,10 +145,10 @@ class Dashboard extends BaseController
 
             $session->setFlashdata('success', 'Service mis à jour');
 
-            return redirect()->to(route_to('dashboard'));
+            return redirect()->to(route_to('service'));
         } else {
             $data['validationModal'] = $this->validator;
-            return view('dashboard', $data);
+            return view('service', $data);
         }
     }
     function delete()
@@ -140,7 +161,7 @@ class Dashboard extends BaseController
 
         $session->setFlashdata('success', 'Service supprimé');
 
-        return redirect()->to(route_to('dashboard'));
+        return redirect()->to(route_to('service'));
     }
     function checkServ($host, $port = 80, $timeout = 10)
     {

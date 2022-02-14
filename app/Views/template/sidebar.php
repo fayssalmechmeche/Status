@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li>
-                <a href=" <?= route_to('dashboard') ?>" data-toggle="tooltip" data-placement="right" title="Liste des services">
+                <a href=" <?= route_to('service') ?>" data-toggle="tooltip" data-placement="right" title="Liste des services">
                     <i class="fas fa-align-left"></i>
                 </a>
             </li>

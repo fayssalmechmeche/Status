@@ -53,11 +53,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->put('settings/update/', 'Settings::update', ['as' => 'settings/update/']);
 
 
-    $routes->get('service', 'Dashboard::index', ['as' => 'dashboard']);
-    $routes->get('dashboard/logout', 'Dashboard::logout', ['as' => 'logout']);
-    $routes->get('dashboard/addService', 'Dashboard::addService', ['as' => 'addService']);
-    $routes->put('dashboard/update/', 'Dashboard::update/', ['as' => 'dashboard/update/']);
-    $routes->get('dashboard/delete/', 'Dashboard::delete/', ['as' => 'dashboard/delete/']);
+    $routes->get('service', 'Service::index', ['as' => 'service']);
+    $routes->get('service/logout', 'Service::logout', ['as' => 'logout']);
+    $routes->get('service/addService', 'Service::addService', ['as' => 'addService']);
+    $routes->put('service/update/', 'Service::update/', ['as' => 'service/update/']);
+    $routes->get('service/delete/', 'Service::delete/', ['as' => 'service/delete/']);
 
 
     $routes->get('users/edit/(:num)', 'Users::edit/$1', ['as' => 'users/edit']);

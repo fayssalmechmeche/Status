@@ -33,6 +33,9 @@
 			Liste des services
 		</div>
 		<div class="subtitle">Services</div>
+		<?php echo $pager->links('default', 'full_pagination');
+
+		?>
 		<table>
 			<thead>
 				<tr>
@@ -126,8 +129,8 @@
 														</div>
 														<div class="modal-footer">
 															<input type="hidden" name="id" value="<?php echo $service["id"]; ?>">
-															<button type="submit" class="btn btn-secondary" formaction="<?= route_to('dashboard/update/') ?>">Modifier</button>
-															<button type="submit" class="btn btn-danger" formaction="<?= route_to('dashboard/delete/') ?>">Supprimer le service</button>
+															<button type="submit" class="btn btn-secondary" formaction="<?= route_to('service/update/') ?>">Modifier</button>
+															<button type="submit" class="btn btn-danger" formaction="<?= route_to('service/delete/') ?>">Supprimer le service</button>
 														</div>
 													</div>
 												</form>

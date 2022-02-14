@@ -43,7 +43,7 @@ class Users extends BaseController
         $data = [
             'meta' =>  $this->modalMeta->find(1),
             'logo' =>  $this->modalLogo->find(1),
-            'logins' =>  $this->modal->orderBy('id', 'DESC')->paginate(1),
+            'logins' =>  $this->modal->orderBy('id', 'DESC')->paginate(20),
             'pager' =>  $this->modal->pager,
         ];
         return view('users', $data);
