@@ -47,7 +47,7 @@
         </div>
 
     </div>
-    <footer class="footer-primary">
+    <footer class="footer-secondary">
         <div class="h-100 d-flex flex-row justify-content-center align-items-center">
             <a href="<?= route_to('login') ?>"><button class="btn btn-primary mr-3">tableau de bord</button></a>
         </div>
