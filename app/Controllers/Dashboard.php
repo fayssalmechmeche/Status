@@ -19,7 +19,7 @@ class Dashboard extends BaseController
     {
         $this->modalService = new ServiceModel();
         $this->modalCategory = new CategoryModel();
-        $data['services'] = $this->modalService->orderBy('id', 'DESC')->paginate(10);
+        $data['services'] = $this->modalService->orderBy('id', 'DESC')->paginate();
         $data['categorys'] = $this->modalCategory->orderBy('id', 'DESC')->paginate(10);
 
         $this->modalMeta = new MetaModel();

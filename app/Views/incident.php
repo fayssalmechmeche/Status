@@ -1,23 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <title>eZStatus</title>
+    <title>Dashboard | eZStatus</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" name="meta_description" content="<?= $meta['meta_description'] ?>">
     <meta name="title" name="meta_title" content="<?= $meta['meta_title'] ?>">
+
     <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
     <!-- Basic CSS -->
+
+
     <link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 
 <body>
     <?php require "template/sidebar.php" ?>
+    <?php $session = \Config\Services::session();
+
+    if ($session->getFlashdata('success')) {
+        echo '
+            <div class="alert alert-success">' . $session->getFlashdata("success") . '</div>
+            ';
+    } ?>
+    <main id="dashboard">
+        <div class="main-title">
+            Liste des incidents
+        </div>
+        <div class="subtitle">incidents</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Intitulé</th>
+                    <th>Service</th>
+                    <th>Message</th>
+                    <th>Statut</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                if ($messages) {
+                    foreach ($messages as $message) : ?>
+
+                        <tr>
+                            <td><?= $message["title"] ?></td>
+                            <td><?= $message["service"] ?></td>
+                            <td><?= $message["message"] ?></td>
+                            <td><?= $message["state"] ?></td>
+                            <td>
+                                <button class="btn btn-info" type="button" data-toggle="modal" id="btn" data-target="#services-modal<?= $message['id'] ?>">Modifier</button>
+                            </td>
+
+
+                        </tr>
+                        <div class="modal fade" id="services-modal<?= $message['id'] ?>" tabindex=" -1">
+                            <?php if (isset($validationModal)) : ?>
+                                <div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
+                            <?php endif; ?>
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Modifier l'incident</h5>
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span>&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="edit">
+                                            <div class="col-lg-12">
+                                                <form action="" method="post">
+                                                    <div class="row">
+                                                        <div class="form-group col-lg-12">
+                                                            <label for="name">Intitulé</label>
+                                                            <input type="text" class="form-control" id="title" name="title" value="<?= $message['title'] ?>">
+                                                        </div>
+                                                        <div class="form-group col-lg-12">
+                                                            <label for="description">Message</label>
+                                                            <textarea type="text" class="form-control" id="message" name="message" value="<?= $message['message'] ?>"></textarea>
+                                                        </div>
+                                                        <div class="form-group col-lg-6">
+                                                            <label for="link">Service</label>
+                                                            <select name="service" class="form-control">
+                                                                <option <?php if ($message['service'] == 'En cours') echo 'selected="selected"' ?>>En cours</option>
+                                                                <option <?php if ($message['service'] == 'Fermé') echo 'selected="selected"' ?>>Fermé</option>
+
+                                                            </select>
+                                                        </div>
+
+
+                                                        <div class="form-group col-lg-6" id="state">
+                                                            <label for="status">Statut</label>
+                                                            <select name="state" class="form-control">
+                                                                <option <?php if ($message['state'] == 'En cours') echo 'selected="selected"' ?>>En cours</option>
+                                                                <option <?php if ($message['state'] == 'Fermé') echo 'selected="selected"' ?>>Fermé</option>
+
+                                                            </select>
+                                                        </div>
+
+
+                                                        <div class="modal-footer">
+                                                            <input type="hidden" name="id" value="<?php echo $message["id"]; ?>">
+                                                            <button type="submit" class="btn btn-secondary" formaction="<?= route_to('dashboard/update/') ?>">Modifier</button>
+                                                            <button type="submit" class="btn btn-danger" formaction="<?= route_to('dashboard/delete/') ?>">Supprimer le service</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                <?php endforeach;
+                } ?>
+
+            </tbody>
+        </table>
+        <div class="subtitle">Ajouter un incident</div>
+        <div class="edit">
+            <div class="col-lg-12">
+                <?php if (isset($validation)) : ?>
+                    <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+                <?php endif; ?>
+                <form action=' <?= route_to('addIncident') ?>' method='post'>
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <label for="name">Intitulé</label>
+                            <input type="text" class="form-control" id="title" name="title">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="description">Message</label>
+                            <textarea type="text" class="form-control" id="message" name="message" value="<?= $message['message'] ?>"></textarea>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="link">Service</label>
+                            <select name="service" class="form-control">
+                                <?php if ($services) {
+                                    foreach ($services as $service) : ?>
+                                        <option <?php if ($service['title'] == $message['service']) echo 'selected="selected"' ?>> <?= $service['title'] ?></option>
+
+                                <?php endforeach;
+                                } ?>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group col-lg-6" id="statePage">
+                            <label for="status">Statut</label>
+                            <select class="form-control" name="state">
+                                <option selected>En cours</option>
+                                <option>Fermé</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="categorie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modifier la catégorie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="edit">
+                        <div class="col-lg-12">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        <label for="exampleInputEmail1">ID</label>
+                                        <input type="number" class="form-control" value="1">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label for="exampleInputEmail1">Nom</label>
+                                        <input type="text" class="form-control" id="text" value="description">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" formaction="">Modifier</button>
+                    <button type="submit" class="btn btn-danger" formaction="">Supprimer le service</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        $('#services-modal').on('shown.bs.modal', function() {
+            $('#services-edit').trigger('focus')
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".modal").on("hidden.bs.modal", function() {
+                $(".modal-body").removeData('bs.modal');
+            });
+        });
+    </script>
+
+
 
 
 

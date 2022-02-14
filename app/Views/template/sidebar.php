@@ -16,6 +16,11 @@
                 </a>
             </li>
             <li>
+                <a href='<?= route_to('incident') ?>' data-toggle="tooltip" data-placement="right" title="Liste des incidents">
+                    <i class="fas fa-exclamation"></i>
+                </a>
+            </li>
+            <li>
                 <a href=" <?= route_to('category') ?>" data-toggle="tooltip" data-placement="right" title="Liste des catégories">
                     <i class="fas fa-th-list"></i>
                 </a>

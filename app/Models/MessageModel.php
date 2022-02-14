@@ -12,6 +12,6 @@ class MessageModel extends Model
     protected $primaryKey = 'id';
 
     protected $allowedFields = [
-        'message', 'created', 'time'
+        'title', 'service', 'message', 'state', 'created', 'time'
     ];
 }
