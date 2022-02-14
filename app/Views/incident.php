@@ -40,6 +40,7 @@
                     <th>Service</th>
                     <th>Message</th>
                     <th>Statut</th>
+                    <th>Création</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -54,6 +55,8 @@
                             <td><?= $message["service"] ?></td>
                             <td><?= $message["message"] ?></td>
                             <td><?= $message["state"] ?></td>
+                            <td><?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                echo $sqldate ?> à <?= $message['time'] ?></td>
                             <td>
                                 <button class="btn btn-info" type="button" data-toggle="modal" id="btn" data-target="#services-modal<?= $message['id'] ?>">Modifier</button>
                             </td>
@@ -83,14 +86,17 @@
                                                         </div>
                                                         <div class="form-group col-lg-12">
                                                             <label for="description">Message</label>
-                                                            <textarea type="text" class="form-control" id="message" name="message" value="<?= $message['message'] ?>"></textarea>
+                                                            <textarea type="text" class="form-control" id="message" name="message"><?= $message["message"] ?></textarea>
                                                         </div>
                                                         <div class="form-group col-lg-6">
                                                             <label for="link">Service</label>
                                                             <select name="service" class="form-control">
-                                                                <option <?php if ($message['service'] == 'En cours') echo 'selected="selected"' ?>>En cours</option>
-                                                                <option <?php if ($message['service'] == 'Fermé') echo 'selected="selected"' ?>>Fermé</option>
+                                                                <?php if ($services) {
+                                                                    foreach ($services as $service) : ?>
+                                                                        <option <?php if ($service['title'] == $message['service']) echo 'selected="selected"' ?>> <?= $service['title'] ?></option>
 
+                                                                <?php endforeach;
+                                                                } ?>
                                                             </select>
                                                         </div>
 
@@ -107,8 +113,8 @@
 
                                                         <div class="modal-footer">
                                                             <input type="hidden" name="id" value="<?php echo $message["id"]; ?>">
-                                                            <button type="submit" class="btn btn-secondary" formaction="<?= route_to('dashboard/update/') ?>">Modifier</button>
-                                                            <button type="submit" class="btn btn-danger" formaction="<?= route_to('dashboard/delete/') ?>">Supprimer le service</button>
+                                                            <button type="submit" class="btn btn-secondary" formaction="<?= route_to('incident/update/') ?>">Modifier</button>
+
                                                         </div>
                                                     </div>
                                                 </form>
@@ -138,7 +144,7 @@
                         </div>
                         <div class="form-group col-lg-12">
                             <label for="description">Message</label>
-                            <textarea type="text" class="form-control" id="message" name="message" value="<?= $message['message'] ?>"></textarea>
+                            <textarea type="text" class="form-control" id="message" name="message"></textarea>
                         </div>
 
                         <div class="form-group col-lg-6">
@@ -146,7 +152,7 @@
                             <select name="service" class="form-control">
                                 <?php if ($services) {
                                     foreach ($services as $service) : ?>
-                                        <option <?php if ($service['title'] == $message['service']) echo 'selected="selected"' ?>> <?= $service['title'] ?></option>
+                                        <option> <?= $service['title'] ?></option>
 
                                 <?php endforeach;
                                 } ?>
@@ -170,39 +176,7 @@
         </div>
     </main>
 
-    <div class="modal fade" id="categorie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modifier la catégorie</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="edit">
-                        <div class="col-lg-12">
-                            <form>
-                                <div class="row">
-                                    <div class="form-group col-lg-6">
-                                        <label for="exampleInputEmail1">ID</label>
-                                        <input type="number" class="form-control" value="1">
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <label for="exampleInputEmail1">Nom</label>
-                                        <input type="text" class="form-control" id="text" value="description">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-secondary" formaction="">Modifier</button>
-                    <button type="submit" class="btn btn-danger" formaction="">Supprimer le service</button>
-                </div>
-            </div>
-        </div>
+
     </div>
     <script src="js/script.js"></script>
     <!-- Optional JavaScript -->

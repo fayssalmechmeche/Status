@@ -32,7 +32,7 @@
             <?php foreach ($messages as $message) : ?>
                 <div class="latest-item">
                     <div class="latest-header">
-                        <h5><?php $sqldate = date('m/d/Y', strtotime($message['created']));
+                        <h5><?php $sqldate = date('d/m/Y', strtotime($message['created']));
                             echo $sqldate ?> à <?= $message['time'] ?></h5>
                         <hr class="latest-hr" />
                     </div>

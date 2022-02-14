@@ -46,9 +46,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     $routes->get('Public', 'Incident::indexPublic', ['as' => 'incidentPublic']);
     $routes->get('incident', 'Incident::index', ['as' => 'incident']);
+    $routes->get('incident/addIncident', 'Incident::addIncident', ['as' => 'addIncident']);
+    $routes->put('incident/update/', 'Incident::update', ['as' => 'incident/update/']);
 
     $routes->get('settings', 'Settings::index', ['as' => 'settings']);
-    $routes->get('settings/update/', 'Settings::update', ['as' => 'settings/update/']);
+    $routes->put('settings/update/', 'Settings::update', ['as' => 'settings/update/']);
 
 
     $routes->get('service', 'Dashboard::index', ['as' => 'dashboard']);
