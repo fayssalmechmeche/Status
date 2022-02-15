@@ -32,6 +32,7 @@ class Service extends BaseController
             'categorys' =>  $this->modalCategory->orderBy('id', 'DESC')->paginate(20),
             'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(20),
             'pager' =>  $this->modalService->pager,
+
         ];
         return view('service', $data);
     }
@@ -85,8 +86,15 @@ class Service extends BaseController
 
 
             ];
+            if ($data['monitoring'] == 1) {
+                $data['state'] = null;
+                $this->modalService->save($data);
+            }
+            if ($data['monitoring'] == 0) {
+                $data['ip'] = null;
+                $this->modalService->save($data);
+            }
 
-            $this->modalService->save($data);
 
             return redirect()->to(route_to('service'));
         } else {
@@ -124,22 +132,11 @@ class Service extends BaseController
 
             ];
 
-            $this->modalService->update($id, $data);
-            $data = [
-
-                'message'    => $this->request->getVar('message')
-
-
-
-            ];
-            if ($data['message'] == null) {
+            if ($data['state'] == null) {
+                $this->modalService->update($id, $data['title'], $data['link'], $data['category'], $data['monitoring'], $data['ip'], $data['updated'], $data['description'],);
             } else {
-                $this->modalMessage->save($data);
+                $this->modalService->update($id, $data);
             }
-
-
-
-
 
             $session = \Config\Services::session();
 
@@ -172,10 +169,8 @@ class Service extends BaseController
 
         if (fSockOpen($host, $port, $errno, $errstr, $timeout)) //on check si le serv est up ou pas
         {
-            $session = \Config\Services::session();
-            return $session->setFlashdata('serverup', 'Serveur UP');
+            return true;
         }
-        $session = \Config\Services::session();
-        return $session->setFlashdata('serverdown', 'Serveur Down');
+        return false;
     }
 }

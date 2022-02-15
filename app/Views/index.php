@@ -168,27 +168,40 @@
                                             <p>Dernière mise à jour le <?php $sqldate = date('d/m/Y', strtotime($service['updated']));
                                                                         echo $sqldate ?> à <?= $service['time'] ?></p>
                                         </div>
+                                        <?php if ($service['monitoring'] == 0) { ?>
+                                            <?php if ($service['state'] == 'En ligne') { ?>
+                                                <div class="status-success pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Hors-ligne') { ?>
+                                                <div class="status-danger pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Maintenance') { ?>
+                                                <div class="status-primary pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Panne partielle') { ?>
+                                                <div class="status-warning pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php }
+                                        } else {
+                                            if ($ip == true) { ?>
+                                                <div class="status-success pr-4 col-4 text-right">
+                                                    <p>En ligne</p>
+                                                </div>
+                                            <?php } else { ?>
+                                                <div class="status-danger pr-4 col-4 text-right">
+                                                    <p>Hors-ligne</p>
+                                                </div>
 
-                                        <?php if ($service['state'] == 'En ligne') { ?>
-                                            <div class="status-success pr-4 col-4 text-right">
-                                                <p><?= $service['state'] ?></p>
-                                            </div>
-                                        <?php } ?>
-                                        <?php if ($service['state'] == 'Hors-ligne') { ?>
-                                            <div class="status-danger pr-4 col-4 text-right">
-                                                <p><?= $service['state'] ?></p>
-                                            </div>
-                                        <?php } ?>
-                                        <?php if ($service['state'] == 'Maintenance') { ?>
-                                            <div class="status-primary pr-4 col-4 text-right">
-                                                <p><?= $service['state'] ?></p>
-                                            </div>
-                                        <?php } ?>
-                                        <?php if ($service['state'] == 'Panne partielle') { ?>
-                                            <div class="status-warning pr-4 col-4 text-right">
-                                                <p><?= $service['state'] ?></p>
-                                            </div>
-                                        <?php } ?>
+                                        <?php
+                                            }
+                                        } ?>
 
                                     </div>
 

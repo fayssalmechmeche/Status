@@ -48,7 +48,7 @@ class Login extends BaseController
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to(route_to('dashboard'));
+                return redirect()->to(route_to('dash'));
             } else {
                 $session->setFlashdata('msg', 'Combinaison Mail ou Mot de passe incorrect');
                 return redirect()->to(route_to('login'));

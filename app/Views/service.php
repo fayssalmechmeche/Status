@@ -110,6 +110,7 @@
 														<div class="form-group col-lg-6" id="state">
 															<label for="status">Statut</label>
 															<select name="state" class="form-control">
+
 																<option <?php if ($service['state'] == 'En ligne') echo 'selected="selected"' ?>>En ligne</option>
 																<option <?php if ($service['state'] == 'Panne partielle') echo 'selected="selected"' ?>>Panne partielle</option>
 																<option <?php if ($service['state'] == 'Maintenance') echo 'selected="selected"' ?>>Maintenance</option>
@@ -123,10 +124,7 @@
 																<option value="1">Oui</option>
 															</select>
 														</div>
-														<div class="form-group col-lg-12">
-															<label for="message">Message</label>
-															<textarea class="form-control" id="message" id="updated" name="message" rows="4"></textarea>
-														</div>
+
 														<div class="modal-footer">
 															<input type="hidden" name="id" value="<?php echo $service["id"]; ?>">
 															<button type="submit" class="btn btn-secondary" formaction="<?= route_to('service/update/') ?>">Modifier</button>
@@ -182,7 +180,8 @@
 						<div class="form-group col-lg-6" id="statePage">
 							<label for="status">Statut</label>
 							<select class="form-control" name="state">
-								<option selected>En ligne</option>
+
+								<option>En ligne</option>
 								<option>Panne partielle</option>
 								<option>Maintenance</option>
 								<option>Hors-ligne</option>

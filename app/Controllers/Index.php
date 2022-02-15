@@ -32,8 +32,10 @@ class Index extends BaseController
         $data['services'] = $this->modalService->orderBy('id', 'desc')->paginate();
 
         $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(5);
+        $data['ip'] = $this->modalService->checkServ('127.0.0.1');
 
         $this->modalService = new ServiceModel();
+
 
 
 
