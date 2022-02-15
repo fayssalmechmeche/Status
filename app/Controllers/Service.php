@@ -132,9 +132,12 @@ class Service extends BaseController
 
             ];
 
-            if ($data['state'] == null) {
-                $this->modalService->update($id, $data['title'], $data['link'], $data['category'], $data['monitoring'], $data['ip'], $data['updated'], $data['description'],);
-            } else {
+            if ($data['monitoring'] == 1) {
+                $data['state'] = null;
+                $this->modalService->update($id, $data);
+            }
+            if ($data['monitoring'] == 0) {
+                $data['ip'] = null;
                 $this->modalService->update($id, $data);
             }
 
@@ -159,18 +162,5 @@ class Service extends BaseController
         $session->setFlashdata('success', 'Service supprimé');
 
         return redirect()->to(route_to('service'));
-    }
-    function checkServ($host, $port = 80, $timeout = 10)
-    {
-        //$fp = fSockOpen($host, $port, $errno, $errstr, $timeout);
-        //return $fp!=false;
-
-        error_reporting(E_ALL ^ E_WARNING);  // ligne qui enleve les messages d'erreur car il affiche un Warning (moche) si le serveur est down
-
-        if (fSockOpen($host, $port, $errno, $errstr, $timeout)) //on check si le serv est up ou pas
-        {
-            return true;
-        }
-        return false;
     }
 }

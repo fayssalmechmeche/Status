@@ -189,20 +189,19 @@
                                                     <p><?= $service['state'] ?></p>
                                                 </div>
                                             <?php }
-                                        } else {
-                                            if ($ip == true) { ?>
+                                        }
+                                        if ($service['monitoring'] == 1) {
+                                            error_reporting(E_ALL ^ E_WARNING);
+                                            if (fSockOpen($service['ip'], 80, $errno, $errstr, 10)) { ?>
                                                 <div class="status-success pr-4 col-4 text-right">
-                                                    <p>En ligne</p>
-                                                </div>
-                                            <?php } else { ?>
+                                                    <p name="state" id="state">En ligne</p>
+                                                </div><?php
+                                                    } else { ?>
                                                 <div class="status-danger pr-4 col-4 text-right">
-                                                    <p>Hors-ligne</p>
-                                                </div>
-
-                                        <?php
-                                            }
-                                        } ?>
-
+                                                    <p name="state" id="state">Hors-ligne </p>
+                                                </div><?php
+                                                    }
+                                                } ?>
                                     </div>
 
                                 </div>
