@@ -82,7 +82,8 @@ class Service extends BaseController
                 'category'    => $this->request->getVar('category'),
                 'monitoring'    => $this->request->getVar('monitoring'),
                 'ip'    => $this->request->getVar('ip'),
-                'state'    => $this->request->getVar('state')
+                'state'    => $this->request->getVar('state'),
+                'description'    => $this->request->getVar('description')
 
 
             ];

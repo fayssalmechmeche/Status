@@ -30,9 +30,7 @@
         <div class="subtitle">
             Catégories
         </div>
-        <?php echo $pager->links('default', 'full_pagination');
 
-        ?>
         <table>
             <thead>
                 <tr>
@@ -87,6 +85,9 @@
                         <?php } ?>
             </tbody>
         </table>
+        <?php echo $pager->links('default', 'full_pagination');
+
+        ?>
         <div class="subtitle">Ajouter une catégorie</div>
         <div class="edit">
             <div class="col-lg-12">

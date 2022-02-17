@@ -32,10 +32,8 @@
         <div class="main-title">
             Liste des incidents
         </div>
-        <div class="subtitle">incidents</div>
-        <?php echo $pager->links('default', 'full_pagination');
+        <div class="subtitle">Incidents</div>
 
-        ?>
         <table>
             <thead>
                 <tr>
@@ -134,6 +132,9 @@
 
             </tbody>
         </table>
+        <?php echo $pager->links('default', 'full_pagination');
+
+        ?>
         <div class="subtitle">Ajouter un incident</div>
         <div class="edit">
             <div class="col-lg-12">

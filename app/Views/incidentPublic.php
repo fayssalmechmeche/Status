@@ -29,9 +29,7 @@
         <div class="d-flex">
             <h2 class="m-5 mx-auto">Incidents antérieurs</h2>
         </div>
-        <?php echo $pager->links('default', 'full_pagination');
 
-        ?>
 
 
 
@@ -55,7 +53,12 @@
                 </div>
             <?php endforeach; ?>
 
+
+            <?php echo $pager->links('default', 'full_pagination');
+
+            ?>
         </div>
+
 
 
 

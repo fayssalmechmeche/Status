@@ -19,19 +19,34 @@ class Index extends BaseController
     public function __construct()
     {
         $this->modalMeta = new MetaModel();
-        $data['meta'] = $this->modalMeta->find(1);
 
         $this->modalLogo = new LogoModel();
-        $data['logo'] = $this->modalLogo->find(1);
         $this->modalService = new ServiceModel();
         $this->modalCategory = new CategoryModel();
         $this->modalMessage = new MessageModel();
 
-        $data['categorys'] = $this->modalCategory->orderBy('id', 'desc')->paginate();
 
-        $data['services'] = $this->modalService->orderBy('id', 'desc')->paginate();
 
-        $data['messages'] = $this->modalMessage->orderBy('id', 'DESC')->paginate(5);
+
+
+
+
+
+        $data = [
+            'categorys' => $this->modalCategory->orderBy('id', 'desc')->paginate(),
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'messages' =>  $this->modalMessage->orderBy('id', 'DESC')->paginate(5),
+            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(),
+            'pager' =>  $this->modalMessage->pager,
+
+
+            'services_NomDeDomaine' => $this->modalService->where('category', 'Noms de domaines')->paginate(),
+            'services_Serveur' => $this->modalService->where('category', 'Serveurs')->paginate(),
+
+            'services_SiteInternet' => $this->modalService->where('category', 'Sites internet')->paginate(),
+        ];
+
         $this->modalService = new ServiceModel();
 
 
@@ -42,13 +57,5 @@ class Index extends BaseController
     public function index()
     {
         return view('index');
-    }
-    public function update()
-    {
-        $id = $this->request->getVar('id');
-        $data = [
-            'state'     => $this->request->getVar('state')
-        ];
-        $this->modalService->update($id, $data['state']);
     }
 }

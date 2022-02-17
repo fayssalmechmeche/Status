@@ -18,17 +18,26 @@ class Dash extends BaseController
     public function __construct()
     {
         $this->modalMeta = new MetaModel();
-        $data['meta'] = $this->modalMeta->find(1);
+
         $this->modalLogo = new LogoModel();
-        $data['logo'] = $this->modalLogo->find(1);
+
         $this->modal = new LoginModel();
-        $data['user'] = $this->modal->countsUser();
+
 
         $this->modalCategory = new CategoryModel();
         $data['category'] = $this->modalCategory->countsCategory();
         $this->modalService = new ServiceModel();
-        $data['service'] = $this->modalService->countsService();
 
+
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'categorys' =>  $this->modal->orderBy('id', 'DESC')->paginate(20),
+            'category' => $this->modalCategory->countsCategory(),
+            'service' => $this->modalService->countsService(),
+            'user' => $this->modal->countsUser(),
+            'pager' =>  $this->modal->pager
+        ];
 
         return view('dash', $data);
     }

@@ -33,9 +33,7 @@
 			Liste des services
 		</div>
 		<div class="subtitle">Services</div>
-		<?php echo $pager->links('default', 'full_pagination');
 
-		?>
 		<table>
 			<thead>
 				<tr>
@@ -144,6 +142,9 @@
 
 			</tbody>
 		</table>
+		<?php echo $pager->links('default', 'full_pagination');
+
+		?>
 		<div class="subtitle">Ajouter un service</div>
 		<div class="edit">
 			<div class="col-lg-12">
@@ -155,6 +156,10 @@
 						<div class="form-group col-lg-6">
 							<label for="name">Intitulé</label>
 							<input type="text" class="form-control" id="title" name="title">
+						</div>
+						<div class="form-group col-lg-12">
+							<label for="description">Description</label>
+							<input type="text" class="form-control" id="description" name="description">
 						</div>
 
 						<div class="form-group col-lg-6">

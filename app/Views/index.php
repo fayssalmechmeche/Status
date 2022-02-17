@@ -98,63 +98,18 @@
 
 
 
-                                <?php foreach ($services as $service) :
-                                    $variables = 'En ligne';
 
-                                    if ($category['title'] != $service['category']) {
-                                        continue;
-                                    }
-
-                                    if ($service['state'] == 'Hors-ligne') {
-                                        $variables = 'Hors-ligne';
-                                        break;
-                                    }
-
-                                    if ($service['state'] != 'Hors-ligne' and $service['state'] == 'Panne partielle') {
-                                        $variables = 'En panne';
-                                        break;
-                                    }
-                                    if ($service['state'] != 'Hors-ligne' and $service['state'] != 'Panne partielle' and $service['state'] == 'Maintenance') {
-                                        $variables = 'Maintenance';
-                                        break;
-                                    }
-
-                                endforeach;
-                                if ($variables == 'En ligne') { ?>
-                                    <div class="d-flex align-items-center pr-2">
-                                        <div class="status success"></div>
-                                    </div>
-                                <?php
-                                }
-                                if ($variables == 'Hors-ligne') { ?>
-                                    <div class="d-flex align-items-center pr-2">
-                                        <div class="status danger"></div>
-                                    </div>
-                                <?php
-                                }
-                                if ($variables == 'Maintenance') { ?>
-                                    <div class="d-flex align-items-center pr-2">
-                                        <div class="status primary"></div>
-                                    </div>
-                                <?php
-                                }
-                                if ($variables == 'En panne') { ?>
-                                    <div class="d-flex align-items-center pr-2">
-                                        <div class="status warning"></div>
-                                    </div>
-                                <?php
-                                }
-                                ?>
 
 
                             </h4>
                         </div>
-                        <?php foreach ($services as $service) : ?>
-                            <?php
+
+                        <?php foreach ($services_Serveur as $service) :
                             if ($category['title'] != $service['category']) {
+
                                 continue;
-                            }
-                            ?>
+                            } ?>
+
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
                                     <div class="d-flex flex-row justify-content-between status-item align-items-center">
@@ -198,7 +153,125 @@
                                                 </div><?php
                                                     } else { ?>
                                                 <div class="status-danger pr-4 col-4 text-right">
-                                                    <p name="state" id="state">Hors-ligne </p>
+                                                    <p name="state" id="state">Hors-ligne</p>
+                                                </div><?php
+                                                    }
+                                                } ?>
+                                    </div>
+
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                        <?php foreach ($services_SiteInternet as $service) :
+                            if ($category['title'] != $service['category']) {
+
+                                continue;
+                            } ?>
+
+
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                        <div class="status-primary d-flex col-4">
+                                            <p> <a target="_blank" href="<?= $service['link'] ?>" class="ez-link"> <?= $service['title'] ?>
+                                                </a> </p>&nbsp;&nbsp;
+                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above"><?= $service['description'] ?></span></span>
+                                        </div>
+
+                                        <div class="status-secondary col-4">
+                                            <p>Dernière mise à jour le <?php $sqldate = date('d/m/Y', strtotime($service['updated']));
+                                                                        echo $sqldate ?> à <?= $service['time'] ?></p>
+                                        </div>
+                                        <?php if ($service['monitoring'] == 0) { ?>
+                                            <?php if ($service['state'] == 'En ligne') { ?>
+                                                <div class="status-success pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Hors-ligne') { ?>
+                                                <div class="status-danger pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Maintenance') { ?>
+                                                <div class="status-primary pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Panne partielle') { ?>
+                                                <div class="status-warning pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php }
+                                        }
+                                        if ($service['monitoring'] == 1) {
+                                            error_reporting(E_ALL ^ E_WARNING);
+                                            if (fSockOpen($service['ip'], 80, $errno, $errstr, 10)) { ?>
+                                                <div class="status-success pr-4 col-4 text-right">
+                                                    <p name="state" id="state">En ligne</p>
+                                                </div><?php
+                                                    } else { ?>
+                                                <div class="status-danger pr-4 col-4 text-right">
+                                                    <p name="state" id="state">Hors-ligne</p>
+                                                </div><?php
+                                                    }
+                                                } ?>
+                                    </div>
+
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                        <?php foreach ($services_NomDeDomaine as $service) :
+                            if ($category['title'] != $service['category']) {
+
+                                continue;
+                            } ?>
+
+
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="d-flex flex-row justify-content-between status-item align-items-center">
+                                        <div class="status-primary d-flex col-4">
+                                            <p> <a target="_blank" href="<?= $service['link'] ?>" class="ez-link"> <?= $service['title'] ?>
+                                                </a> </p>&nbsp;&nbsp;
+                                            <span class="qs"><i class="fa fa-question-circle" style="margin-top: 3px;"></i><span class="popover above"><?= $service['description'] ?></span></span>
+                                        </div>
+
+                                        <div class="status-secondary col-4">
+                                            <p>Dernière mise à jour le <?php $sqldate = date('d/m/Y', strtotime($service['updated']));
+                                                                        echo $sqldate ?> à <?= $service['time'] ?></p>
+                                        </div>
+                                        <?php if ($service['monitoring'] == 0) { ?>
+                                            <?php if ($service['state'] == 'En ligne') { ?>
+                                                <div class="status-success pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Hors-ligne') { ?>
+                                                <div class="status-danger pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Maintenance') { ?>
+                                                <div class="status-primary pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($service['state'] == 'Panne partielle') { ?>
+                                                <div class="status-warning pr-4 col-4 text-right">
+                                                    <p><?= $service['state'] ?></p>
+                                                </div>
+                                            <?php }
+                                        }
+                                        if ($service['monitoring'] == 1) {
+                                            error_reporting(E_ALL ^ E_WARNING);
+                                            if (fSockOpen($service['ip'], 80, $errno, $errstr, 10)) { ?>
+                                                <div class="status-success pr-4 col-4 text-right">
+                                                    <p name="state" id="state">En ligne</p>
+                                                </div><?php
+                                                    } else { ?>
+                                                <div class="status-danger pr-4 col-4 text-right">
+                                                    <p name="state" id="state">Hors-ligne</p>
                                                 </div><?php
                                                     }
                                                 } ?>
