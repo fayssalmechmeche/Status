@@ -29,7 +29,10 @@
                 </div>
                 <div class="card p-2 col-lg-8 col-sm-8 col-8 mx-auto">
                     <?php if (session()->getFlashdata('msg')) : ?>
-                        <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
+                        <div class="alert alert-danger alert-dismissable fade show"><?= session()->getFlashdata('msg') ?>
+                            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
+                        </div>
+
                     <?php endif; ?>
                     <form action="<?= route_to('auth') ?>" method="post">
                         <div class="d-flex flex-column m-2">

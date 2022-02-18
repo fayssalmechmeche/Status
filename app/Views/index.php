@@ -29,21 +29,21 @@
             <div class="d-flex flex-column">
                 <h2 class="m-5 mx-auto">état de nos services</h2>
             </div>
-            <?php $variable = 'En ligne'; ?>
+            <?php $number = 'En ligne'; ?>
             <?php foreach ($services as $service) :
 
 
 
                 if ($service['state'] == 'Hors-ligne') {
-                    $variable = 'Hors-ligne';
+                    $number = 'Hors-ligne';
                     break;
                 }
                 foreach ($services as $service) :
                     if ($service['state'] != 'Hors-ligne' and $service['state'] == 'Panne partielle') {
-                        $variable = 'En panne';
+                        $number = 'En panne';
                         break;
                     } elseif ($service['state'] != 'Hors-ligne' and $service['state'] != 'Panne partielle' and $service['state'] == 'Maintenance') {
-                        $variable = 'Maintenance';
+                        $number = 'Maintenance';
                     }
                 endforeach;
 
@@ -58,21 +58,21 @@
 
 
 
-            if ($variable == 'En ligne' and $variable != 'Maintenance' and $variable != 'En panne'  and $variable != 'Hors-ligne') { ?>
+            if ($number == 'En ligne' and $number != 'Maintenance' and $number != 'En panne'  and $number != 'Hors-ligne') { ?>
                 <div class="alert-roundedSuccess">
                     <p class="p-2 pl-4">Tous les services sont opérationnels</p>
                 </div>
             <?php
-            } elseif ($variable == 'Maintenance' and $variable != 'En panne'  and $variable != 'Hors-ligne') { ?>
+            } elseif ($number == 'Maintenance' and $number != 'En panne'  and $number != 'Hors-ligne') { ?>
                 <div class="alert-roundedPrimary">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
             <?php
-            } elseif ($variable == 'En panne' and $variable != 'Hors-ligne') { ?>
+            } elseif ($number == 'En panne' and $number != 'Hors-ligne') { ?>
                 <div class="alert-roundedWarning">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
-            <?php } elseif ($variable == 'Hors-ligne') { ?>
+            <?php } elseif ($number == 'Hors-ligne') { ?>
                 <div class="alert-roundedDanger">
                     <p class="p-2 pl-4">Certains services sont en pannes</p>
                 </div>
@@ -84,7 +84,7 @@
 
             <div class="panel-group mt-5" id="accordion" role="tablist" aria-multiselectable="true">
 
-                <!-- 1er tableau -->
+                <!-- 1er states -->
 
                 <div class="panel panel-default mt-4">
                     <?php foreach ($categorys as $category) : ?>
@@ -97,8 +97,8 @@
                                 </a>
 
                                 <?php
-                                $variable = 0;
-                                $tableau = [
+                                $number = 0;
+                                $states = [
                                     "Hors-ligne" => 99,
                                     "Panne partielle" => 98,
                                     "Maintenance" => 97,
@@ -109,13 +109,13 @@
 
                                         continue;
                                     }
-                                    if (isset($tableau[$service['state']]) and $tableau[$service['state']] > $variable) {
+                                    if (isset($states[$service['state']]) and $states[$service['state']] > $number) {
 
-                                        $variable = $tableau[$service['state']];
+                                        $number = $states[$service['state']];
                                     }
                                 endforeach;
                                 $class = "success";
-                                switch ($variable) {
+                                switch ($number) {
                                     case 99:
                                         $class = "danger";
                                         break;
@@ -179,15 +179,12 @@
                                             }
                                             if ($service['monitoring'] == 1) {
                                                 error_reporting(E_ALL ^ E_WARNING);
-                                                if (fSockOpen($service['ip'], 80, $errno, $errstr, 10)) { ?>
-                                                    <div class="status-success pr-4 col-4 text-right">
-                                                        <p name="state" id="state"><?= $service['state'] ?></p>
-                                                    </div><?php
-                                                        } else { ?>
-                                                    <div class="status-danger pr-4 col-4 text-right">
-                                                        <p name="state" id="state"><?= $service['state'] ?></p>
-                                                    </div><?php
-                                                        }
+                                                ?>
+
+                                                <div class="status-danger pr-4 col-4 text-right">
+                                                    <p name="state" id="state"><?= $service['state'] ?></p>
+                                                </div><?php
+
                                                     } ?>
                                         </div>
 
@@ -232,7 +229,7 @@
     </main>
     <footer class="footer-primary">
         <div class="h-100 d-flex flex-row justify-content-center align-items-center">
-            <a href="<?= route_to('login') ?>"><button class="btn btn-primary mr-3">tableau de bord</button></a>
+            <a href="<?= route_to('login') ?>"><button class="btn btn-primary mr-3">states de bord</button></a>
         </div>
     </footer>
     <script src="js/script.js"></script>
