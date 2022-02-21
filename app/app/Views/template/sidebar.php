@@ -1,6 +1,10 @@
 <div class="sidebar">
     <div class="sidebar-brand">
-        <img src=<?php echo base_url("/assets/images/" . $logo['name']); ?> alt="logo" />
+        <img src=<?php if (isset($logo['name'])) {
+                        echo base_url("/assets/images/" . $logo['name']);
+                    } else {
+                        echo "rien";
+                    } ?> alt="logo" />
         <hr />
     </div>
     <div class="sidebar-content">

@@ -6,8 +6,16 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" name="meta_description" content="<?= $meta['meta_description'] ?>">
-    <meta name="title" name="meta_title" content="<?= $meta['meta_title'] ?>">
+    <meta name="description" name="meta_description" content="<?php if (isset($meta['meta_description'])) {
+                                                                    echo $meta['meta_description'];
+                                                                } else {
+                                                                    echo "rien";
+                                                                } ?>">
+    <meta name="title" name="meta_title" content="<?php if (isset($meta['meta_title'])) {
+                                                        echo $meta['meta_title'];
+                                                    } else {
+                                                        echo " rien";
+                                                    } ?>">
     <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
     <!-- Basic CSS -->
     <link rel="stylesheet" href="<?php echo base_url("/assets/css/style.css"); ?>">
@@ -33,11 +41,19 @@
                     <div class="row">
                         <div class="form-group col-lg-6">
                             <label for="siteName">Nom du site</label>
-                            <input type="text" class="form-control" name="meta_title" id="meta_title" value="<?= $meta['meta_title'] ?>">
+                            <input type="text" class="form-control" name="meta_title" id="meta_title" value="<?php if (isset($meta['meta_title'])) {
+                                                                                                                    echo $meta['meta_title'];
+                                                                                                                } else {
+                                                                                                                    echo " rien";
+                                                                                                                } ?>">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="description">Description du site</label>
-                            <input type="text" class="form-control" name="meta_description" id="meta_description" value="<?= $meta['meta_description'] ?>">
+                            <input type="text" class="form-control" name="meta_description" id="meta_description" value="<?php if (isset($meta['meta_description'])) {
+                                                                                                                                echo $meta['meta_description'];
+                                                                                                                            } else {
+                                                                                                                                echo " rien";
+                                                                                                                            } ?>">
                         </div>
 
                         <div class="form-group col-lg-6">
@@ -46,7 +62,11 @@
                         </div>
                     </div>
                     <div>
-                        <input type="hidden" name="id" value="<?= $meta["id"]; ?>" />
+                        <input type="hidden" name="id" value=" <?php if (isset($meta['id'])) {
+                                                                    echo $meta['id'];
+                                                                } else {
+                                                                    echo " rien";
+                                                                } ?>">
                         <button type="submit" class="btn btn-secondary">Modifier</button>
                     </div>
 
