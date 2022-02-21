@@ -8,13 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" name="meta_description" content="<?php if (isset($meta['meta_description'])) {
                                                                     echo $meta['meta_description'];
-                                                                } else {
-                                                                    echo "rien";
-                                                                } ?>">
+                                                                }  ?>">
     <meta name="title" name="meta_title" content="<?php if (isset($meta['meta_title'])) {
                                                         echo $meta['meta_title'];
-                                                    } else {
-                                                        echo " rien";
                                                     } ?>">
 
     <link rel="shortcut icon" href="<?php echo base_url("/assets/images/favicon.png"); ?>" />
