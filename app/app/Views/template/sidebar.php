@@ -1,11 +1,6 @@
 <div class="sidebar">
-    <div class="sidebar-brand">
-        <img src=<?php if (isset($logo['name'])) {
-                        echo base_url("/assets/images/" . $logo['name']);
-                    } else {
-                        echo "rien";
-                    } ?> alt="logo" />
-        <hr />
+    <div class="d-flex justify-content-center align-items-center banner">
+        <a href="index"><img src="<?php echo base_url("/assets/images/logo.png"); ?>" alt="Logo eZCorp"></a>
     </div>
     <div class="sidebar-content">
         <ul>

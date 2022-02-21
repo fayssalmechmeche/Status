@@ -48,7 +48,19 @@ class Settings extends BaseController
 
             ];
 
-            $this->modalMeta->update($id, $data);
+            if (!isset($data['meta_title'])) {
+
+                $this->modalMeta->save($data);
+            } else {
+                $this->modalMeta->update($id, $data);
+            }
+            if (!isset($data['meta_description'])) {
+
+                $this->modalMeta->save($data);
+            } else {
+                $this->modalMeta->update($id, $data);
+            }
+
 
             $imageFile = $this->request->getFile('logo');
             if ($imageFile->isValid()) {
