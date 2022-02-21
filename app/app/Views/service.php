@@ -256,6 +256,10 @@
 
 		}
 
+		// MODAL
+
+
+
 
 		var elms = document.querySelectorAll("[id='btn']");
 		elms[i].addEventListener("click", Modal);
