@@ -25,7 +25,7 @@ class Dash extends BaseController
 
 
         $this->modalCategory = new CategoryModel();
-        $data['category'] = $this->modalCategory->countsCategory();
+
         $this->modalService = new ServiceModel();
 
 

@@ -1,7 +1,9 @@
 <div class="sidebar">
-    <div class="d-flex justify-content-center align-items-center banner">
-        <a href="index"><img src="<?php echo base_url("/assets/images/logo.png"); ?>" alt="Logo eZCorp"></a>
+    <div class="sidebar-brand">
+        <img src=<?php echo base_url("/assets/images/logo.png"); ?> alt="logo" />
+        <hr />
     </div>
+
     <div class="sidebar-content">
         <ul>
             <li>
