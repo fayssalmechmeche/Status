@@ -53,7 +53,7 @@ class Settings extends BaseController
                 $this->modalMeta->save($data);
             } else {
                 $this->modalMeta->update($id, $data);
-            } //
+            }
 
 
 

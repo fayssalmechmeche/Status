@@ -5,7 +5,7 @@ namespace App\Commands;
 use CodeIgniter\CLI\BaseCommand;
 use CodeIgniter\CLI\CLI;
 
-class Services extends BaseCommand
+class Monitoring extends BaseCommand
 {
     /**
      * The Command's Group
@@ -19,7 +19,7 @@ class Services extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'services';
+    protected $name = 'monitoring';
 
     /**
      * The Command's Description
@@ -33,7 +33,7 @@ class Services extends BaseCommand
      *
      * @var string
      */
-    protected $usage = 'services [arguments] [options]';
+    protected $usage = 'monitoring [arguments] [options]';
 
     /**
      * The Command's Arguments
@@ -69,6 +69,7 @@ class Services extends BaseCommand
                 $db->query("UPDATE service SET state = ? WHERE id = ?", ['Hors-ligne', $service->id]);
             }
 
+            echo 'intitulé : ' . $service->title . ' -> ' . $service->state;
         endforeach;
     }
 }

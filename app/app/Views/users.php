@@ -51,13 +51,8 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <?php $session = \Config\Services::session();
+                                        <?php $session = \Config\Services::session(); ?>
 
-                                        if ($session->getFlashdata('warning')) {
-                                            echo '
-            <div class="alert alert-warning">' . $session->getFlashdata("warning") . '</div>
-            ';
-                                        } ?>
 
 
 
@@ -90,9 +85,9 @@
                                                         <div class="modal-footer">
                                                             <input type="hidden" name="id" value="<?php echo $user["id"]; ?>" />
                                                             <button type="submit" name="modify" class="btn btn-secondary" formaction="<?= route_to('users/update/') ?>">Modifier</button>
-
-                                                            <button type="submit" name="delete" class="btn btn-danger" formaction="<?= route_to('users/delete/') ?>">Supprimer l'utilisateur</button>
-
+                                                            <?php if ($user['id'] != $session->get('id')) { ?>
+                                                                <button type="submit" name="delete" class="btn btn-danger" formaction="<?= route_to('users/delete/') ?>">Supprimer l'utilisateur</button>
+                                                            <?php } ?>
 
                                                         </div>
                                                     </form>

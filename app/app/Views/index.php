@@ -165,12 +165,17 @@
                                             if ($service['monitoring'] == 1) {
                                                 error_reporting(E_ALL ^ E_WARNING);
                                                 ?>
-
-                                                <div class="status-danger pr-4 col-4 text-right">
-                                                    <p name="state" id="state"><?= $service['state'] ?></p>
-                                                </div><?php
-
-                                                    } ?>
+                                                <?php if ($service['state'] == 'En ligne') { ?>
+                                                    <div class="status-success pr-4 col-4 text-right">
+                                                        <p><?= $service['state'] ?></p>
+                                                    </div>
+                                                <?php } ?>
+                                                <?php if ($service['state'] == 'Hors-ligne') { ?>
+                                                    <div class="status-danger pr-4 col-4 text-right">
+                                                        <p><?= $service['state'] ?></p>
+                                                    </div>
+                                            <?php }
+                                            } ?>
                                         </div>
 
                                     </div>
