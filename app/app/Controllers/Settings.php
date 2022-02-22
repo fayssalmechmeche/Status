@@ -31,8 +31,8 @@ class Settings extends BaseController
         helper(['form', 'url']);
 
         $rules = [
-            'meta_title'          => 'min_length[2]|max_length[50]',
-            'meta_description'         => 'min_length[4]|max_length[100]'
+            'meta_title'          => 'max_length[50]',
+            'meta_description'         => 'max_length[100]'
 
         ];
 
@@ -48,18 +48,13 @@ class Settings extends BaseController
 
             ];
 
-            if (!isset($data['meta_title'])) {
+            if ($data['meta'] = $this->modalMeta->getData() == 0) {
 
                 $this->modalMeta->save($data);
             } else {
                 $this->modalMeta->update($id, $data);
             }
-            if (!isset($data['meta_description'])) {
 
-                $this->modalMeta->save($data);
-            } else {
-                $this->modalMeta->update($id, $data);
-            }
 
 
             $imageFile = $this->request->getFile('logo');
@@ -72,6 +67,8 @@ class Settings extends BaseController
                 $imageFile = $this->request->getFile('logo');
 
                 $imageFile->move('./assets/images/');
+                $name = $imageFile->getName();
+                rename("./assets/images/$name", "./assets/images/logo.png");
             }
 
 
