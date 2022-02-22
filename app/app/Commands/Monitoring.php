@@ -61,6 +61,12 @@ class Monitoring extends BaseCommand
 
 
         foreach ($services as $service) :
+            echo '
+            Vérification du service : ' . $service->title . ' (' . $service->ip . ') ' . '
+            ';
+
+
+
 
             $status = @fSockOpen($service->ip, 80, $errno, $errstr, 10);
             if ($status) {
@@ -68,8 +74,8 @@ class Monitoring extends BaseCommand
             } else {
                 $db->query("UPDATE service SET state = ? WHERE id = ?", ['Hors-ligne', $service->id]);
             }
+            echo 'Nom du service : ' . $service->title . ' -> ' . $service->state;
 
-            echo 'intitulé : ' . $service->title . ' -> ' . $service->state;
         endforeach;
     }
 }

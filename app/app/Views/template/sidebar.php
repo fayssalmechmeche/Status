@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="sidebar-brand">
-        <img src=<?php echo base_url("/assets/images/logo.png"); ?> alt="logo" />
+        <a href=" <?= route_to('dash') ?>"><img src=<?php echo base_url("/assets/images/logo.png"); ?> alt="logo" /></a>
         <hr />
     </div>
 
@@ -39,6 +39,11 @@
             <li>
                 <a href=" <?= route_to('user') ?>" data-toggle="tooltip" data-placement="right" title="Paramètres du compte">
                     <i class="fas fa-user-edit"></i>
+                </a>
+            </li>
+            <li>
+                <a href=" <?= route_to('index') ?>" data-toggle="tooltip" data-placement="right" title="Page d'incident public">
+                    <i class="fas fa-archive"></i>
                 </a>
             </li>
             <li>

@@ -41,10 +41,7 @@ class Index extends BaseController
             'pager' =>  $this->modalMessage->pager,
 
 
-            'services_NomDeDomaine' => $this->modalService->where('category', 'Noms de domaines')->paginate(),
-            'services_Serveur' => $this->modalService->where('category', 'Serveurs')->paginate(),
 
-            'services_SiteInternet' => $this->modalService->where('category', 'Sites internet')->paginate(),
         ];
 
         $this->modalService = new ServiceModel();

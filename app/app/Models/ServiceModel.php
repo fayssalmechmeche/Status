@@ -21,4 +21,18 @@ class ServiceModel extends Model
         $query = $builder->countAllResults();
         return $query;
     }
+    public function countsServiceOnline()
+    {
+        $builder = $this->db->table('service')->where('state', 'En ligne');
+
+        $query = $builder->countAllResults();
+        return $query;
+    }
+    public function countsServiceOffline()
+    {
+        $builder = $this->db->table('service')->where('state', 'Hors-ligne');
+
+        $query = $builder->countAllResults();
+        return $query;
+    }
 }

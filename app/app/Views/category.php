@@ -50,7 +50,7 @@
                                                     <div class="col-lg-12">
                                                         <form action="" method="post">
                                                             <div class="row">
-                                                                <div class="form-group col-lg-6">
+                                                                <div class="form-group col-lg-12">
                                                                     <label for="name">Intitulé</label>
                                                                     <input type="text" class="form-control" id="title" name="title" value="<?= $category['title'] ?>">
                                                                 </div>

@@ -35,6 +35,8 @@ class Dash extends BaseController
             'categorys' =>  $this->modal->orderBy('id', 'DESC')->paginate(20),
             'category' => $this->modalCategory->countsCategory(),
             'service' => $this->modalService->countsService(),
+            'service_online' => $this->modalService->countsServiceOnline(),
+            'service_offline' => $this->modalService->countsServiceOffline(),
             'user' => $this->modal->countsUser(),
             'pager' =>  $this->modal->pager
         ];
