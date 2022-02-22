@@ -110,9 +110,7 @@
 
             </tbody>
         </table>
-        <?php echo $pager->links('default', 'full_pagination');
 
-        ?>
         <div class="subtitle">Ajouter un utilisateur</div>
         <div class="edit">
             <div class="col-lg-12">
