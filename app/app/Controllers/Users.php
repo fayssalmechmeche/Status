@@ -71,6 +71,7 @@ class Users extends BaseController
             return redirect()->to(route_to('users'));
         } else {
             $data['validation'] = $this->validator;
+            $data['pager'] = $this->modalService->pager;
             return view('users', $data);
         }
     }
@@ -120,6 +121,7 @@ class Users extends BaseController
             return redirect()->to(route_to('users'));
         } else {
             $data['validationModal'] = $this->validator;
+            $data['pager'] = $this->modalService->pager;
             return view('users', $data);
         }
     }

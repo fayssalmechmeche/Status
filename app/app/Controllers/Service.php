@@ -51,7 +51,7 @@ class Service extends BaseController
             'meta' =>  $this->modalMeta->find(1),
             'logo' =>  $this->modalLogo->find(1),
             'categorys' =>  $this->modalCategory->orderBy('id', 'DESC')->paginate(20),
-            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(20),
+            'services' =>  $this->modalService->orderBy('id', 'ASC')->paginate(20),
             'pager' =>  $this->modalService->pager,
         ];
 
@@ -83,7 +83,8 @@ class Service extends BaseController
                 'monitoring'    => $this->request->getVar('monitoring'),
                 'ip'    => $this->request->getVar('ip'),
                 'state'    => $this->request->getVar('state'),
-                'description'    => $this->request->getVar('description')
+                'description'    => $this->request->getVar('description'),
+                'pager' =>  $this->modalService->pager,
 
 
             ];
@@ -107,6 +108,7 @@ class Service extends BaseController
         } else {
 
             $data['validation'] = $this->validator;
+            $data['pager'] = $this->modalService->pager;
             return view('service', $data);
         }
     }
@@ -133,6 +135,7 @@ class Service extends BaseController
                 'state'    => $this->request->getVar('state'),
                 'updated'    => $this->request->getVar('updated'),
                 'description'    => $this->request->getVar('description'),
+                'pager' =>  $this->modalService->pager,
 
 
 
@@ -161,6 +164,7 @@ class Service extends BaseController
             return redirect()->to(route_to('service'));
         } else {
             $data['validationModal'] = $this->validator;
+            $data['pager'] = $this->modalService->pager;
             return view('service', $data);
         }
     }

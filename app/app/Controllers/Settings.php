@@ -81,6 +81,7 @@ class Settings extends BaseController
             return redirect()->to(route_to('settings'));
         } else {
             $data['validation'] = $this->validator;
+
             return view('settings', $data);
         }
     }

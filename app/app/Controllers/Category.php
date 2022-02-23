@@ -69,6 +69,7 @@ class Category extends BaseController
             return redirect()->to('/category');
         } else {
             $data['validation'] = $this->validator;
+            $data['pager'] = $this->modalService->pager;
             return view('category', $data);
         }
     }
@@ -105,6 +106,7 @@ class Category extends BaseController
             return redirect()->to(route_to('category'));
         } else {
             $data['validationModal'] = $this->validator;
+            $data['pager'] = $this->modalService->pager;
             return view('category', $data);
         }
     }
