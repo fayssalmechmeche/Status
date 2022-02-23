@@ -1,0 +1,43 @@
+variables:
+    IMAGE_NAME: web/status
+    BUILD_CODE_IMAGE: $REGISTRY_URL/$IMAGE_NAME:$CI_COMMIT_TAG
+    LATEST_CODE_IMAGE: $REGISTRY_URL/$IMAGE_NAME:latest
+
+stages:
+    - build
+
+##########################
+### Build image latest ###
+##########################
+
+build-latest:
+    stage: build
+    image: docker:latest
+    only:
+        - main
+    tags:
+        - build
+    services:
+        - docker:dind
+    script:
+        - echo $LATEST_CODE_IMAGE
+        - docker build --tag="$LATEST_CODE_IMAGE" .
+        - docker push $LATEST_CODE_IMAGE
+
+############################
+### Build image with tag ###
+############################
+
+build-tags:
+    stage: build
+    image: docker:latest
+    only:
+        - tags
+    tags:
+        - build
+    services:
+        - docker:dind
+    script:
+        - echo $BUILD_CODE_IMAGE
+        - docker build --tag="$BUILD_CODE_IMAGE" .
+        - docker push $BUILD_CODE_IMAGE
