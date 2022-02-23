@@ -89,6 +89,12 @@ class Service extends BaseController
             ];
             if ($data['monitoring'] == 1) {
                 $data['state'] = null;
+                $status = @fSockOpen($data['ip'], 80, $errno, $errstr, 10);
+                if ($status) {
+                    $data['state'] = 'En ligne';
+                } else {
+                    $data['state'] = 'Hors-ligne';
+                }
                 $this->modalService->save($data);
             }
             if ($data['monitoring'] == 0) {
@@ -136,6 +142,7 @@ class Service extends BaseController
             if ($data['monitoring'] == 1) {
                 $data['state'] = null;
                 $this->modalService->update($id, $data);
+                Service::monitoring();
             }
             if ($data['monitoring'] == 0) {
                 $data['ip'] = null;
@@ -163,5 +170,19 @@ class Service extends BaseController
         $session->setFlashdata('success', 'Service supprimé');
 
         return redirect()->to(route_to('service'));
+    }
+
+    public function monitoring()
+    {
+        $db = \Config\Database::connect();
+        $id = $this->request->getVar('id');
+        $ip = $this->request->getVar('ip');
+
+        $status = @fSockOpen($ip, 80, $errno, $errstr, 10);
+        if ($status) {
+            $db->query("UPDATE service SET state = ? WHERE id = ?", ['En ligne', $id]);
+        } else {
+            $db->query("UPDATE service SET state = ? WHERE id = ?", ['Hors-ligne', $id]);
+        }
     }
 }
