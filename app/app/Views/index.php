@@ -199,18 +199,44 @@
             <div class="mt-3 w-100">
                 <?php foreach ($messages as $message) : ?>
                     <div class="latest-item">
-                        <div class="latest-header">
-                            <h5><?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                                echo $sqldate ?> à <?= $message['time'] ?></h5>
-                            <hr class="latest-hr" />
-                            <p> <b>Service concerné :</b> <?= $message['service'] ?> </p>
-                            <p> <b> Etat de l'incident :</b> <?= $message['state'] ?> </p>
-                        </div>
-                        <div class="latest-main">
-                            <p><?php
-                                echo $message['message'];
-                                ?></p>
-                        </div>
+                        <?php if ($message['state'] == 'En cours') { ?>
+                            <div class="latest-header">
+                                <h5 class="text-danger"><?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                                        echo $sqldate ?> à <?= $message['time'] ?> <i class="fas fa-times"></i></h5>
+                                <hr class="latest-hr" />
+
+                                <p class="text-danger">
+                                    <b>Service concerné :</b> <?= $message['service'] ?>
+                                    <br />
+
+
+                                    <b> Etat de l'incident :</b> <?= $message['state'] ?>
+                                    <br />
+                                    <?= $message['message'];
+                                    ?>
+                                </p>
+                            <?php } ?>
+
+
+
+                            <?php if ($message['state'] == 'Fermé') { ?>
+                                <h5 class="text-success"> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                                            echo $sqldate ?> à <?= $message['time'] ?> <i class="fas fa-check"></i></h5>
+
+                                <hr class="latest-hr" />
+                                <p class="text-success">
+                                    <b>Service concerné :</b> <?= $message['service'] ?>
+                                    <br />
+
+
+                                    <b> Etat de l'incident :</b> <?= $message['state'] ?>
+                                    <br />
+                                    <?= $message['message'];
+                                    ?>
+                                </p>
+                            <?php } ?>
+                            </div>
+
                     </div>
                 <?php endforeach; ?>
 
