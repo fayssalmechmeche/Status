@@ -59,23 +59,16 @@ class Monitoring extends BaseCommand
         $db = \Config\Database::connect();
         $services = $db->query("SELECT * FROM service WHERE monitoring = 1")->getResult();
 
-
-        foreach ($services as $service) :
-            echo '
-            Vérification du service : ' . $service->title . ' (' . $service->ip . ') ' . '
-            ';
-
-
-
-
+        foreach ($services as $service){
             $status = @fSockOpen($service->ip, 80, $errno, $errstr, 10);
             if ($status) {
                 $db->query("UPDATE service SET state = ? WHERE id = ?", ['En ligne', $service->id]);
+                echo "$service->title ($service->ip) : En ligne\n";
             } else {
                 $db->query("UPDATE service SET state = ? WHERE id = ?", ['Hors-ligne', $service->id]);
+                echo "$service->title ($service->ip) : Hors-ligne\n";
             }
-            echo 'Nom du service : ' . $service->title . ' -> ' . $service->state;
-
-        endforeach;
+        }
+        echo "\n";
     }
 }
