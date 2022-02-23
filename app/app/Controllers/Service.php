@@ -70,7 +70,9 @@ class Service extends BaseController
             'title'          => 'required',
             'link'          => 'required',
             'category'         => 'required',
-            'monitoring'      => 'required'
+            'monitoring'      => 'required',
+            'description'      => 'required'
+
         ];
 
         if ($this->validate($rules)) {
@@ -117,7 +119,9 @@ class Service extends BaseController
         helper(['form', 'url']);
 
         $rules = [
-            'title'          => 'required'
+            'title'          => 'required',
+            'link'          => 'required',
+            'description'          => 'required',
         ];
 
 
