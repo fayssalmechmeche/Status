@@ -37,7 +37,7 @@ class Index extends BaseController
             'meta' =>  $this->modalMeta->find(1),
             'logo' =>  $this->modalLogo->find(1),
             'messages' =>  $this->modalMessage->orderBy('id', 'DESC')->paginate(5),
-            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(),
+            'services' =>  $this->modalService->orderBy('id', 'ASC')->paginate(),
             'pager' =>  $this->modalMessage->pager,
 
 
