@@ -6,9 +6,7 @@
 <body>
 
     <?php require "template/sidebar.php" ?>
-    <?php if (isset($validation)) : ?>
-        <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
-    <?php endif; ?>
+
     <?php $session = \Config\Services::session();
 
     if ($session->getFlashdata('success')) { ?>
@@ -24,6 +22,9 @@
     <main id="dashboard">
 
         <div class="main-title">Paramètres du compte</div>
+        <?php if (isset($validation)) : ?>
+            <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+        <?php endif; ?>
 
         <div class="edit">
             <div class="col-lg-12">

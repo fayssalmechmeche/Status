@@ -53,12 +53,39 @@ class Users extends BaseController
     {
 
         helper(['form', 'url']);
+        $validation =  \Config\Services::validation();
+
+
         $rules = [
-            'name'          => 'required|min_length[2]|max_length[50]',
-            'email'         => 'required|min_length[4]|max_length[100]|valid_email|is_unique[login.email]',
-            'password'      => 'required|min_length[4]|max_length[50]',
-            'cpassword'  => 'required|matches[password]'
+            'name'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un nom valide.',
+                ]
+            ],
+            'email'          => [
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => 'Veuillez entrer un e-mail valide.',
+                    'valid_email' => 'Veuillez entrer un e-mail valide.',
+                ]
+            ],
+            'password'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un mot de passe valide.',
+                ]
+            ],
+            'cpassword'          => [
+                'rules' => 'matches[password]',
+                'errors' => [
+                    'matches[password]' => 'La confirmation de mot de passe est incorrect',
+                ]
+            ],
+
+
         ];
+
 
         if ($this->validate($rules)) {
             $data = [
@@ -71,8 +98,8 @@ class Users extends BaseController
             return redirect()->to(route_to('users'));
         } else {
             $data['validation'] = $this->validator;
-            $data['pager'] = $this->modalService->pager;
-            return view('users', $data);
+            $data['pager'] = $this->modal->pager;
+            return view(route_to('users'), $data);
         }
     }
 
@@ -87,7 +114,7 @@ class Users extends BaseController
     public function edit($id = null)
     {
         $data['login'] = $this->modal->find($id);
-        return view('users/edit', $data);
+        return view(route_to('users'), $data);
     }
     function update()
     {
@@ -121,8 +148,8 @@ class Users extends BaseController
             return redirect()->to(route_to('users'));
         } else {
             $data['validationModal'] = $this->validator;
-            $data['pager'] = $this->modalService->pager;
-            return view('users', $data);
+            $data['pager'] = $this->modal->pager;
+            return view(route_to('users'), $data);
         }
     }
     function delete()
