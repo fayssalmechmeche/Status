@@ -214,7 +214,7 @@
 
                             <p>
                                 <b> Etat de l'incident :</b>
-                                <span class="text-warning"> <?= $message['state'] ?> </span><i class="fas fa-check"></i>
+                                <span class="text-warning"> <?= $message['state'] ?> <i class="fas fa-times"></i> </span>
                             </p>
 
                             <?= $message['message']; ?>
@@ -230,7 +230,7 @@
                             <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
                                     echo $sqldate ?> à <?= $message['time'] ?> </h5>
 
-                            <hr class="latest-hr" />
+                            <hr class=" latest-hr" />
                             <p>
                                 <b>Service concerné :</b>
                                 <?= $message['service'] ?>
@@ -240,7 +240,7 @@
 
                             <p>
                                 <b> Etat de l'incident :</b>
-                                <span class="text-success"> <?= $message['state'] ?> </span><i class="fas fa-check"></i>
+                                <span class="text-success"> <?= $message['state'] ?> <i class="fas fa-check"></i> </span>
                             </p>
                             <br />
                             <?= $message['message']; ?>
