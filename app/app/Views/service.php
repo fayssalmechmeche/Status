@@ -47,9 +47,7 @@
 
 						</tr>
 						<div class="modal fade" id="services-modal<?= $service['id'] ?>" tabindex=" -1">
-							<?php if (isset($validationModal)) : ?>
-								<div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
-							<?php endif; ?>
+
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">
@@ -59,8 +57,12 @@
 										</button>
 									</div>
 									<div class="modal-body">
+
 										<div class="edit">
 											<div class="col-lg-12">
+												<?php if (isset($validationModal)) : ?>
+													<div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
+												<?php endif; ?>
 												<form action="" method="post">
 													<div class="row">
 														<div class="form-group col-lg-12">
@@ -130,7 +132,11 @@
 
 			</tbody>
 		</table>
-		<?php echo $pager->links('default', 'full_pagination');
+		<?php
+		if ($pager->getPageCount() > 1) {
+			echo $pager->links('default', 'full_pagination');
+		}
+
 
 		?>
 		<div class="subtitle">Ajouter un service</div>

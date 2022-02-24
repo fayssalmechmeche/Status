@@ -74,9 +74,11 @@
 
                 <?php } ?>
             <?php endforeach; ?>
+            <?php
+            if ($pager->getPageCount() > 1) {
+                echo $pager->links('default', 'full_pagination');
+            }
 
-
-            <?php echo $pager->links('default', 'full_pagination');
 
             ?>
         </div>

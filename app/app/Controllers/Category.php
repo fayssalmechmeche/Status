@@ -53,9 +53,17 @@ class Category extends BaseController
     public function addCategory()
     {
         helper(['form', 'url']);
+
+
         $rules = [
-            'title'          => 'required'
+            'title'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un intitulé valide.',
+                ]
+            ],
         ];
+
 
         if ($this->validate($rules)) {
 
@@ -103,7 +111,7 @@ class Category extends BaseController
 
             $session->setFlashdata('success', 'Catégorie mis à jour');
 
-            return redirect()->to(route_to('category'));
+            return redirect()->to('category');
         } else {
             $data['validationModal'] = $this->validator;
             $data['pager'] = $this->modal->pager;

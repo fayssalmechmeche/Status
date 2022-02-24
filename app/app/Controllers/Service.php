@@ -67,13 +67,40 @@ class Service extends BaseController
     {
         helper(['form']);
         $rules = [
-            'title'          => 'required',
-            'link'          => 'required',
-            'category'         => 'required',
-            'monitoring'      => 'required',
-            'description'      => 'required'
+            'title'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un intitulé valide.',
+                ]
+            ],
+            'link'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un lien valide.',
+                ]
+            ],
+            'category'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez sélectionner une catégorie.',
+                ]
+            ],
+            'monitoring'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez sélectionner une option de monitoring.',
+                ]
+            ],
+            'description'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer une description valide.',
+                ]
+            ],
+
 
         ];
+
 
         if ($this->validate($rules)) {
 
@@ -122,6 +149,29 @@ class Service extends BaseController
             'title'          => 'required',
             'link'          => 'required',
             'description'          => 'required',
+        ];
+
+        $rules = [
+            'title'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un intitulé valide.',
+                ]
+            ],
+            'link'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un lien valide.',
+                ]
+            ],
+            'description'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer une description valide.',
+                ]
+            ],
+
+
         ];
 
 

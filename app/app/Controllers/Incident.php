@@ -23,6 +23,15 @@ class Incident extends BaseController
         $this->modalMessage = new MessageModel();
 
         $this->modalService = new ServiceModel();
+        $data = [
+            'meta' =>  $this->modalMeta->find(1),
+            'logo' =>  $this->modalLogo->find(1),
+            'messages' =>  $this->modalMessage->orderBy('id', 'DESC')->paginate(5),
+            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(),
+            'pager' =>  $this->modalMessage->pager,
+        ];
+
+        return view('incident', $data);
     }
     public function index()
     {
@@ -49,9 +58,18 @@ class Incident extends BaseController
     {
         helper(['form', 'url']);
         $rules = [
-            'title'          => 'required',
-            'message'          => 'required'
-
+            'title'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un intitulé valide.',
+                ]
+            ],
+            'message'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un message valide.',
+                ]
+            ],
         ];
 
         if ($this->validate($rules)) {
@@ -70,7 +88,7 @@ class Incident extends BaseController
 
             $this->modalMessage->save($data);
 
-            return redirect()->to(route_to('incident'));
+            return redirect()->to('incident');
         } else {
 
             $data['validation'] = $this->validator;
@@ -85,8 +103,18 @@ class Incident extends BaseController
         helper(['form', 'url']);
 
         $rules = [
-            'title'          => 'required',
-            'message'          => 'required'
+            'title'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un intitulé valide.',
+                ]
+            ],
+            'message'          => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Veuillez entrer un message valide.',
+                ]
+            ],
         ];
 
 
@@ -113,7 +141,7 @@ class Incident extends BaseController
 
             $session->setFlashdata('success', 'Service mis à jour');
 
-            return redirect()->to(route_to('incident'));
+            return redirect()->to('incident');
         } else {
             $data['validationModal'] = $this->validator;
             $data['pager'] = $this->modalMessage->pager;

@@ -75,7 +75,11 @@
                     <?php } ?>
             </tbody>
         </table>
-        <?php echo $pager->links('default', 'full_pagination');
+        <?php
+        if ($pager->getPageCount() > 1) {
+            echo $pager->links('default', 'full_pagination');
+        }
+
 
         ?>
         <div class="subtitle">Ajouter une catégorie</div>

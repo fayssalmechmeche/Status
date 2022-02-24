@@ -106,6 +106,13 @@
 
             </tbody>
         </table>
+        <?php
+        if ($pager->getPageCount() > 1) {
+            echo $pager->links('default', 'full_pagination');
+        }
+
+
+        ?>
 
         <div class="subtitle">Ajouter un utilisateur</div>
         <div class="edit">
