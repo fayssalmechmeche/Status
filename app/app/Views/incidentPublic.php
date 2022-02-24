@@ -21,23 +21,58 @@
 
 
         <div class="mt-3 w-100">
-            <?php $no = 1 ?>
+
             <?php foreach ($messages as $message) : ?>
 
-                <div class="latest-item">
-                    <div class="latest-header">
-                        <h5><?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                            echo $sqldate ?> à <?= $message['time'] ?></h5>
-                        <hr class="latest-hr" />
-                        <p> <b>Service concerné :</b> <?= $message['service'] ?> </p>
-                        <p> <b> Etat de l'incident :</b> <?= $message['state'] ?> </p>
-                    </div>
-                    <div class="latest-main">
-                        <p><?php
-                            echo $message['message'];
-                            ?></p>
-                    </div>
-                </div>
+                <?php if ($message['state'] == 'En cours') { ?>
+                    <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                            echo $sqldate ?> à <?= $message['time'] ?> </h5>
+
+                    <hr class="latest-hr" />
+                    <p>
+                        <b>Service concerné :</b>
+                        <?= $message['service'] ?>
+                    </p>
+
+                    <br />
+
+
+                    <p>
+                        <b> Etat de l'incident :</b>
+                        <span class="text-warning"> <?= $message['state'] ?> <i class="fas fa-times"></i> </span>
+                    </p>
+
+                    <?= $message['message']; ?>
+
+
+
+
+                <?php } ?>
+
+
+
+                <?php if ($message['state'] == 'Fermé') { ?>
+                    <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                            echo $sqldate ?> à <?= $message['time'] ?> </h5>
+
+                    <hr class=" latest-hr" />
+                    <p>
+                        <b>Service concerné :</b>
+                        <?= $message['service'] ?>
+                    </p>
+
+                    <br />
+
+                    <p>
+                        <b> Etat de l'incident :</b>
+                        <span class="text-success"> <?= $message['state'] ?> <i class="fas fa-check"></i> </span>
+                    </p>
+                    <br />
+                    <?= $message['message']; ?>
+
+
+
+                <?php } ?>
             <?php endforeach; ?>
 
 
