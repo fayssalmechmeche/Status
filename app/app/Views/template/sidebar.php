@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li>
-                <a href=" <?= route_to('index') ?>" data-toggle="tooltip" data-placement="right" title="Page d'incident public">
+                <a href=" <?= route_to('index') ?>" data-toggle="tooltip" data-placement="right" title="Retour au site">
                     <i class="fas fa-archive"></i>
                 </a>
             </li>

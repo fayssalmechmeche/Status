@@ -214,7 +214,7 @@
 
                             <p>
                                 <b> Etat de l'incident :</b>
-                                <span class="text-warning"> <?= $message['state'] ?> <i class="fas fa-times"></i> </span>
+                                <span class="text-warning"><i class="fas fa-times"></i> <?= $message['state'] ?> </span>
                             </p>
 
                             <?= $message['message']; ?>
@@ -226,7 +226,7 @@
 
 
 
-                        <?php if ($message['state'] == 'Fermé') { ?>
+                        <?php if ($message['state'] == 'Terminé') { ?>
                             <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
                                     echo $sqldate ?> à <?= $message['time'] ?> </h5>
 
@@ -240,7 +240,7 @@
 
                             <p>
                                 <b> Etat de l'incident :</b>
-                                <span class="text-success"> <?= $message['state'] ?> <i class="fas fa-check"></i> </span>
+                                <span class="text-success"> <i class="fas fa-check"></i> <?= $message['state'] ?> </span>
                             </p>
                             <br />
                             <?= $message['message']; ?>

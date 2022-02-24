@@ -5,17 +5,18 @@
 
 <body>
     <?php require "template/sidebar.php" ?>
-    <?php $session = \Config\Services::session();
+    <?php $session = \Config\Services::session(); ?>
 
-    if ($session->getFlashdata('success')) { ?>
-        <div class="alert alert-success alert-dismissable fade show"><?= session()->getFlashdata('success') ?>
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
-        </div>
-    <?php } ?>
     <main id="dashboard">
         <div class="main-title">
             Liste des incidents
         </div>
+        <?php
+        if ($session->getFlashdata('success')) { ?>
+            <div class="alert alert-success alert-dismissable fade show"><?= session()->getFlashdata('success') ?>
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
+            </div>
+        <?php } ?>
         <div class="subtitle">Incidents</div>
 
         <table>
@@ -91,7 +92,7 @@
                                                             <label for="status">Statut</label>
                                                             <select name="state" class="form-control">
                                                                 <option <?php if ($message['state'] == 'En cours') echo 'selected="selected"' ?>>En cours</option>
-                                                                <option <?php if ($message['state'] == 'Fermé') echo 'selected="selected"' ?>>Fermé</option>
+                                                                <option <?php if ($message['state'] == 'Terminé') echo 'selected="selected"' ?>>Terminé</option>
 
                                                             </select>
                                                         </div>
@@ -153,7 +154,7 @@
                             <label for="status">Statut</label>
                             <select class="form-control" name="state">
                                 <option selected>En cours</option>
-                                <option>Fermé</option>
+                                <option>Terminé</option>
 
                             </select>
                         </div>

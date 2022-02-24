@@ -5,15 +5,16 @@
 
 <body>
     <?php require "template/sidebar.php" ?>
-    <?php $session = \Config\Services::session();
+    <?php $session = \Config\Services::session(); ?>
 
-    if ($session->getFlashdata('success')) { ?>
-        <div class="alert alert-success alert-dismissable fade show"><?= session()->getFlashdata('success') ?>
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
-        </div>
-    <?php } ?>
     <main id="dashboard">
         <div class="main-title">Liste des catégories</div>
+        <?php
+        if ($session->getFlashdata('success')) { ?>
+            <div class="alert alert-success alert-dismissable fade show"><?= session()->getFlashdata('success') ?>
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
+            </div>
+        <?php } ?>
         <div class="subtitle">
             Catégories
         </div>
@@ -33,43 +34,45 @@
 
                             <td> <a href="category/edit/<?= $category['id'] ?>" class="btn btn-info" data-toggle="modal" data-target="#users-modal<?= $category['id'] ?>" name="edit">Modifier</a></td>
                             <div class="modal fade" id="users-modal<?= $category['id'] ?>" tabindex="-1">
-                                <?php if (isset($validationModal)) : ?>
-                                    <div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
-                                <?php endif; ?><div class="modal-dialog">
-                                    <div class="modal-dialog">
 
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Modifier la catégorie</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span>&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="edit">
-                                                    <div class="col-lg-12">
-                                                        <form action="" method="post">
-                                                            <div class="row">
-                                                                <div class="form-group col-lg-12">
-                                                                    <label for="name">Intitulé</label>
-                                                                    <input type="text" class="form-control" id="title" name="title" value="<?= $category['title'] ?>">
-                                                                </div>
+                                <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Modifier la catégorie</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="edit">
+                                                <div class="col-lg-12">
+                                                    <form action="" method="post">
+                                                        <div class="row">
+
+                                                            <div class="form-group col-lg-12">
+                                                                <?php if (isset($validationModal)) : ?>
+                                                                    <div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
+                                                                <?php endif; ?>
+                                                                <label for="name">Intitulé</label>
+                                                                <input type="text" class="form-control" id="title" name="title" value="<?= $category['title'] ?>">
                                                             </div>
-                                                            <div class="modal-footer">
-                                                                <input type="hidden" name="id" value="<?php echo $category["id"]; ?>" />
-                                                                <button type="submit" class="btn btn-secondary" formaction="<?= route_to('category/update/') ?>">Modifier</button>
-                                                                <button type="submit" class="btn btn-danger" formaction="<?= route_to('category/delete/') ?>">Supprimer la catégorie</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <input type="hidden" name="id" value="<?php echo $category["id"]; ?>" />
+                                                            <button type="submit" class="btn btn-secondary" formaction="<?= route_to('category/update/') ?>">Modifier</button>
+                                                            <button type="submit" class="btn btn-danger" formaction="<?= route_to('category/delete/') ?>">Supprimer la catégorie</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
-
                                         </div>
+
                                     </div>
                                 </div>
-                            <?php endforeach ?>
-                        <?php } ?>
+                            </div>
+                        <?php endforeach ?>
+                    <?php } ?>
             </tbody>
         </table>
         <?php echo $pager->links('default', 'full_pagination');

@@ -5,17 +5,18 @@
 
 <body>
 	<?php require "template/sidebar.php" ?>
-	<?php $session = \Config\Services::session();
+	<?php $session = \Config\Services::session(); ?>
 
-	if ($session->getFlashdata('success')) { ?>
-		<div class="alert alert-success alert-dismissable fade show"><?= session()->getFlashdata('success') ?>
-			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
-		</div>
-	<?php } ?>
 	<main id="dashboard">
 		<div class="main-title">
 			Liste des services
 		</div>
+		<?php
+		if ($session->getFlashdata('success')) { ?>
+			<div class="alert alert-success alert-dismissable fade show"><?= session()->getFlashdata('success') ?>
+				<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
+			</div>
+		<?php } ?>
 		<div class="subtitle">Services</div>
 
 		<table>
@@ -103,9 +104,12 @@
 															<label for="monitoring">Monitoring automatique</label>
 															<select class="form-control" name="monitoring" id="monitoring" onchange="Modal();">
 																<option value="0">Non</option>
+
 																<option value="1">Oui</option>
 															</select>
 														</div>
+
+
 
 														<div class="modal-footer">
 															<input type="hidden" name="id" value="<?php echo $service["id"]; ?>">

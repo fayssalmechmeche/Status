@@ -86,8 +86,7 @@ class User extends BaseController
 
             $session->setFlashdata('success', 'Donnée du compte mis à jour');
 
-            return redirect()->to(route_to('u
-            ser'));
+            return redirect()->to('user');
         } else {
             $data['validation'] = $this->validator;
 
