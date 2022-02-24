@@ -15,7 +15,7 @@
 
         <div class="row">
             <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre d'utilisateurs</h5>
+                <h5 class="my-3">Utilisateurs</h5>
                 <div class="card  border-left-success shadow  py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre de services</h5>
+                <h5 class="my-3">Services</h5>
                 <div class="card border-left-success shadow  py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre de catégories</h5>
+                <h5 class="my-3">Catégories</h5>
                 <div class="card border-left-success shadow  py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -70,7 +70,7 @@
         </div>
         <div class="row">
             <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre de services <br />en ligne</h5>
+                <h5 class="my-3">Service en ligne</h5>
                 <div class="card border-left-success shadow  py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -87,8 +87,8 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <h5 class="my-3">Nombre de services
-                    <br /> hors-ligne
+                <h5 class="my-3">Services
+                    hors-ligne
                 </h5>
                 <div class="card border-left-success shadow  py-2">
                     <div class="card-body">

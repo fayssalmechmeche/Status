@@ -52,6 +52,7 @@
     </div>
     <footer class="footer-primary">
         <div class="h-100 d-flex flex-row justify-content-center align-items-center">
+            <a href="<?= route_to('index') ?>"><button class="btn btn-primary mr-3">Index</button></a>
             <a href="<?= route_to('login') ?>"><button class="btn btn-primary mr-3">tableau de bord</button></a>
         </div>
     </footer>

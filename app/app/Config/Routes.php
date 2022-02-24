@@ -37,7 +37,7 @@ $routes->get('/', 'Index::index', ['as' => 'index']);
 $routes->get('login', 'Login::index', ['as' => 'login']);
 $routes->get('login/auth', 'Login::auth', ['as' => 'auth']);
 
-$routes->get('Public', 'Incident::indexPublic', ['as' => 'incidentPublic']);
+$routes->get('History', 'Incident::indexPublic', ['as' => 'incidentPublic']);
 
 
 

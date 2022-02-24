@@ -200,53 +200,72 @@
                 <?php foreach ($messages as $message) : ?>
                     <div class="latest-item">
                         <?php if ($message['state'] == 'En cours') { ?>
-                            <div class="latest-header">
-                                <h5 class="text-danger"><?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                                                        echo $sqldate ?> à <?= $message['time'] ?> <i class="fas fa-times"></i></h5>
-                                <hr class="latest-hr" />
+                            <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                    echo $sqldate ?> à <?= $message['time'] ?> </h5>
 
-                                <p class="text-danger">
-                                    <b>Service concerné :</b> <?= $message['service'] ?>
-                                    <br />
+                            <hr class="latest-hr" />
+                            <p>
+                                <b>Service concerné :</b>
+                                <?= $message['service'] ?>
+                            </p>
 
-
-                                    <b> Etat de l'incident :</b> <?= $message['state'] ?>
-                                    <br />
-                                    <?= $message['message'];
-                                    ?>
-                                </p>
-                            <?php } ?>
+                            <br />
 
 
+                            <p>
+                                <b> Etat de l'incident :</b>
+                                <span class="text-warning"> <?= $message['state'] ?> </span><i class="fas fa-check"></i>
+                            </p>
 
-                            <?php if ($message['state'] == 'Fermé') { ?>
-                                <h5 class="text-success"> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                                                            echo $sqldate ?> à <?= $message['time'] ?> <i class="fas fa-check"></i></h5>
-
-                                <hr class="latest-hr" />
-                                <p class="text-success">
-                                    <b>Service concerné :</b> <?= $message['service'] ?>
-                                    <br />
+                            <?= $message['message']; ?>
 
 
-                                    <b> Etat de l'incident :</b> <?= $message['state'] ?>
-                                    <br />
-                                    <?= $message['message'];
-                                    ?>
-                                </p>
-                            <?php } ?>
-                            </div>
+
+
+                        <?php } ?>
+
+
+
+                        <?php if ($message['state'] == 'Fermé') { ?>
+                            <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                    echo $sqldate ?> à <?= $message['time'] ?> </h5>
+
+                            <hr class="latest-hr" />
+                            <p>
+                                <b>Service concerné :</b>
+                                <?= $message['service'] ?>
+                            </p>
+
+                            <br />
+
+                            <p>
+                                <b> Etat de l'incident :</b>
+                                <span class="text-success"> <?= $message['state'] ?> </span><i class="fas fa-check"></i>
+                            </p>
+                            <br />
+                            <?= $message['message']; ?>
+
+
+
+                        <?php } ?>
 
                     </div>
-                <?php endforeach; ?>
 
             </div>
+        <?php endforeach; ?>
+
+        </div>
         </div>
     </main>
     <footer class="footer-primary">
+
         <div class="h-100 d-flex flex-row justify-content-center align-items-center">
+            <a href="<?= route_to('incidentPublic') ?>"><button class="btn btn-primary mr-3">Historique des incidents</button></a>
             <a href="<?= route_to('dash') ?>"><button class="btn btn-primary mr-3">Panneau de controle</button></a>
         </div>
+
+
+
     </footer>
     <script src="js/script.js"></script>
     <!-- Optional JavaScript -->
