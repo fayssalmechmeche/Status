@@ -133,7 +133,7 @@ class Service extends BaseController
             }
 
 
-            return redirect()->to(route_to('service'));
+            return redirect()->to('service');
         } else {
 
             $data['validation'] = $this->validator;
@@ -215,7 +215,7 @@ class Service extends BaseController
 
             $session->setFlashdata('success', 'Service mis à jour');
 
-            return redirect()->to(route_to('service'));
+            return redirect()->to('service');
         } else {
             $data['validationModal'] = $this->validator;
             $data['pager'] = $this->modalService->pager;

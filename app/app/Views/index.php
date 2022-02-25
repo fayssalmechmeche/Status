@@ -197,62 +197,61 @@
                 <h2 class="m-5 mx-auto">Incidents antérieurs</h2>
             </div>
             <div class="mt-3 w-100">
+
                 <?php foreach ($messages as $message) : ?>
-                    <div class="latest-item">
-                        <?php if ($message['state'] == 'En cours') { ?>
-                            <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                                    echo $sqldate ?> à <?= $message['time'] ?> </h5>
 
-                            <hr class="latest-hr" />
-                            <p>
-                                <b>Service concerné :</b>
-                                <?= $message['service'] ?>
-                            </p>
+                    <?php if ($message['state'] == 'En cours') { ?>
+                        <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                echo $sqldate ?> à <?= $message['time'] ?> </h5>
 
-                            <br />
+                        <hr class="latest-hr" />
+                        <p>
+                            <b>Service concerné :</b>
+                            <?= $message['service'] ?>
+                        </p>
 
-
-                            <p>
-                                <b> Etat de l'incident :</b>
-                                <span class="text-warning"><i class="fas fa-times"></i> <?= $message['state'] ?> </span>
-                            </p>
-
-                            <?= $message['message']; ?>
+                        <br />
 
 
+                        <p>
+                            <b> Etat de l'incident :</b>
+                            <span class="text-warning"><i class="fas fa-times"></i> <?= $message['state'] ?> </span>
+                        </p>
 
-
-                        <?php } ?>
+                        <p class="mh-100"> <?= $message['message']; ?> </p>
 
 
 
-                        <?php if ($message['state'] == 'Terminé') { ?>
-                            <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
-                                    echo $sqldate ?> à <?= $message['time'] ?> </h5>
 
-                            <hr class=" latest-hr" />
-                            <p>
-                                <b>Service concerné :</b>
-                                <?= $message['service'] ?>
-                            </p>
-
-                            <br />
-
-                            <p>
-                                <b> Etat de l'incident :</b>
-                                <span class="text-success"> <i class="fas fa-check"></i> <?= $message['state'] ?> </span>
-                            </p>
-                            <br />
-                            <?= $message['message']; ?>
+                    <?php } ?>
 
 
 
-                        <?php } ?>
+                    <?php if ($message['state'] == 'Terminé') { ?>
+                        <h5> <?php $sqldate = date('d/m/Y', strtotime($message['created']));
+                                echo $sqldate ?> à <?= $message['time'] ?> </h5>
 
-                    </div>
+                        <hr class=" latest-hr" />
+                        <p>
+                            <b>Service concerné :</b>
+                            <?= $message['service'] ?>
+                        </p>
+
+                        <br />
+
+                        <p>
+                            <b> Etat de l'incident :</b>
+                            <span class="text-success"> <i class="fas fa-check"></i><?= $message['state'] ?> </span>
+                        </p>
+                        <br />
+                        <p class="mh-100"> <?= $message['message']; ?> </p>
+
+
+
+                    <?php } ?>
+                <?php endforeach; ?>
 
             </div>
-        <?php endforeach; ?>
 
         </div>
         </div>
