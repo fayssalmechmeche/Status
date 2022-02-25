@@ -105,9 +105,9 @@
 														<div class="form-group col-lg-6">
 															<label for="monitoring">Monitoring automatique</label>
 															<select class="form-control" name="monitoring" id="monitoring" onchange="Modal();">
-																<option value="0">Non</option>
+																<option value="0" <?php if ($service['monitoring'] == 0) echo 'selected="selected"' ?>>Non</option>
 
-																<option value="1">Oui</option>
+																<option value="1" <?php if ($service['monitoring'] == 1) echo 'selected="selected"' ?>>Oui</option>
 															</select>
 														</div>
 
@@ -188,7 +188,7 @@
 						</div>
 						<div class=" form-group col-lg-6">
 							<label for="monitoring">Monitoring automatique</label>
-							<select class="form-control" name="monitoring" id="monitoringPage" onchange="contact1();">
+							<select class="form-control" name="monitoring" id="monitoringPage" onchange=" contact1();">
 
 								<option value="0">Non</option>
 								<option value="1">Oui</option>
@@ -209,8 +209,7 @@
 	<script src="js/script.js"></script>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
 	</script>
 	<script>
@@ -222,13 +221,7 @@
 			$('#services-edit').trigger('focus')
 		})
 	</script>
-	<script>
-		$(document).ready(function() {
-			$(".modal").on("hidden.bs.modal", function() {
-				$(".modal-body").removeData('bs.modal');
-			});
-		});
-	</script>
+
 
 	<script>
 		if (document.getElementById("monitoringPage").selectedIndex == 1) {
@@ -252,9 +245,9 @@
 			}
 
 		}
-
+	</script>
+	<script>
 		// MODAL
-
 
 
 
@@ -311,6 +304,8 @@
 
 		}
 	</script>
+
+
 
 
 
