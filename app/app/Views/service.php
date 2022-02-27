@@ -52,7 +52,7 @@
 								<div class="modal-content">
 									<div class="modal-header">
 										<h5 class="modal-title">Modifier le service</h5>
-										<button type="button" class="close" data-dismiss="modal">
+										<button type="button" id='close' class="close" data-dismiss="modal">
 											<span>&times;</span>
 										</button>
 									</div>
@@ -77,7 +77,7 @@
 															<label for="link">Lien</label>
 															<input type="text" class="form-control" id="link" name="link" value="<?= $service['link'] ?>">
 														</div>
-														<div class="form-group col-lg-6" id="ip">
+														<div class="form-group col-lg-6" id="ip<?= $service['id'] ?>">
 															<label for="hostname">IP/Hôte</label>
 															<input type="text" class="form-control" id="hostname" name="ip" value="<?= $service['ip'] ?>">
 														</div>
@@ -92,9 +92,9 @@
 																} ?>
 															</select>
 														</div>
-														<div class="form-group col-lg-6" id="state">
+														<div class="form-group col-lg-6" id="state<?= $service['id'] ?>">
 															<label for="status">Statut</label>
-															<select name="state" class="form-control">
+															<select name="state" class="form-control" id="state">
 
 																<option <?php if ($service['state'] == 'En ligne') echo 'selected="selected"' ?>>En ligne</option>
 																<option <?php if ($service['state'] == 'Panne partielle') echo 'selected="selected"' ?>>Panne partielle</option>
@@ -104,7 +104,7 @@
 														</div>
 														<div class="form-group col-lg-6">
 															<label for="monitoring">Monitoring automatique</label>
-															<select class="form-control" name="monitoring" id="monitoring" onchange="Modal();">
+															<select class="form-control" name="monitoring" id="monitoring<?= $service['id'] ?>" onchange="Modal();">
 																<option value="0" <?php if ($service['monitoring'] == 0) echo 'selected="selected"' ?>>Non</option>
 
 																<option value="1" <?php if ($service['monitoring'] == 1) echo 'selected="selected"' ?>>Oui</option>
@@ -186,15 +186,20 @@
 								<option>Hors-ligne</option>
 							</select>
 						</div>
-						<div class=" form-group col-lg-6">
+
+
+
+
+
+						<div class="form-group col-lg-6">
 							<label for="monitoring">Monitoring automatique</label>
-							<select class="form-control" name="monitoring" id="monitoringPage" onchange=" contact1();">
-
+							<select class="form-control" name="monitoring" id="monitoring" onchange="Modal();">
 								<option value="0">Non</option>
-								<option value="1">Oui</option>
 
+								<option value="1">Oui</option>
 							</select>
 						</div>
+
 					</div>
 					<div>
 
@@ -249,61 +254,32 @@
 	<script>
 		// MODAL
 
-
-
-		var elms = document.querySelectorAll("[id='btn']");
-		elms[i].addEventListener("click", Modal);
-		var elms = document.querySelectorAll("[id='monitoring']");
-		for (var i = 0; i < elms.length; i++)
-			if (elms[i].selectedIndex == 1) {
-
-				var elms = document.querySelectorAll("[id='state']");
-				for (var i = 0; i < elms.length; i++)
-					elms[i].style.display = 'none';
-
-				var elms = document.querySelectorAll("[id='ip']");
-				for (var i = 0; i < elms.length; i++)
-					elms[i].style.display = 'block';
+		<?php foreach ($services as $service) : ?>
+			if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 1) {
+				document.getElementById("state<?= $service['id'] ?>").style.display = "none";
+				document.getElementById("ip<?= $service['id'] ?>").style.display = "block";
 			}
-		for (var i = 0; i < elms.length; i++)
-			if (elms[i].selectedIndex == 0) {
-
-				var elms = document.querySelectorAll("[id='state']");
-				for (var i = 0; i < elms.length; i++)
-					elms[i].style.display = 'block';
-
-				var elms = document.querySelectorAll("[id='ip']");
-				for (var i = 0; i < elms.length; i++)
-					elms[i].style.display = 'none';
+			if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 0) {
+				document.getElementById("state<?= $service['id'] ?>").style.display = "block";
+				document.getElementById("ip<?= $service['id'] ?>").style.display = "none";
 			}
+		<?php endforeach; ?>
 
 		function Modal() {
-			var elms = document.querySelectorAll("[id='monitoring']");
-			for (var i = 0; i < elms.length; i++)
-				if (elms[i].selectedIndex == 1) {
-
-					var elms = document.querySelectorAll("[id='state']");
-					for (var i = 0; i < elms.length; i++)
-						elms[i].style.display = 'none';
-
-					var elms = document.querySelectorAll("[id='ip']");
-					for (var i = 0; i < elms.length; i++)
-						elms[i].style.display = 'block';
+			<?php foreach ($services as $service) : ?>
+				if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 1) {
+					document.getElementById("state<?= $service['id'] ?>").style.display = "none";
+					document.getElementById("ip<?= $service['id'] ?>").style.display = "block";
 				}
-			for (var i = 0; i < elms.length; i++)
-				if (elms[i].selectedIndex == 0) {
-
-					var elms = document.querySelectorAll("[id='state']");
-					for (var i = 0; i < elms.length; i++)
-						elms[i].style.display = 'block';
-
-					var elms = document.querySelectorAll("[id='ip']");
-					for (var i = 0; i < elms.length; i++)
-						elms[i].style.display = 'none';
+				if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 0) {
+					document.getElementById("state<?= $service['id'] ?>").style.display = "block";
+					document.getElementById("ip<?= $service['id'] ?>").style.display = "none";
 				}
+			<?php endforeach; ?>
 
 		}
 	</script>
+
 
 
 

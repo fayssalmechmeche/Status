@@ -33,6 +33,7 @@ class Service extends BaseController
             'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(20),
             'pager' =>  $this->modalService->pager,
 
+
         ];
         return view('service', $data);
     }
@@ -53,6 +54,7 @@ class Service extends BaseController
             'categorys' =>  $this->modalCategory->orderBy('id', 'DESC')->paginate(20),
             'services' =>  $this->modalService->orderBy('id', 'ASC')->paginate(20),
             'pager' =>  $this->modalService->pager,
+            'serviceid' =>  $this->modalService->find('id'),
         ];
 
         return view('service', $data);
