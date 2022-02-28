@@ -215,7 +215,7 @@
 
                         <p>
                             <b> Etat de l'incident :</b>
-                            <span class="text-warning"><i class="fas fa-times"></i> <?= $message['state'] ?> </span>
+                            <span class="text-warning"><i class="fas fa-stopwatch"></i> <?= $message['state'] ?> </span>
                         </p>
 
                         <p class="mh-100"> <?= $message['message']; ?> </p>

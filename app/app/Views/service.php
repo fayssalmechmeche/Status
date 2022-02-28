@@ -73,9 +73,9 @@
 															<label for="description">Description</label>
 															<input type="text" class="form-control" id="description" name="description" value="<?= $service['description'] ?>">
 														</div>
-														<div class="form-group col-lg-6">
+														<div class="form-group col-lg-6" id="link<?= $service['id'] ?>">
 															<label for="link">Lien</label>
-															<input type="text" class="form-control" id="link" name="link" value="<?= $service['link'] ?>">
+															<input type="text" class="form-control" name="link" value="<?= $service['link'] ?>">
 														</div>
 														<div class="form-group col-lg-6" id="ip<?= $service['id'] ?>">
 															<label for="hostname">IP/Hôte</label>
@@ -102,7 +102,7 @@
 																<option <?php if ($service['state'] == 'Hors-ligne') echo 'selected="selected"' ?>>Hors-ligne</option>
 															</select>
 														</div>
-														<div class="form-group col-lg-6">
+														<div class="form-group col-lg-6" id='monitoringContainer<?= $service['id'] ?>'>
 															<label for="monitoring">Monitoring automatique</label>
 															<select class="form-control" name="monitoring" id="monitoring<?= $service['id'] ?>" onchange="Modal();">
 																<option value="0" <?php if ($service['monitoring'] == 0) echo 'selected="selected"' ?>>Non</option>
@@ -147,7 +147,7 @@
 				<?php endif; ?>
 				<form action=' <?= route_to('addService') ?>' method='post'>
 					<div class="row">
-						<div class="form-group col-lg-6">
+						<div class="form-group col-lg-12">
 							<label for="name">Intitulé</label>
 							<input type="text" class="form-control" id="title" name="title">
 						</div>
@@ -156,9 +156,9 @@
 							<input type="text" class="form-control" id="description" name="description">
 						</div>
 
-						<div class="form-group col-lg-6">
+						<div class="form-group col-lg-6" id="linkPage">
 							<label for="link">Lien</label>
-							<input type="text" class="form-control" id="link" name="link">
+							<input type="text" class="form-control" name="link">
 						</div>
 						<div class="form-group col-lg-6" id="ipPage">
 							<label for="hostname">IP/Hôte</label>
@@ -191,7 +191,7 @@
 
 
 
-						<div class="form-group col-lg-6">
+						<div class="form-group col-lg-6" id="monitoringPageContainer">
 							<label for="monitoring">Monitoring automatique</label>
 							<select class="form-control" name="monitoring" id="monitoringPage" onchange="contact1();">
 								<option value="0">Non</option>
@@ -230,23 +230,36 @@
 
 	<script>
 		if (document.getElementById("monitoringPage").selectedIndex == 1) {
+			document.getElementById('linkPage').className = "form-group col-lg-6";
 			document.getElementById("statePage").style.display = "none";
 			document.getElementById("ipPage").style.display = "block";
+			document.getElementById('linkPage').className = "form-group col-lg-6";
+			document.getElementById('monitoringPageContainer').className = "form-group col-lg-12";
 		}
 		if (document.getElementById("monitoringPage").selectedIndex == 0) {
+			document.getElementById('linkPage').className = "form-group col-lg-12";
 			document.getElementById("statePage").style.display = "block";
 			document.getElementById("ipPage").style.display = "none";
+			document.getElementById('linkPage').className = "form-group col-lg-12";
+			document.getElementById('monitoringPageContainer').className = "form-group col-lg-6";
+
 		}
 
 		function contact1() {
 
 			if (document.getElementById("monitoringPage").selectedIndex == 1) {
+				document.getElementById('linkPage').className = "form-group col-lg-6";
 				document.getElementById("statePage").style.display = "none";
 				document.getElementById("ipPage").style.display = "block";
+				document.getElementById('linkPage').className = "form-group col-lg-6";
+				document.getElementById('monitoringPageContainer').className = "form-group col-lg-12";
+
 			}
 			if (document.getElementById("monitoringPage").selectedIndex == 0) {
 				document.getElementById("statePage").style.display = "block";
 				document.getElementById("ipPage").style.display = "none";
+				document.getElementById('linkPage').className = "form-group col-lg-12";
+				document.getElementById('monitoringPageContainer').className = "form-group col-lg-6";
 			}
 
 		}
@@ -261,10 +274,14 @@
 			if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 1) {
 				document.getElementById("state<?= $service['id'] ?>").style.display = "none";
 				document.getElementById("ip<?= $service['id'] ?>").style.display = "block";
+				document.getElementById('link<?= $service['id'] ?>').className = "form-group col-lg-6";
+				document.getElementById('monitoringContainer<?= $service['id'] ?>').className = "form-group col-lg-12";
 			}
 			if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 0) {
 				document.getElementById("state<?= $service['id'] ?>").style.display = "block";
 				document.getElementById("ip<?= $service['id'] ?>").style.display = "none";
+				document.getElementById('link<?= $service['id'] ?>').className = "form-group col-lg-12";
+				document.getElementById('monitoringContainer<?= $service['id'] ?>').className = "form-group col-lg-6";
 			}
 		<?php endforeach; ?>
 
@@ -273,10 +290,14 @@
 				if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 1) {
 					document.getElementById("state<?= $service['id'] ?>").style.display = "none";
 					document.getElementById("ip<?= $service['id'] ?>").style.display = "block";
+					document.getElementById('link<?= $service['id'] ?>').className = "form-group col-lg-6";
+					document.getElementById('monitoringContainer<?= $service['id'] ?>').className = "form-group col-lg-12";
 				}
 				if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 0) {
 					document.getElementById("state<?= $service['id'] ?>").style.display = "block";
 					document.getElementById("ip<?= $service['id'] ?>").style.display = "none";
+					document.getElementById('link<?= $service['id'] ?>').className = "form-group col-lg-12";
+					document.getElementById('monitoringContainer<?= $service['id'] ?>').className = "form-group col-lg-6";
 				}
 			<?php endforeach; ?>
 
