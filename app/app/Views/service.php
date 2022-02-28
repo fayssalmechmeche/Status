@@ -193,7 +193,7 @@
 
 						<div class="form-group col-lg-6">
 							<label for="monitoring">Monitoring automatique</label>
-							<select class="form-control" name="monitoring" id="monitoring" onchange="Modal();">
+							<select class="form-control" name="monitoring" id="monitoringPage" onchange="contact1();">
 								<option value="0">Non</option>
 
 								<option value="1">Oui</option>
@@ -255,6 +255,9 @@
 		// MODAL
 
 		<?php foreach ($services as $service) : ?>
+			$('#services-modal<?= $service['id'] ?>').on('hidden.bs.modal', function() {
+				$(this).find('form').trigger('reset');
+			})
 			if (document.getElementById("monitoring<?= $service['id'] ?>").selectedIndex == 1) {
 				document.getElementById("state<?= $service['id'] ?>").style.display = "none";
 				document.getElementById("ip<?= $service['id'] ?>").style.display = "block";
