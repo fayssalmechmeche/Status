@@ -241,7 +241,7 @@
 
                         <p>
                             <b> Etat de l'incident :</b>
-                            <span class="text-success"> <i class="fas fa-check"></i><?= $message['state'] ?> </span>
+                            <span class="text-success"> <i class="fas fa-check"></i> <?= $message['state'] ?> </span>
                         </p>
                         <br />
                         <p class="mh-100"> <?= $message['message']; ?> </p>

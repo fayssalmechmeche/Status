@@ -130,7 +130,7 @@ class Service extends BaseController
                 $this->modalService->save($data);
             }
             if ($data['monitoring'] == 0) {
-                $data['ip'] = null;
+                $data['ip'] = 'Manuel';
                 $this->modalService->save($data);
             }
 
@@ -209,7 +209,7 @@ class Service extends BaseController
                 $this->modalService->update($id, $data);
             }
             if ($data['monitoring'] == 0) {
-                $data['ip'] = null;
+                $data['ip'] = 'Manuel';
                 $this->modalService->update($id, $data);
             }
 
