@@ -221,6 +221,8 @@ class Service extends BaseController
         } else {
             $data['validationModal'] = $this->validator;
             $data['pager'] = $this->modalService->pager;
+            $data['id'] = $id;
+
             return view('service', $data);
         }
     }

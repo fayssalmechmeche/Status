@@ -11,12 +11,24 @@
 		<div class="main-title">
 			Liste des services
 		</div>
+
 		<?php
+
+
 		if ($session->getFlashdata('success')) { ?>
 			<div class="alert alert-success alert-dismissable fade show"><?= session()->getFlashdata('success') ?>
 				<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span> </button>
 			</div>
 		<?php } ?>
+		<?php if (isset($validationModal)) : ?>
+			<script>
+				$(window).on('load', function() {
+					$('#services-modal<?= $id ?>').modal('show');
+				});
+			</script>
+
+		<?php endif; ?>
+
 		<div class="subtitle">Services</div>
 
 		<table>
@@ -61,8 +73,10 @@
 										<div class="edit">
 											<div class="col-lg-12">
 												<?php if (isset($validationModal)) : ?>
+
 													<div class="alert alert-danger"><?= $validationModal->listErrors() ?></div>
 												<?php endif; ?>
+
 												<form action="" method="post">
 													<div class="row">
 														<div class="form-group col-lg-12">
@@ -264,10 +278,15 @@
 
 		}
 	</script>
+
+
 	<script>
 		// MODAL
 
 		<?php foreach ($services as $service) : ?>
+
+
+
 			$('#services-modal<?= $service['id'] ?>').on('hidden.bs.modal', function() {
 				$(this).find('form').trigger('reset');
 			})
