@@ -30,7 +30,7 @@ class Service extends BaseController
             'meta' =>  $this->modalMeta->find(1),
             'logo' =>  $this->modalLogo->find(1),
             'categorys' =>  $this->modalCategory->orderBy('id', 'DESC')->paginate(20),
-            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(20),
+            'services' =>  $this->modalService->orderBy('id', 'DESC')->paginate(5),
             'pager' =>  $this->modalService->pager,
 
 
@@ -52,7 +52,7 @@ class Service extends BaseController
             'meta' =>  $this->modalMeta->find(1),
             'logo' =>  $this->modalLogo->find(1),
             'categorys' =>  $this->modalCategory->orderBy('id', 'DESC')->paginate(20),
-            'services' =>  $this->modalService->orderBy('id', 'ASC')->paginate(20),
+            'services' =>  $this->modalService->orderBy('id', 'ASC')->paginate(5),
             'pager' =>  $this->modalService->pager,
             'serviceid' =>  $this->modalService->find('id'),
         ];

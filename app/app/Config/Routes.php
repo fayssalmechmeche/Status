@@ -52,29 +52,29 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->put('incident/update/', 'Incident::update', ['as' => 'incident/update/']);
 
     $routes->get('settings', 'Settings::index', ['as' => 'settings']);
-    $routes->put('settings/update/', 'Settings::update', ['as' => 'settings/update/']);
+    $routes->get('settings/update/', 'Settings::update', ['as' => 'settings/update/']);
 
 
     $routes->get('service', 'Service::index', ['as' => 'service']);
     $routes->get('service/logout', 'Service::logout', ['as' => 'logout']);
     $routes->get('service/addService', 'Service::addService', ['as' => 'addService']);
-    $routes->put('service/update/', 'Service::update/', ['as' => 'service/update/']);
+    $routes->get('service/update/', 'Service::update/', ['as' => 'service/update/']);
     $routes->get('service/delete/', 'Service::delete/', ['as' => 'service/delete/']);
 
 
     $routes->get('users/edit/(:num)', 'Users::edit/$1', ['as' => 'users/edit']);
     $routes->get('users', 'Users::index', ['as' => 'users']);
     $routes->get('users/addUser', 'Users::save', ['as' => 'addUser']);
-    $routes->put('users/update/', 'Users::update/', ['as' => 'users/update/']);
-    $routes->put('users/delete/', 'Users::delete/', ['as' => 'users/delete/']);
+    $routes->get('users/update/', 'Users::update/', ['as' => 'users/update/']);
+    $routes->get('users/delete/', 'Users::delete/', ['as' => 'users/delete/']);
 
     $routes->get('user', 'User::index', ['as' => 'user']);
-    $routes->put('user/update/', 'User::update/', ['as' => 'user/update/']);
+    $routes->get('user/update/', 'User::update/', ['as' => 'user/update/']);
 
     $routes->get('category', 'Category::index', ['as' => 'category']);
     $routes->get('category/addCategory', 'Category::addCategory', ['as' => 'addCategory']);
-    $routes->put('category/update/', 'Category::update/', ['as' => 'category/update/']);
-    $routes->put('category/delete/', 'Category::delete/', ['as' => 'category/delete/']);
+    $routes->get('category/update/', 'Category::update/', ['as' => 'category/update/']);
+    $routes->get('category/delete/', 'Category::delete/', ['as' => 'category/delete/']);
 });
 
 
